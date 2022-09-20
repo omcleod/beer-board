@@ -17,7 +17,7 @@ class CreateBeersTable extends Migration
         Schema::create('beers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('brewey_id')->constrained('breweries');
+            $table->foreignId('brewery_id')->constrained('breweries');
             $table->foreignId('style_id')->constrained('styles');
             $table->double('abv', 4, 1);
             $table->timestamps();

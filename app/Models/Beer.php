@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use NunoMaduro\Collision\Adapters\Phpunit\Style;
+// use NunoMaduro\Collision\Adapters\Phpunit\Style;
 
 class Beer extends Model
 {
@@ -14,11 +14,11 @@ class Beer extends Model
 
     public function brewery()
     {
-        return $this->hasOne(Brewery::class);
+        return $this->belongsTo(Brewery::class, 'brewery_id');
     }
 
     public function style()
     {
-        return $this->hasOne(Style::class);
+        return $this->belongsTo(Style::class);
     }
 }
