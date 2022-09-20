@@ -16,6 +16,7 @@ class CreateBoardTable extends Migration
         Schema::create('board', function (Blueprint $table) {
             $table->id();
             $table->foreignId('beer_id')->constrained('beers');
+            $table->decimal('price', 4, 2);
             $table->timestamps();
             $table->softDeletes();
         });
