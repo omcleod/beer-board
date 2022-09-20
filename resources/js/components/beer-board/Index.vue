@@ -1,0 +1,48 @@
+<template>
+    <div>
+        <table class="border-collapse table-auto w-full text-sm">
+            <thead>
+            <tr>
+                <th class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">Name</th>
+                <th class="border-b dark:border-slate-600 font-medium p-4 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">Style</th>
+                <th class="border-b dark:border-slate-600 font-medium p-4 pr-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">ABV</th>
+                <th class="border-b dark:border-slate-600 font-medium p-4 pr-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">Brewery</th>
+                <th class="border-b dark:border-slate-600 font-medium p-4 pr-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">Price</th>
+            </tr>
+            </thead>
+            <tbody class="bg-white dark:bg-slate-800">
+            <tr v-for="beer in beers" :key="beer.id">
+                <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">
+                    {{ beer.name }}
+                </td>
+                <td class="border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">
+                    {{ beer.style }}
+                </td>
+                <td class="border-b border-slate-100 dark:border-slate-700 p-4 pr-8 text-slate-500 dark:text-slate-400">
+                    {{ beer.abv }}
+                </td>
+                <td class="border-b border-slate-100 dark:border-slate-700 p-4 pr-8 text-slate-500 dark:text-slate-400">
+                    {{ beer.brewery }}
+                </td>
+                <td class="border-b border-slate-100 dark:border-slate-700 p-4 pr-8 text-slate-500 dark:text-slate-400">
+                    &pound;{{ beer.price }}
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</template>
+<script>
+    export default {
+        data() {
+            return {
+              beers: {},
+            }
+        },
+        mounted() {
+            axios.get('/api/beers').then(response => {
+                this.beers = response.data.data;
+            })
+        },
+    }
+</script> 
