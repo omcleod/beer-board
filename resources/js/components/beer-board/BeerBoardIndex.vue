@@ -33,16 +33,18 @@
     </div>
 </template>
 <script>
+    import useBeerBoard from '../../composables/beer-board';
+    import { onMounted, useMounted } from "vue";
+    
     export default {
-        data() {
+        setup() {
+            const { beers, getBeers } = useBeerBoard()
+
+            onMounted(getBeers)
+
             return {
-              beers: {},
+                beers
             }
-        },
-        mounted() {
-            axios.get('/api/beers').then(response => {
-                this.beers = response.data.data;
-            })
-        },
+        }
     }
 </script> 

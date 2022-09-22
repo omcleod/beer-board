@@ -9,7 +9,8 @@
     </head>
     <body class="flex flex-col items-center justify-center">
         <div id="app" class="flex h-screen justify-center items-center">
-            <beer-board-list></beer-board-list>
+            <!-- <beer-board-list></beer-board-list> -->
+            <router-view />
         </div>
          <script>
            window.Laravel = <?php echo json_encode([

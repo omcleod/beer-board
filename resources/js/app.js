@@ -2,9 +2,12 @@
 
 require('./bootstrap');
 
-import { createApp } from "vue"
-import BeersIndex from './components/beer-board/Index'
+import { createApp } from "vue";
+import router from './router'
+import BeerBoardIndex from './components/beer-board/BeerBoardIndex'
 
-const app = createApp({})
-app.component('beer-board-list', BeersIndex)
-app.mount('#app')
+createApp({
+    components: {
+        BeerBoardIndex
+    }
+}).use(router).mount('#app')
