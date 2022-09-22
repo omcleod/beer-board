@@ -27,6 +27,12 @@
                 <td class="border-b border-slate-100 dark:border-slate-700 p-4 pr-8 text-slate-500 dark:text-slate-400">
                     &pound;{{ beer.price }}
                 </td>
+                <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
+                    <button @click="deleteBeer(beer.id)"
+                            class="inline-flex items-center px-4 py-2 bg-red-500 rounded-md font-semibold text-xs text-white uppercase">
+                            Delete
+                    </button>
+                </td>
             </tr>
             </tbody>
         </table>
@@ -38,12 +44,23 @@
     
     export default {
         setup() {
-            const { beers, getBeers } = useBeerBoard()
+            const { beers, getBeers, destroyBeer } = useBeerBoard()
 
             onMounted(getBeers)
 
+            const deleteBeer = async (id) => {
+                //TODO Replace with modal
+                if (!window.confirm('Are you sure you want to remove this beer?')) {
+                    return
+                }
+
+                await destroyBeer(id);
+                await getBeers();
+            }
+
             return {
-                beers
+                beers,
+                deleteBeer
             }
         }
     }
