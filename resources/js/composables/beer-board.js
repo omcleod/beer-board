@@ -11,8 +11,13 @@ export default function useBeerBoard() {
         beers.value = response.data.data;
     }
 
+    const destroyBeer = async (id) => {
+        await axios.delete('/api/beers/' + id)
+    }
+
     return {
         beers,
-        getBeers
+        getBeers,
+        destroyBeer
     }
 }
