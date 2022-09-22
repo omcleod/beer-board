@@ -19,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/beers', [BeerBoardController::class, 'index']);
+Route::apiResource('beers', 'App\Http\Controllers\Api\BeerBoardController');
