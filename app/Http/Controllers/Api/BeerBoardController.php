@@ -12,4 +12,10 @@ class BeerBoardController extends Controller
     {
         return BeerBoardResource::collection(BeerBoard::all());
     }
+
+    public function destroy(BeerBoard $beer) {
+        $beer->delete();
+
+        return response()->noContent();
+    }
 }
