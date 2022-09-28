@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\BeerBoardController;
+use App\Http\Controllers\Api\BeerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('beers', 'App\Http\Controllers\Api\BeerBoardController');
+
+Route::get('beerNames', [BeerController::class, 'index']);
