@@ -61,7 +61,16 @@
                     {{ beer.brewery }}
                 </td>
                 <td class="p-4 pr-8 border-b border-slate-100 dark:border-slate-700 text-slate-500 dark:text-slate-400">
-                    &pound;{{ beer.price }}
+                    <input  type="number" name="price" id="price"
+                        min="0.00" max="50.00" step="0.05"
+                        class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                        v-model="beer.price">
+                </td>
+                <td class="px-3 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
+                    <button @click="editBeer(beer)"
+                            class="inline-flex items-center px-4 py-2 text-xs font-semibold text-white uppercase bg-green-500 rounded-md">
+                            Update
+                    </button>
                 </td>
                 <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
                     <button @click="deleteBeer(beer.id)"
@@ -85,15 +94,20 @@
                 'price': '',
             })
             
-            const { beers, options, errors, getBeers, destroyBeer, getBeerNames, storeBeer } = useBeerBoard()
+            const { beers, options, errors, getBeers, destroyBeer, getBeerNames, storeBeer, updateBeer } = useBeerBoard()
 
-            onMounted(() => {
+            onMounted(() => { 
                 getBeers()
                 getBeerNames()
             })
 
             const saveBeer = async () => {
                 await storeBeer({...form});
+                await getBeers();
+            }
+
+             const editBeer = async (beer) => {
+                await updateBeer(beer);
                 await getBeers();
             }
 
@@ -113,7 +127,8 @@
                 errors,
                 options,
                 saveBeer,
-                deleteBeer
+                deleteBeer,
+                editBeer
             }
         }
     }
