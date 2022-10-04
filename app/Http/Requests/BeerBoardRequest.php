@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class BeerBoardRequest extends FormRequest
 {
@@ -36,7 +37,10 @@ class BeerBoardRequest extends FormRequest
     public function rules()
     {
         return [
-            'beer_id' => 'required|unique:board',
+            'beer_id' => [
+                'required',
+                Rule::unique('board', 'beer_id')->ignore($this->beer)
+            ],
             'price' => 'required|numeric|between:0,49.99',
         ];
     }
