@@ -17,6 +17,7 @@ class BeerBoardResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'beer_id' => $this->beer->id,
             'name' => $this->beer->name,
             'brewery' => $this->beer->brewery->name,
             'abv' => $this->beer->abv,
