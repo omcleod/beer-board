@@ -27,4 +27,11 @@ class BeerBoardController extends Controller
 
         return new BeerBoardResource($beer);
     }
+
+    public function update(BeerBoardRequest $request, BeerBoard $beer)
+    {
+        $beer->update($request->validated());
+
+        return new BeerBoardResource($beer);
+    }
 }
