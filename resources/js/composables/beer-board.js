@@ -32,6 +32,17 @@ export default function useBeerBoard() {
         }
     }
 
+    const updateBeer = async (beer) => {
+        errors.value = ''
+        try {
+            await axios.put('/api/beers/' + beer.id, beer)
+        } catch (e) {
+            if (e.response.status === 422) {
+               errors.value = e.response.data.errors
+            }
+        }
+    }
+
     const destroyBeer = async (id) => {
         await axios.delete('/api/beers/' + id)
     }
@@ -43,6 +54,7 @@ export default function useBeerBoard() {
         getBeers,
         destroyBeer,
         storeBeer,
+        updateBeer,
         getBeerNames
     }
 }
