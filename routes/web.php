@@ -1,6 +1,10 @@
 <?php
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BeerBoardController;
+use App\Http\Controllers\BeerBoardAdminController;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [BeerBoardController::class, 'index']);
+
+Route::get('/dashboard', [BeerBoardAdminController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::resource('beers', BeerBoardAdminController::class);
+
+require __DIR__.'/auth.php';

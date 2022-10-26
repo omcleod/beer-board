@@ -1,6 +1,42 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/@inertiajs/inertia-vue3/dist/index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@inertiajs/inertia-vue3/dist/index.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+function e(e){return e&&"object"==typeof e&&"default"in e?e.default:e}var r=e(__webpack_require__(/*! lodash.isequal */ "./node_modules/lodash.isequal/index.js")),t=__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js"),n=e(__webpack_require__(/*! lodash.clonedeep */ "./node_modules/lodash.clonedeep/index.js")),o=__webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");function i(){return(i=Object.assign||function(e){for(var r=1;r<arguments.length;r++){var t=arguments[r];for(var n in t)Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n])}return e}).apply(this,arguments)}function a(){var e=[].slice.call(arguments),a="string"==typeof e[0]?e[0]:null,u=("string"==typeof e[0]?e[1]:e[0])||{},s=a?o.Inertia.restore(a):null,c=n(u),l=null,p=null,f=function(e){return e},d=t.reactive(i({},s?s.data:u,{isDirty:!1,errors:s?s.errors:{},hasErrors:!1,processing:!1,progress:null,wasSuccessful:!1,recentlySuccessful:!1,data:function(){var e=this;return Object.keys(u).reduce(function(r,t){return r[t]=e[t],r},{})},transform:function(e){return f=e,this},defaults:function(e,r){var t;return c=void 0===e?this.data():Object.assign({},n(c),r?((t={})[e]=r,t):e),this},reset:function(){var e=[].slice.call(arguments),r=n(c);return Object.assign(this,0===e.length?r:Object.keys(r).filter(function(r){return e.includes(r)}).reduce(function(e,t){return e[t]=r[t],e},{})),this},setError:function(e,r){var t;return Object.assign(this.errors,r?((t={})[e]=r,t):e),this.hasErrors=Object.keys(this.errors).length>0,this},clearErrors:function(){var e=this,r=[].slice.call(arguments);return this.errors=Object.keys(this.errors).reduce(function(t,n){var o;return i({},t,r.length>0&&!r.includes(n)?((o={})[n]=e.errors[n],o):{})},{}),this.hasErrors=Object.keys(this.errors).length>0,this},submit:function(e,r,t){var a=this,u=this;void 0===t&&(t={});var s=f(this.data()),d=i({},t,{onCancelToken:function(e){if(l=e,t.onCancelToken)return t.onCancelToken(e)},onBefore:function(e){if(u.wasSuccessful=!1,u.recentlySuccessful=!1,clearTimeout(p),t.onBefore)return t.onBefore(e)},onStart:function(e){if(u.processing=!0,t.onStart)return t.onStart(e)},onProgress:function(e){if(u.progress=e,t.onProgress)return t.onProgress(e)},onSuccess:function(e){try{var r=function(e){return c=n(a.data()),a.isDirty=!1,e};return a.processing=!1,a.progress=null,a.clearErrors(),a.wasSuccessful=!0,a.recentlySuccessful=!0,p=setTimeout(function(){return a.recentlySuccessful=!1},2e3),Promise.resolve(t.onSuccess?Promise.resolve(t.onSuccess(e)).then(r):r(null))}catch(e){return Promise.reject(e)}},onError:function(e){if(u.processing=!1,u.progress=null,u.clearErrors().setError(e),t.onError)return t.onError(e)},onCancel:function(){if(u.processing=!1,u.progress=null,t.onCancel)return t.onCancel()},onFinish:function(){if(u.processing=!1,u.progress=null,l=null,t.onFinish)return t.onFinish()}});"delete"===e?o.Inertia.delete(r,i({},d,{data:s})):o.Inertia[e](r,s,d)},get:function(e,r){this.submit("get",e,r)},post:function(e,r){this.submit("post",e,r)},put:function(e,r){this.submit("put",e,r)},patch:function(e,r){this.submit("patch",e,r)},delete:function(e,r){this.submit("delete",e,r)},cancel:function(){l&&l.cancel()},__rememberable:null===a,__remember:function(){return{data:this.data(),errors:this.errors}},__restore:function(e){Object.assign(this,e.data),this.setError(e.errors)}}));return t.watch(d,function(e){d.isDirty=!r(d.data(),c),a&&o.Inertia.remember(n(e.__remember()),a)},{immediate:!0,deep:!0}),d}var u={created:function(){var e=this;if(this.$options.remember){Array.isArray(this.$options.remember)&&(this.$options.remember={data:this.$options.remember}),"string"==typeof this.$options.remember&&(this.$options.remember={data:[this.$options.remember]}),"string"==typeof this.$options.remember.data&&(this.$options.remember={data:[this.$options.remember.data]});var r=this.$options.remember.key instanceof Function?this.$options.remember.key.call(this):this.$options.remember.key,t=o.Inertia.restore(r),a=this.$options.remember.data.filter(function(r){return!(null!==e[r]&&"object"==typeof e[r]&&!1===e[r].__rememberable)}),u=function(r){return null!==e[r]&&"object"==typeof e[r]&&"function"==typeof e[r].__remember&&"function"==typeof e[r].__restore};a.forEach(function(s){void 0!==e[s]&&void 0!==t&&void 0!==t[s]&&(u(s)?e[s].__restore(t[s]):e[s]=t[s]),e.$watch(s,function(){o.Inertia.remember(a.reduce(function(r,t){var o;return i({},r,((o={})[t]=n(u(t)?e[t].__remember():e[t]),o))},{}),r)},{immediate:!0,deep:!0})})}}},s=t.ref(null),c=t.ref({}),l=t.ref(null),p=null,f={name:"Inertia",props:{initialPage:{type:Object,required:!0},initialComponent:{type:Object,required:!1},resolveComponent:{type:Function,required:!1},titleCallback:{type:Function,required:!1,default:function(e){return e}},onHeadUpdate:{type:Function,required:!1,default:function(){return function(){}}}},setup:function(e){var r=e.initialPage,n=e.initialComponent,a=e.resolveComponent,u=e.titleCallback,f=e.onHeadUpdate;s.value=n?t.markRaw(n):null,c.value=r,l.value=null;var d="undefined"==typeof window;return p=o.createHeadManager(d,u,f),d||o.Inertia.init({initialPage:r,resolveComponent:a,swapComponent:function(e){try{return s.value=t.markRaw(e.component),c.value=e.page,l.value=e.preserveState?l.value:Date.now(),Promise.resolve()}catch(e){return Promise.reject(e)}}}),function(){if(s.value){s.value.inheritAttrs=!!s.value.inheritAttrs;var e=t.h(s.value,i({},c.value.props,{key:l.value}));return s.value.layout?"function"==typeof s.value.layout?s.value.layout(t.h,e):(Array.isArray(s.value.layout)?s.value.layout:[s.value.layout]).concat(e).reverse().reduce(function(e,r){return r.inheritAttrs=!!r.inheritAttrs,t.h(r,i({},c.value.props),function(){return e})}):e}}}},d={install:function(e){o.Inertia.form=a,Object.defineProperty(e.config.globalProperties,"$inertia",{get:function(){return o.Inertia}}),Object.defineProperty(e.config.globalProperties,"$page",{get:function(){return c.value}}),Object.defineProperty(e.config.globalProperties,"$headManager",{get:function(){return p}}),e.mixin(u)}},h={props:{title:{type:String,required:!1}},data:function(){return{provider:this.$headManager.createProvider()}},beforeUnmount:function(){this.provider.disconnect()},methods:{isUnaryTag:function(e){return["area","base","br","col","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"].indexOf(e.type)>-1},renderTagStart:function(e){e.props=e.props||{},e.props.inertia=void 0!==e.props["head-key"]?e.props["head-key"]:"";var r=Object.keys(e.props).reduce(function(r,t){var n=e.props[t];return["key","head-key"].includes(t)?r:""===n?r+" "+t:r+" "+t+'="'+n+'"'},"");return"<"+e.type+r+">"},renderTagChildren:function(e){var r=this;return"string"==typeof e.children?e.children:e.children.reduce(function(e,t){return e+r.renderTag(t)},"")},renderTag:function(e){if("Symbol(Text)"===e.type.toString())return e.children;if("Symbol()"===e.type.toString())return"";if("Symbol(Comment)"===e.type.toString())return"";var r=this.renderTagStart(e);return e.children&&(r+=this.renderTagChildren(e)),this.isUnaryTag(e)||(r+="</"+e.type+">"),r},addTitleElement:function(e){return this.title&&!e.find(function(e){return e.startsWith("<title")})&&e.push("<title inertia>"+this.title+"</title>"),e},renderNodes:function(e){var r=this;return this.addTitleElement(e.flatMap(function(e){return"Symbol(Fragment)"===e.type.toString()?e.children:e}).map(function(e){return r.renderTag(e)}).filter(function(e){return e}))}},render:function(){this.provider.update(this.renderNodes(this.$slots.default?this.$slots.default():[]))}},m={name:"InertiaLink",props:{as:{type:String,default:"a"},data:{type:Object,default:function(){return{}}},href:{type:String},method:{type:String,default:"get"},replace:{type:Boolean,default:!1},preserveScroll:{type:Boolean,default:!1},preserveState:{type:Boolean,default:null},only:{type:Array,default:function(){return[]}},headers:{type:Object,default:function(){return{}}},queryStringArrayFormat:{type:String,default:"brackets"}},setup:function(e,r){var n=r.slots,a=r.attrs;return function(e){var r=e.as.toLowerCase(),u=e.method.toLowerCase(),s=o.mergeDataIntoQueryString(u,e.href||"",e.data,e.queryStringArrayFormat),c=s[0],l=s[1];return"a"===r&&"get"!==u&&console.warn('Creating POST/PUT/PATCH/DELETE <a> links is discouraged as it causes "Open Link in New Tab/Window" accessibility issues.\n\nPlease specify a more appropriate element using the "as" attribute. For example:\n\n<Link href="'+c+'" method="'+u+'" as="button">...</Link>'),t.h(e.as,i({},a,"a"===r?{href:c}:{},{onClick:function(r){var t;o.shouldIntercept(r)&&(r.preventDefault(),o.Inertia.visit(c,{data:l,method:u,replace:e.replace,preserveScroll:e.preserveScroll,preserveState:null!=(t=e.preserveState)?t:"get"!==u,only:e.only,headers:e.headers,onCancelToken:a.onCancelToken||function(){return{}},onBefore:a.onBefore||function(){return{}},onStart:a.onStart||function(){return{}},onProgress:a.onProgress||function(){return{}},onFinish:a.onFinish||function(){return{}},onCancel:a.onCancel||function(){return{}},onSuccess:a.onSuccess||function(){return{}},onError:a.onError||function(){return{}}}))}}),n)}}};exports.App=f,exports.Head=h,exports.InertiaApp=f,exports.InertiaHead=h,exports.InertiaLink=m,exports.Link=m,exports.app=f,exports.createInertiaApp=function(e){try{var r,n,o,i,a,u,s;n=void 0===(r=e.id)?"app":r,o=e.resolve,i=e.setup,a=e.title,u=e.page,s=e.render;var c="undefined"==typeof window,l=c?null:document.getElementById(n),p=u||JSON.parse(l.dataset.page),h=function(e){return Promise.resolve(o(e)).then(function(e){return e.default||e})},m=[];return Promise.resolve(h(p.component).then(function(e){return i({el:l,app:f,App:f,props:{initialPage:p,initialComponent:e,resolveComponent:h,titleCallback:a,onHeadUpdate:c?function(e){return m=e}:null},plugin:d})})).then(function(e){return function(){if(c)return Promise.resolve(s(t.createSSRApp({render:function(){return t.h("div",{id:n,"data-page":JSON.stringify(p),innerHTML:s(e)})}}))).then(function(e){return{head:m,body:e}})}()})}catch(e){return Promise.reject(e)}},exports.link=m,exports.plugin=d,exports.useForm=a,exports.usePage=function(){return{props:t.computed(function(){return c.value.props}),url:t.computed(function(){return c.value.url}),component:t.computed(function(){return c.value.component}),version:t.computed(function(){return c.value.version})}},exports.useRemember=function(e,r){if("object"==typeof e&&null!==e&&!1===e.__rememberable)return e;var i=o.Inertia.restore(r),a=t.isReactive(e)?t.reactive:t.ref,u="function"==typeof e.__remember&&"function"==typeof e.__restore,s=void 0===i?e:a(u?e.__restore(i):i);return t.watch(s,function(t){o.Inertia.remember(n(u?e.__remember():t),r)},{immediate:!0,deep:!0}),s};
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/@inertiajs/inertia/dist/index.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@inertiajs/inertia/dist/index.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+function e(e){return e&&"object"==typeof e&&"default"in e?e.default:e}var t=e(__webpack_require__(/*! axios */ "./node_modules/axios/index.js")),n=__webpack_require__(/*! qs */ "./node_modules/qs/lib/index.js"),i=e(__webpack_require__(/*! deepmerge */ "./node_modules/deepmerge/dist/cjs.js"));function r(){return(r=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var i in n)Object.prototype.hasOwnProperty.call(n,i)&&(e[i]=n[i])}return e}).apply(this,arguments)}var o,s={modal:null,listener:null,show:function(e){var t=this;"object"==typeof e&&(e="All Inertia requests must receive a valid Inertia response, however a plain JSON response was received.<hr>"+JSON.stringify(e));var n=document.createElement("html");n.innerHTML=e,n.querySelectorAll("a").forEach(function(e){return e.setAttribute("target","_top")}),this.modal=document.createElement("div"),this.modal.style.position="fixed",this.modal.style.width="100vw",this.modal.style.height="100vh",this.modal.style.padding="50px",this.modal.style.boxSizing="border-box",this.modal.style.backgroundColor="rgba(0, 0, 0, .6)",this.modal.style.zIndex=2e5,this.modal.addEventListener("click",function(){return t.hide()});var i=document.createElement("iframe");if(i.style.backgroundColor="white",i.style.borderRadius="5px",i.style.width="100%",i.style.height="100%",this.modal.appendChild(i),document.body.prepend(this.modal),document.body.style.overflow="hidden",!i.contentWindow)throw new Error("iframe not yet ready.");i.contentWindow.document.open(),i.contentWindow.document.write(n.outerHTML),i.contentWindow.document.close(),this.listener=this.hideOnEscape.bind(this),document.addEventListener("keydown",this.listener)},hide:function(){this.modal.outerHTML="",this.modal=null,document.body.style.overflow="visible",document.removeEventListener("keydown",this.listener)},hideOnEscape:function(e){27===e.keyCode&&this.hide()}};function a(e,t){var n;return function(){var i=arguments,r=this;clearTimeout(n),n=setTimeout(function(){return e.apply(r,[].slice.call(i))},t)}}function c(e,t,n){for(var i in void 0===t&&(t=new FormData),void 0===n&&(n=null),e=e||{})Object.prototype.hasOwnProperty.call(e,i)&&d(t,l(n,i),e[i]);return t}function l(e,t){return e?e+"["+t+"]":t}function d(e,t,n){return Array.isArray(n)?Array.from(n.keys()).forEach(function(i){return d(e,l(t,i.toString()),n[i])}):n instanceof Date?e.append(t,n.toISOString()):n instanceof File?e.append(t,n,n.name):n instanceof Blob?e.append(t,n):"boolean"==typeof n?e.append(t,n?"1":"0"):"string"==typeof n?e.append(t,n):"number"==typeof n?e.append(t,""+n):null==n?e.append(t,""):void c(n,e,t)}function u(e){return new URL(e.toString(),window.location.toString())}function h(e,t,r,o){void 0===o&&(o="brackets");var s=/^https?:\/\//.test(t.toString()),a=s||t.toString().startsWith("/"),c=!a&&!t.toString().startsWith("#")&&!t.toString().startsWith("?"),l=t.toString().includes("?")||e===exports.Method.GET&&Object.keys(r).length,d=t.toString().includes("#"),u=new URL(t.toString(),"http://localhost");return e===exports.Method.GET&&Object.keys(r).length&&(u.search=n.stringify(i(n.parse(u.search,{ignoreQueryPrefix:!0}),r),{encodeValuesOnly:!0,arrayFormat:o}),r={}),[[s?u.protocol+"//"+u.host:"",a?u.pathname:"",c?u.pathname.substring(1):"",l?u.search:"",d?u.hash:""].join(""),r]}function p(e){return(e=new URL(e.href)).hash="",e}function f(e,t){return document.dispatchEvent(new CustomEvent("inertia:"+e,t))}(o=exports.Method||(exports.Method={})).GET="get",o.POST="post",o.PUT="put",o.PATCH="patch",o.DELETE="delete";var v=function(e){return f("finish",{detail:{visit:e}})},m=function(e){return f("navigate",{detail:{page:e}})},g="undefined"==typeof window,w=function(){function e(){this.visitId=null}var n=e.prototype;return n.init=function(e){var t=e.resolveComponent,n=e.swapComponent;this.page=e.initialPage,this.resolveComponent=t,this.swapComponent=n,this.isBackForwardVisit()?this.handleBackForwardVisit(this.page):this.isLocationVisit()?this.handleLocationVisit(this.page):this.handleInitialPageVisit(this.page),this.setupEventListeners()},n.handleInitialPageVisit=function(e){this.page.url+=window.location.hash,this.setPage(e,{preserveState:!0}).then(function(){return m(e)})},n.setupEventListeners=function(){window.addEventListener("popstate",this.handlePopstateEvent.bind(this)),document.addEventListener("scroll",a(this.handleScrollEvent.bind(this),100),!0)},n.scrollRegions=function(){return document.querySelectorAll("[scroll-region]")},n.handleScrollEvent=function(e){"function"==typeof e.target.hasAttribute&&e.target.hasAttribute("scroll-region")&&this.saveScrollPositions()},n.saveScrollPositions=function(){this.replaceState(r({},this.page,{scrollRegions:Array.from(this.scrollRegions()).map(function(e){return{top:e.scrollTop,left:e.scrollLeft}})}))},n.resetScrollPositions=function(){var e;window.scrollTo(0,0),this.scrollRegions().forEach(function(e){"function"==typeof e.scrollTo?e.scrollTo(0,0):(e.scrollTop=0,e.scrollLeft=0)}),this.saveScrollPositions(),window.location.hash&&(null==(e=document.getElementById(window.location.hash.slice(1)))||e.scrollIntoView())},n.restoreScrollPositions=function(){var e=this;this.page.scrollRegions&&this.scrollRegions().forEach(function(t,n){var i=e.page.scrollRegions[n];i&&("function"==typeof t.scrollTo?t.scrollTo(i.left,i.top):(t.scrollTop=i.top,t.scrollLeft=i.left))})},n.isBackForwardVisit=function(){return window.history.state&&window.performance&&window.performance.getEntriesByType("navigation").length>0&&"back_forward"===window.performance.getEntriesByType("navigation")[0].type},n.handleBackForwardVisit=function(e){var t=this;window.history.state.version=e.version,this.setPage(window.history.state,{preserveScroll:!0,preserveState:!0}).then(function(){t.restoreScrollPositions(),m(e)})},n.locationVisit=function(e,t){try{window.sessionStorage.setItem("inertiaLocationVisit",JSON.stringify({preserveScroll:t})),window.location.href=e.href,p(window.location).href===p(e).href&&window.location.reload()}catch(e){return!1}},n.isLocationVisit=function(){try{return null!==window.sessionStorage.getItem("inertiaLocationVisit")}catch(e){return!1}},n.handleLocationVisit=function(e){var t,n,i,r,o=this,s=JSON.parse(window.sessionStorage.getItem("inertiaLocationVisit")||"");window.sessionStorage.removeItem("inertiaLocationVisit"),e.url+=window.location.hash,e.rememberedState=null!=(t=null==(n=window.history.state)?void 0:n.rememberedState)?t:{},e.scrollRegions=null!=(i=null==(r=window.history.state)?void 0:r.scrollRegions)?i:[],this.setPage(e,{preserveScroll:s.preserveScroll,preserveState:!0}).then(function(){s.preserveScroll&&o.restoreScrollPositions(),m(e)})},n.isLocationVisitResponse=function(e){return e&&409===e.status&&e.headers["x-inertia-location"]},n.isInertiaResponse=function(e){return null==e?void 0:e.headers["x-inertia"]},n.createVisitId=function(){return this.visitId={},this.visitId},n.cancelVisit=function(e,t){var n=t.cancelled,i=void 0!==n&&n,r=t.interrupted,o=void 0!==r&&r;!e||e.completed||e.cancelled||e.interrupted||(e.cancelToken.cancel(),e.onCancel(),e.completed=!1,e.cancelled=i,e.interrupted=o,v(e),e.onFinish(e))},n.finishVisit=function(e){e.cancelled||e.interrupted||(e.completed=!0,e.cancelled=!1,e.interrupted=!1,v(e),e.onFinish(e))},n.resolvePreserveOption=function(e,t){return"function"==typeof e?e(t):"errors"===e?Object.keys(t.props.errors||{}).length>0:e},n.visit=function(e,n){var i=this,o=void 0===n?{}:n,a=o.method,l=void 0===a?exports.Method.GET:a,d=o.data,v=void 0===d?{}:d,m=o.replace,g=void 0!==m&&m,w=o.preserveScroll,y=void 0!==w&&w,S=o.preserveState,b=void 0!==S&&S,E=o.only,P=void 0===E?[]:E,T=o.headers,I=void 0===T?{}:T,x=o.errorBag,V=void 0===x?"":x,L=o.forceFormData,O=void 0!==L&&L,k=o.onCancelToken,C=void 0===k?function(){}:k,M=o.onBefore,A=void 0===M?function(){}:M,j=o.onStart,F=void 0===j?function(){}:j,R=o.onProgress,D=void 0===R?function(){}:R,B=o.onFinish,q=void 0===B?function(){}:B,N=o.onCancel,H=void 0===N?function(){}:N,W=o.onSuccess,G=void 0===W?function(){}:W,U=o.onError,X=void 0===U?function(){}:U,J=o.queryStringArrayFormat,K=void 0===J?"brackets":J,_="string"==typeof e?u(e):e;if(!function e(t){return t instanceof File||t instanceof Blob||t instanceof FileList&&t.length>0||t instanceof FormData&&Array.from(t.values()).some(function(t){return e(t)})||"object"==typeof t&&null!==t&&Object.values(t).some(function(t){return e(t)})}(v)&&!O||v instanceof FormData||(v=c(v)),!(v instanceof FormData)){var z=h(l,_,v,K),Q=z[1];_=u(z[0]),v=Q}var Y={url:_,method:l,data:v,replace:g,preserveScroll:y,preserveState:b,only:P,headers:I,errorBag:V,forceFormData:O,queryStringArrayFormat:K,cancelled:!1,completed:!1,interrupted:!1};if(!1!==A(Y)&&function(e){return f("before",{cancelable:!0,detail:{visit:e}})}(Y)){this.activeVisit&&this.cancelVisit(this.activeVisit,{interrupted:!0}),this.saveScrollPositions();var Z=this.createVisitId();this.activeVisit=r({},Y,{onCancelToken:C,onBefore:A,onStart:F,onProgress:D,onFinish:q,onCancel:H,onSuccess:G,onError:X,queryStringArrayFormat:K,cancelToken:t.CancelToken.source()}),C({cancel:function(){i.activeVisit&&i.cancelVisit(i.activeVisit,{cancelled:!0})}}),function(e){f("start",{detail:{visit:e}})}(Y),F(Y),t({method:l,url:p(_).href,data:l===exports.Method.GET?{}:v,params:l===exports.Method.GET?v:{},cancelToken:this.activeVisit.cancelToken.token,headers:r({},I,{Accept:"text/html, application/xhtml+xml","X-Requested-With":"XMLHttpRequest","X-Inertia":!0},P.length?{"X-Inertia-Partial-Component":this.page.component,"X-Inertia-Partial-Data":P.join(",")}:{},V&&V.length?{"X-Inertia-Error-Bag":V}:{},this.page.version?{"X-Inertia-Version":this.page.version}:{}),onUploadProgress:function(e){v instanceof FormData&&(e.percentage=Math.round(e.loaded/e.total*100),function(e){f("progress",{detail:{progress:e}})}(e),D(e))}}).then(function(e){var t;if(!i.isInertiaResponse(e))return Promise.reject({response:e});var n=e.data;P.length&&n.component===i.page.component&&(n.props=r({},i.page.props,n.props)),y=i.resolvePreserveOption(y,n),(b=i.resolvePreserveOption(b,n))&&null!=(t=window.history.state)&&t.rememberedState&&n.component===i.page.component&&(n.rememberedState=window.history.state.rememberedState);var o=_,s=u(n.url);return o.hash&&!s.hash&&p(o).href===s.href&&(s.hash=o.hash,n.url=s.href),i.setPage(n,{visitId:Z,replace:g,preserveScroll:y,preserveState:b})}).then(function(){var e=i.page.props.errors||{};if(Object.keys(e).length>0){var t=V?e[V]?e[V]:{}:e;return function(e){f("error",{detail:{errors:e}})}(t),X(t)}return f("success",{detail:{page:i.page}}),G(i.page)}).catch(function(e){if(i.isInertiaResponse(e.response))return i.setPage(e.response.data,{visitId:Z});if(i.isLocationVisitResponse(e.response)){var t=u(e.response.headers["x-inertia-location"]),n=_;n.hash&&!t.hash&&p(n).href===t.href&&(t.hash=n.hash),i.locationVisit(t,!0===y)}else{if(!e.response)return Promise.reject(e);f("invalid",{cancelable:!0,detail:{response:e.response}})&&s.show(e.response.data)}}).then(function(){i.activeVisit&&i.finishVisit(i.activeVisit)}).catch(function(e){if(!t.isCancel(e)){var n=f("exception",{cancelable:!0,detail:{exception:e}});if(i.activeVisit&&i.finishVisit(i.activeVisit),n)return Promise.reject(e)}})}},n.setPage=function(e,t){var n=this,i=void 0===t?{}:t,r=i.visitId,o=void 0===r?this.createVisitId():r,s=i.replace,a=void 0!==s&&s,c=i.preserveScroll,l=void 0!==c&&c,d=i.preserveState,h=void 0!==d&&d;return Promise.resolve(this.resolveComponent(e.component)).then(function(t){o===n.visitId&&(e.scrollRegions=e.scrollRegions||[],e.rememberedState=e.rememberedState||{},(a=a||u(e.url).href===window.location.href)?n.replaceState(e):n.pushState(e),n.swapComponent({component:t,page:e,preserveState:h}).then(function(){l||n.resetScrollPositions(),a||m(e)}))})},n.pushState=function(e){this.page=e,window.history.pushState(e,"",e.url)},n.replaceState=function(e){this.page=e,window.history.replaceState(e,"",e.url)},n.handlePopstateEvent=function(e){var t=this;if(null!==e.state){var n=e.state,i=this.createVisitId();Promise.resolve(this.resolveComponent(n.component)).then(function(e){i===t.visitId&&(t.page=n,t.swapComponent({component:e,page:n,preserveState:!1}).then(function(){t.restoreScrollPositions(),m(n)}))})}else{var o=u(this.page.url);o.hash=window.location.hash,this.replaceState(r({},this.page,{url:o.href})),this.resetScrollPositions()}},n.get=function(e,t,n){return void 0===t&&(t={}),void 0===n&&(n={}),this.visit(e,r({},n,{method:exports.Method.GET,data:t}))},n.reload=function(e){return void 0===e&&(e={}),this.visit(window.location.href,r({},e,{preserveScroll:!0,preserveState:!0}))},n.replace=function(e,t){var n;return void 0===t&&(t={}),console.warn("Inertia.replace() has been deprecated and will be removed in a future release. Please use Inertia."+(null!=(n=t.method)?n:"get")+"() instead."),this.visit(e,r({preserveState:!0},t,{replace:!0}))},n.post=function(e,t,n){return void 0===t&&(t={}),void 0===n&&(n={}),this.visit(e,r({preserveState:!0},n,{method:exports.Method.POST,data:t}))},n.put=function(e,t,n){return void 0===t&&(t={}),void 0===n&&(n={}),this.visit(e,r({preserveState:!0},n,{method:exports.Method.PUT,data:t}))},n.patch=function(e,t,n){return void 0===t&&(t={}),void 0===n&&(n={}),this.visit(e,r({preserveState:!0},n,{method:exports.Method.PATCH,data:t}))},n.delete=function(e,t){return void 0===t&&(t={}),this.visit(e,r({preserveState:!0},t,{method:exports.Method.DELETE}))},n.remember=function(e,t){var n,i;void 0===t&&(t="default"),g||this.replaceState(r({},this.page,{rememberedState:r({},null==(n=this.page)?void 0:n.rememberedState,(i={},i[t]=e,i))}))},n.restore=function(e){var t,n;if(void 0===e&&(e="default"),!g)return null==(t=window.history.state)||null==(n=t.rememberedState)?void 0:n[e]},n.on=function(e,t){var n=function(e){var n=t(e);e.cancelable&&!e.defaultPrevented&&!1===n&&e.preventDefault()};return document.addEventListener("inertia:"+e,n),function(){return document.removeEventListener("inertia:"+e,n)}},e}(),y={buildDOMElement:function(e){var t=document.createElement("template");t.innerHTML=e;var n=t.content.firstChild;if(!e.startsWith("<script "))return n;var i=document.createElement("script");return i.innerHTML=n.innerHTML,n.getAttributeNames().forEach(function(e){i.setAttribute(e,n.getAttribute(e)||"")}),i},isInertiaManagedElement:function(e){return e.nodeType===Node.ELEMENT_NODE&&null!==e.getAttribute("inertia")},findMatchingElementIndex:function(e,t){var n=e.getAttribute("inertia");return null!==n?t.findIndex(function(e){return e.getAttribute("inertia")===n}):-1},update:a(function(e){var t=this,n=e.map(function(e){return t.buildDOMElement(e)});Array.from(document.head.childNodes).filter(function(e){return t.isInertiaManagedElement(e)}).forEach(function(e){var i=t.findMatchingElementIndex(e,n);if(-1!==i){var r,o=n.splice(i,1)[0];o&&!e.isEqualNode(o)&&(null==e||null==(r=e.parentNode)||r.replaceChild(o,e))}else{var s;null==e||null==(s=e.parentNode)||s.removeChild(e)}}),n.forEach(function(e){return document.head.appendChild(e)})},1)},S=new w;exports.Inertia=S,exports.createHeadManager=function(e,t,n){var i={},r=0;function o(){var e=Object.values(i).reduce(function(e,t){return e.concat(t)},[]).reduce(function(e,n){if(-1===n.indexOf("<"))return e;if(0===n.indexOf("<title ")){var i=n.match(/(<title [^>]+>)(.*?)(<\/title>)/);return e.title=i?""+i[1]+t(i[2])+i[3]:n,e}var r=n.match(/ inertia="[^"]+"/);return r?e[r[0]]=n:e[Object.keys(e).length]=n,e},{});return Object.values(e)}function s(){e?n(o()):y.update(o())}return{createProvider:function(){var e=function(){var e=r+=1;return i[e]=[],e.toString()}();return{update:function(t){return function(e,t){void 0===t&&(t=[]),null!==e&&Object.keys(i).indexOf(e)>-1&&(i[e]=t),s()}(e,t)},disconnect:function(){return function(e){null!==e&&-1!==Object.keys(i).indexOf(e)&&(delete i[e],s())}(e)}}}}},exports.hrefToUrl=u,exports.mergeDataIntoQueryString=h,exports.shouldIntercept=function(e){var t="a"===e.currentTarget.tagName.toLowerCase();return!(e.target&&null!=e&&e.target.isContentEditable||e.defaultPrevented||t&&e.which>1||t&&e.altKey||t&&e.ctrlKey||t&&e.metaKey||t&&e.shiftKey)},exports.urlWithoutHash=p;
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/@inertiajs/progress/dist/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@inertiajs/progress/dist/index.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var n,e=(n=__webpack_require__(/*! nprogress */ "./node_modules/nprogress/nprogress.js"))&&"object"==typeof n&&"default"in n?n.default:n,t=null;function r(n){document.addEventListener("inertia:start",o.bind(null,n)),document.addEventListener("inertia:progress",i),document.addEventListener("inertia:finish",s)}function o(n){t=setTimeout(function(){return e.start()},n)}function i(n){e.isStarted()&&n.detail.progress.percentage&&e.set(Math.max(e.status,n.detail.progress.percentage/100*.9))}function s(n){clearTimeout(t),e.isStarted()&&(n.detail.visit.completed?e.done():n.detail.visit.interrupted?e.set(0):n.detail.visit.cancelled&&(e.done(),e.remove()))}exports.InertiaProgress={init:function(n){var t=void 0===n?{}:n,o=t.delay,i=t.color,s=void 0===i?"#29d":i,a=t.includeCSS,p=void 0===a||a,d=t.showSpinner,l=void 0!==d&&d;r(void 0===o?250:o),e.configure({showSpinner:l}),p&&function(n){var e=document.createElement("style");e.type="text/css",e.textContent="\n    #nprogress {\n      pointer-events: none;\n    }\n\n    #nprogress .bar {\n      background: "+n+";\n\n      position: fixed;\n      z-index: 1031;\n      top: 0;\n      left: 0;\n\n      width: 100%;\n      height: 2px;\n    }\n\n    #nprogress .peg {\n      display: block;\n      position: absolute;\n      right: 0px;\n      width: 100px;\n      height: 100%;\n      box-shadow: 0 0 10px "+n+", 0 0 5px "+n+";\n      opacity: 1.0;\n\n      -webkit-transform: rotate(3deg) translate(0px, -4px);\n          -ms-transform: rotate(3deg) translate(0px, -4px);\n              transform: rotate(3deg) translate(0px, -4px);\n    }\n\n    #nprogress .spinner {\n      display: block;\n      position: fixed;\n      z-index: 1031;\n      top: 15px;\n      right: 15px;\n    }\n\n    #nprogress .spinner-icon {\n      width: 18px;\n      height: 18px;\n      box-sizing: border-box;\n\n      border: solid 2px transparent;\n      border-top-color: "+n+";\n      border-left-color: "+n+";\n      border-radius: 50%;\n\n      -webkit-animation: nprogress-spinner 400ms linear infinite;\n              animation: nprogress-spinner 400ms linear infinite;\n    }\n\n    .nprogress-custom-parent {\n      overflow: hidden;\n      position: relative;\n    }\n\n    .nprogress-custom-parent #nprogress .spinner,\n    .nprogress-custom-parent #nprogress .bar {\n      position: absolute;\n    }\n\n    @-webkit-keyframes nprogress-spinner {\n      0%   { -webkit-transform: rotate(0deg); }\n      100% { -webkit-transform: rotate(360deg); }\n    }\n    @keyframes nprogress-spinner {\n      0%   { transform: rotate(0deg); }\n      100% { transform: rotate(360deg); }\n    }\n  ",document.head.appendChild(e)}(s)}};
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/@vue/compiler-core/dist/compiler-core.esm-bundler.js":
 /*!***************************************************************************!*\
   !*** ./node_modules/@vue/compiler-core/dist/compiler-core.esm-bundler.js ***!
@@ -5637,263 +5673,6 @@ function parse(template, options = {}) {
 }
 
 
-
-
-/***/ }),
-
-/***/ "./node_modules/@vue/devtools-api/lib/esm/const.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/@vue/devtools-api/lib/esm/const.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "HOOK_PLUGIN_SETTINGS_SET": () => (/* binding */ HOOK_PLUGIN_SETTINGS_SET),
-/* harmony export */   "HOOK_SETUP": () => (/* binding */ HOOK_SETUP)
-/* harmony export */ });
-const HOOK_SETUP = 'devtools-plugin:setup';
-const HOOK_PLUGIN_SETTINGS_SET = 'plugin:settings:set';
-
-
-/***/ }),
-
-/***/ "./node_modules/@vue/devtools-api/lib/esm/env.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/@vue/devtools-api/lib/esm/env.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getDevtoolsGlobalHook": () => (/* binding */ getDevtoolsGlobalHook),
-/* harmony export */   "getTarget": () => (/* binding */ getTarget),
-/* harmony export */   "isProxyAvailable": () => (/* binding */ isProxyAvailable)
-/* harmony export */ });
-function getDevtoolsGlobalHook() {
-    return getTarget().__VUE_DEVTOOLS_GLOBAL_HOOK__;
-}
-function getTarget() {
-    // @ts-ignore
-    return (typeof navigator !== 'undefined' && typeof window !== 'undefined')
-        ? window
-        : typeof __webpack_require__.g !== 'undefined'
-            ? __webpack_require__.g
-            : {};
-}
-const isProxyAvailable = typeof Proxy === 'function';
-
-
-/***/ }),
-
-/***/ "./node_modules/@vue/devtools-api/lib/esm/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/@vue/devtools-api/lib/esm/index.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "isPerformanceSupported": () => (/* reexport safe */ _time_js__WEBPACK_IMPORTED_MODULE_0__.isPerformanceSupported),
-/* harmony export */   "now": () => (/* reexport safe */ _time_js__WEBPACK_IMPORTED_MODULE_0__.now),
-/* harmony export */   "setupDevtoolsPlugin": () => (/* binding */ setupDevtoolsPlugin)
-/* harmony export */ });
-/* harmony import */ var _env_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./env.js */ "./node_modules/@vue/devtools-api/lib/esm/env.js");
-/* harmony import */ var _const_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./const.js */ "./node_modules/@vue/devtools-api/lib/esm/const.js");
-/* harmony import */ var _proxy_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./proxy.js */ "./node_modules/@vue/devtools-api/lib/esm/proxy.js");
-/* harmony import */ var _time_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./time.js */ "./node_modules/@vue/devtools-api/lib/esm/time.js");
-
-
-
-
-
-
-function setupDevtoolsPlugin(pluginDescriptor, setupFn) {
-    const descriptor = pluginDescriptor;
-    const target = (0,_env_js__WEBPACK_IMPORTED_MODULE_1__.getTarget)();
-    const hook = (0,_env_js__WEBPACK_IMPORTED_MODULE_1__.getDevtoolsGlobalHook)();
-    const enableProxy = _env_js__WEBPACK_IMPORTED_MODULE_1__.isProxyAvailable && descriptor.enableEarlyProxy;
-    if (hook && (target.__VUE_DEVTOOLS_PLUGIN_API_AVAILABLE__ || !enableProxy)) {
-        hook.emit(_const_js__WEBPACK_IMPORTED_MODULE_2__.HOOK_SETUP, pluginDescriptor, setupFn);
-    }
-    else {
-        const proxy = enableProxy ? new _proxy_js__WEBPACK_IMPORTED_MODULE_3__.ApiProxy(descriptor, hook) : null;
-        const list = target.__VUE_DEVTOOLS_PLUGINS__ = target.__VUE_DEVTOOLS_PLUGINS__ || [];
-        list.push({
-            pluginDescriptor: descriptor,
-            setupFn,
-            proxy,
-        });
-        if (proxy)
-            setupFn(proxy.proxiedTarget);
-    }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/@vue/devtools-api/lib/esm/proxy.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/@vue/devtools-api/lib/esm/proxy.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ApiProxy": () => (/* binding */ ApiProxy)
-/* harmony export */ });
-/* harmony import */ var _const_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./const.js */ "./node_modules/@vue/devtools-api/lib/esm/const.js");
-/* harmony import */ var _time_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./time.js */ "./node_modules/@vue/devtools-api/lib/esm/time.js");
-
-
-class ApiProxy {
-    constructor(plugin, hook) {
-        this.target = null;
-        this.targetQueue = [];
-        this.onQueue = [];
-        this.plugin = plugin;
-        this.hook = hook;
-        const defaultSettings = {};
-        if (plugin.settings) {
-            for (const id in plugin.settings) {
-                const item = plugin.settings[id];
-                defaultSettings[id] = item.defaultValue;
-            }
-        }
-        const localSettingsSaveId = `__vue-devtools-plugin-settings__${plugin.id}`;
-        let currentSettings = Object.assign({}, defaultSettings);
-        try {
-            const raw = localStorage.getItem(localSettingsSaveId);
-            const data = JSON.parse(raw);
-            Object.assign(currentSettings, data);
-        }
-        catch (e) {
-            // noop
-        }
-        this.fallbacks = {
-            getSettings() {
-                return currentSettings;
-            },
-            setSettings(value) {
-                try {
-                    localStorage.setItem(localSettingsSaveId, JSON.stringify(value));
-                }
-                catch (e) {
-                    // noop
-                }
-                currentSettings = value;
-            },
-            now() {
-                return (0,_time_js__WEBPACK_IMPORTED_MODULE_0__.now)();
-            },
-        };
-        if (hook) {
-            hook.on(_const_js__WEBPACK_IMPORTED_MODULE_1__.HOOK_PLUGIN_SETTINGS_SET, (pluginId, value) => {
-                if (pluginId === this.plugin.id) {
-                    this.fallbacks.setSettings(value);
-                }
-            });
-        }
-        this.proxiedOn = new Proxy({}, {
-            get: (_target, prop) => {
-                if (this.target) {
-                    return this.target.on[prop];
-                }
-                else {
-                    return (...args) => {
-                        this.onQueue.push({
-                            method: prop,
-                            args,
-                        });
-                    };
-                }
-            },
-        });
-        this.proxiedTarget = new Proxy({}, {
-            get: (_target, prop) => {
-                if (this.target) {
-                    return this.target[prop];
-                }
-                else if (prop === 'on') {
-                    return this.proxiedOn;
-                }
-                else if (Object.keys(this.fallbacks).includes(prop)) {
-                    return (...args) => {
-                        this.targetQueue.push({
-                            method: prop,
-                            args,
-                            resolve: () => { },
-                        });
-                        return this.fallbacks[prop](...args);
-                    };
-                }
-                else {
-                    return (...args) => {
-                        return new Promise(resolve => {
-                            this.targetQueue.push({
-                                method: prop,
-                                args,
-                                resolve,
-                            });
-                        });
-                    };
-                }
-            },
-        });
-    }
-    async setRealTarget(target) {
-        this.target = target;
-        for (const item of this.onQueue) {
-            this.target.on[item.method](...item.args);
-        }
-        for (const item of this.targetQueue) {
-            item.resolve(await this.target[item.method](...item.args));
-        }
-    }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/@vue/devtools-api/lib/esm/time.js":
-/*!********************************************************!*\
-  !*** ./node_modules/@vue/devtools-api/lib/esm/time.js ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "isPerformanceSupported": () => (/* binding */ isPerformanceSupported),
-/* harmony export */   "now": () => (/* binding */ now)
-/* harmony export */ });
-let supported;
-let perf;
-function isPerformanceSupported() {
-    var _a;
-    if (supported !== undefined) {
-        return supported;
-    }
-    if (typeof window !== 'undefined' && window.performance) {
-        supported = true;
-        perf = window.performance;
-    }
-    else if (typeof __webpack_require__.g !== 'undefined' && ((_a = __webpack_require__.g.perf_hooks) === null || _a === void 0 ? void 0 : _a.performance)) {
-        supported = true;
-        perf = __webpack_require__.g.perf_hooks.performance;
-    }
-    else {
-        supported = false;
-    }
-    return supported;
-}
-function now() {
-    return isPerformanceSupported() ? perf.now() : Date.now();
-}
 
 
 /***/ }),
@@ -19724,107 +19503,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/beer-board/BeerBoardIndex.vue?vue&type=script&lang=js":
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/beer-board/BeerBoardIndex.vue?vue&type=script&lang=js ***!
-  \*******************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _composables_beer_board__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../composables/beer-board */ "./resources/js/composables/beer-board.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  setup: function setup() {
-    var _useBeerBoard = (0,_composables_beer_board__WEBPACK_IMPORTED_MODULE_0__["default"])(),
-        beers = _useBeerBoard.beers,
-        getBeers = _useBeerBoard.getBeers;
-
-    (0,vue__WEBPACK_IMPORTED_MODULE_1__.onMounted)(getBeers);
-    return {
-      beers: beers
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/beer-board/BeerBoardIndex.vue?vue&type=template&id=819d15f2":
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/beer-board/BeerBoardIndex.vue?vue&type=template&id=819d15f2 ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render)
-/* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-
-var _hoisted_1 = {
-  "class": "border-collapse table-auto w-full text-sm"
-};
-
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-  "class": "border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
-}, "Name"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-  "class": "border-b dark:border-slate-600 font-medium p-4 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
-}, "Style"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-  "class": "border-b dark:border-slate-600 font-medium p-4 pr-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
-}, "ABV"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-  "class": "border-b dark:border-slate-600 font-medium p-4 pr-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
-}, "Brewery"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-  "class": "border-b dark:border-slate-600 font-medium p-4 pr-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
-}, "Price")])], -1
-/* HOISTED */
-);
-
-var _hoisted_3 = {
-  "class": "bg-white dark:bg-slate-800"
-};
-var _hoisted_4 = {
-  "class": "border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-};
-var _hoisted_5 = {
-  "class": "border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"
-};
-var _hoisted_6 = {
-  "class": "border-b border-slate-100 dark:border-slate-700 p-4 pr-8 text-slate-500 dark:text-slate-400"
-};
-var _hoisted_7 = {
-  "class": "border-b border-slate-100 dark:border-slate-700 p-4 pr-8 text-slate-500 dark:text-slate-400"
-};
-var _hoisted_8 = {
-  "class": "border-b border-slate-100 dark:border-slate-700 p-4 pr-8 text-slate-500 dark:text-slate-400"
-};
-function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", _hoisted_3, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.beers, function (beer) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
-      key: beer.id
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(beer.name), 1
-    /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(beer.style), 1
-    /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(beer.abv), 1
-    /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(beer.brewery), 1
-    /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_8, " £" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(beer.price), 1
-    /* TEXT */
-    )]);
-  }), 128
-  /* KEYED_FRAGMENT */
-  ))])])]);
-}
-
-/***/ }),
-
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -19833,20 +19511,46 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./router */ "./resources/js/router/index.js");
-/* harmony import */ var _components_beer_board_BeerBoardIndex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/beer-board/BeerBoardIndex */ "./resources/js/components/beer-board/BeerBoardIndex.vue");
-// app.js
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+/* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+/* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_bootstrap__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/app.css */ "./resources/css/app.css");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
+/* harmony import */ var _inertiajs_progress__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @inertiajs/progress */ "./node_modules/@inertiajs/progress/dist/index.js");
+/* harmony import */ var laravel_vite_plugin_inertia_helpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! laravel-vite-plugin/inertia-helpers */ "./node_modules/laravel-vite-plugin/inertia-helpers/index.js");
+/* harmony import */ var _vendor_tightenco_ziggy_dist_vue_m__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../vendor/tightenco/ziggy/dist/vue.m */ "./vendor/tightenco/ziggy/dist/vue.m.js");
+var _window$document$getE;
 
 
 
 
-(0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({
-  components: {
-    BeerBoardIndex: _components_beer_board_BeerBoardIndex__WEBPACK_IMPORTED_MODULE_2__["default"]
+
+
+
+
+var appName = ((_window$document$getE = window.document.getElementsByTagName('title')[0]) === null || _window$document$getE === void 0 ? void 0 : _window$document$getE.innerText) || 'Laravel';
+(0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_3__.createInertiaApp)({
+  title: function title(_title) {
+    return "".concat(_title, " - ").concat(appName);
+  },
+  resolve: function resolve(name) {
+    return (0,laravel_vite_plugin_inertia_helpers__WEBPACK_IMPORTED_MODULE_5__.resolvePageComponent)("./Pages/".concat(name, ".vue"), ({}).glob('./Pages/**/*.vue'));
+  },
+  setup: function setup(_ref) {
+    var el = _ref.el,
+        app = _ref.app,
+        props = _ref.props,
+        plugin = _ref.plugin;
+    return (0,vue__WEBPACK_IMPORTED_MODULE_2__.createApp)({
+      render: function render() {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_2__.h)(app, props);
+      }
+    }).use(plugin).use(_vendor_tightenco_ziggy_dist_vue_m__WEBPACK_IMPORTED_MODULE_6__.ZiggyVue, Ziggy).mount(el);
   }
-}).use(_router__WEBPACK_IMPORTED_MODULE_1__["default"]).mount('#app');
+});
+_inertiajs_progress__WEBPACK_IMPORTED_MODULE_4__.InertiaProgress.init({
+  color: '#4B5563'
+});
 
 /***/ }),
 
@@ -19881,95 +19585,5106 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/composables/beer-board.js":
-/*!************************************************!*\
-  !*** ./resources/js/composables/beer-board.js ***!
-  \************************************************/
+/***/ "./vendor/tightenco/ziggy/dist/vue.m.js":
+/*!**********************************************!*\
+  !*** ./vendor/tightenco/ziggy/dist/vue.m.js ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ useBeerBoard)
+/* harmony export */   "ZiggyVue": () => (/* binding */ I)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.mjs");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
-function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return generator._invoke = function (innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; }(innerFn, self, context), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; this._invoke = function (method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); }; } function maybeInvokeDelegate(delegate, context) { var method = delegate.iterator[context.method]; if (undefined === method) { if (context.delegate = null, "throw" === context.method) { if (delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method)) return ContinueSentinel; context.method = "throw", context.arg = new TypeError("The iterator does not provide a 'throw' method"); } return ContinueSentinel; } var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) { if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; } return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, define(Gp, "constructor", GeneratorFunctionPrototype), define(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (object) { var keys = []; for (var key in object) { keys.push(key); } return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) { "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); } }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-
-
-
-function useBeerBoard() {
-  var beers = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)([]);
-  var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_2__.useRouter)();
-
-  var getBeers = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var response;
-      return _regeneratorRuntime().wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/beers');
-
-            case 2:
-              response = _context.sent;
-              beers.value = response.data.data;
-
-            case 4:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }));
-
-    return function getBeers() {
-      return _ref.apply(this, arguments);
-    };
-  }();
-
-  return {
-    beers: beers,
-    getBeers: getBeers
-  };
+function t(t, r) {
+  for (var n = 0; n < r.length; n++) {
+    var e = r[n];
+    e.enumerable = e.enumerable || !1, e.configurable = !0, "value" in e && (e.writable = !0), Object.defineProperty(t, e.key, e);
+  }
 }
+
+function r(r, n, e) {
+  return n && t(r.prototype, n), e && t(r, e), Object.defineProperty(r, "prototype", {
+    writable: !1
+  }), r;
+}
+
+function n() {
+  return n = Object.assign ? Object.assign.bind() : function (t) {
+    for (var r = 1; r < arguments.length; r++) {
+      var n = arguments[r];
+
+      for (var e in n) {
+        Object.prototype.hasOwnProperty.call(n, e) && (t[e] = n[e]);
+      }
+    }
+
+    return t;
+  }, n.apply(this, arguments);
+}
+
+function e(t) {
+  return e = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) {
+    return t.__proto__ || Object.getPrototypeOf(t);
+  }, e(t);
+}
+
+function o(t, r) {
+  return o = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, r) {
+    return t.__proto__ = r, t;
+  }, o(t, r);
+}
+
+function i() {
+  if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
+  if (Reflect.construct.sham) return !1;
+  if ("function" == typeof Proxy) return !0;
+
+  try {
+    return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+  } catch (t) {
+    return !1;
+  }
+}
+
+function u(t, r, n) {
+  return u = i() ? Reflect.construct.bind() : function (t, r, n) {
+    var e = [null];
+    e.push.apply(e, r);
+    var i = new (Function.bind.apply(t, e))();
+    return n && o(i, n.prototype), i;
+  }, u.apply(null, arguments);
+}
+
+function f(t) {
+  var r = "function" == typeof Map ? new Map() : void 0;
+  return f = function f(t) {
+    if (null === t || -1 === Function.toString.call(t).indexOf("[native code]")) return t;
+    if ("function" != typeof t) throw new TypeError("Super expression must either be null or a function");
+
+    if (void 0 !== r) {
+      if (r.has(t)) return r.get(t);
+      r.set(t, n);
+    }
+
+    function n() {
+      return u(t, arguments, e(this).constructor);
+    }
+
+    return n.prototype = Object.create(t.prototype, {
+      constructor: {
+        value: n,
+        enumerable: !1,
+        writable: !0,
+        configurable: !0
+      }
+    }), o(n, t);
+  }, f(t);
+}
+
+var a = String.prototype.replace,
+    c = /%20/g,
+    l = {
+  "default": "RFC3986",
+  formatters: {
+    RFC1738: function RFC1738(t) {
+      return a.call(t, c, "+");
+    },
+    RFC3986: function RFC3986(t) {
+      return String(t);
+    }
+  },
+  RFC1738: "RFC1738",
+  RFC3986: "RFC3986"
+},
+    s = Object.prototype.hasOwnProperty,
+    v = Array.isArray,
+    p = function () {
+  for (var t = [], r = 0; r < 256; ++r) {
+    t.push("%" + ((r < 16 ? "0" : "") + r.toString(16)).toUpperCase());
+  }
+
+  return t;
+}(),
+    y = function y(t, r) {
+  for (var n = r && r.plainObjects ? Object.create(null) : {}, e = 0; e < t.length; ++e) {
+    void 0 !== t[e] && (n[e] = t[e]);
+  }
+
+  return n;
+},
+    d = {
+  arrayToObject: y,
+  assign: function assign(t, r) {
+    return Object.keys(r).reduce(function (t, n) {
+      return t[n] = r[n], t;
+    }, t);
+  },
+  combine: function combine(t, r) {
+    return [].concat(t, r);
+  },
+  compact: function compact(t) {
+    for (var r = [{
+      obj: {
+        o: t
+      },
+      prop: "o"
+    }], n = [], e = 0; e < r.length; ++e) {
+      for (var o = r[e], i = o.obj[o.prop], u = Object.keys(i), f = 0; f < u.length; ++f) {
+        var a = u[f],
+            c = i[a];
+        "object" == _typeof(c) && null !== c && -1 === n.indexOf(c) && (r.push({
+          obj: i,
+          prop: a
+        }), n.push(c));
+      }
+    }
+
+    return function (t) {
+      for (; t.length > 1;) {
+        var r = t.pop(),
+            n = r.obj[r.prop];
+
+        if (v(n)) {
+          for (var e = [], o = 0; o < n.length; ++o) {
+            void 0 !== n[o] && e.push(n[o]);
+          }
+
+          r.obj[r.prop] = e;
+        }
+      }
+    }(r), t;
+  },
+  decode: function decode(t, r, n) {
+    var e = t.replace(/\+/g, " ");
+    if ("iso-8859-1" === n) return e.replace(/%[0-9a-f]{2}/gi, unescape);
+
+    try {
+      return decodeURIComponent(e);
+    } catch (t) {
+      return e;
+    }
+  },
+  encode: function encode(t, r, n, e, o) {
+    if (0 === t.length) return t;
+    var i = t;
+    if ("symbol" == _typeof(t) ? i = Symbol.prototype.toString.call(t) : "string" != typeof t && (i = String(t)), "iso-8859-1" === n) return escape(i).replace(/%u[0-9a-f]{4}/gi, function (t) {
+      return "%26%23" + parseInt(t.slice(2), 16) + "%3B";
+    });
+
+    for (var u = "", f = 0; f < i.length; ++f) {
+      var a = i.charCodeAt(f);
+      45 === a || 46 === a || 95 === a || 126 === a || a >= 48 && a <= 57 || a >= 65 && a <= 90 || a >= 97 && a <= 122 || o === l.RFC1738 && (40 === a || 41 === a) ? u += i.charAt(f) : a < 128 ? u += p[a] : a < 2048 ? u += p[192 | a >> 6] + p[128 | 63 & a] : a < 55296 || a >= 57344 ? u += p[224 | a >> 12] + p[128 | a >> 6 & 63] + p[128 | 63 & a] : (a = 65536 + ((1023 & a) << 10 | 1023 & i.charCodeAt(f += 1)), u += p[240 | a >> 18] + p[128 | a >> 12 & 63] + p[128 | a >> 6 & 63] + p[128 | 63 & a]);
+    }
+
+    return u;
+  },
+  isBuffer: function isBuffer(t) {
+    return !(!t || "object" != _typeof(t) || !(t.constructor && t.constructor.isBuffer && t.constructor.isBuffer(t)));
+  },
+  isRegExp: function isRegExp(t) {
+    return "[object RegExp]" === Object.prototype.toString.call(t);
+  },
+  maybeMap: function maybeMap(t, r) {
+    if (v(t)) {
+      for (var n = [], e = 0; e < t.length; e += 1) {
+        n.push(r(t[e]));
+      }
+
+      return n;
+    }
+
+    return r(t);
+  },
+  merge: function t(r, n, e) {
+    if (!n) return r;
+
+    if ("object" != _typeof(n)) {
+      if (v(r)) r.push(n);else {
+        if (!r || "object" != _typeof(r)) return [r, n];
+        (e && (e.plainObjects || e.allowPrototypes) || !s.call(Object.prototype, n)) && (r[n] = !0);
+      }
+      return r;
+    }
+
+    if (!r || "object" != _typeof(r)) return [r].concat(n);
+    var o = r;
+    return v(r) && !v(n) && (o = y(r, e)), v(r) && v(n) ? (n.forEach(function (n, o) {
+      if (s.call(r, o)) {
+        var i = r[o];
+        i && "object" == _typeof(i) && n && "object" == _typeof(n) ? r[o] = t(i, n, e) : r.push(n);
+      } else r[o] = n;
+    }), r) : Object.keys(n).reduce(function (r, o) {
+      var i = n[o];
+      return r[o] = s.call(r, o) ? t(r[o], i, e) : i, r;
+    }, o);
+  }
+},
+    b = Object.prototype.hasOwnProperty,
+    h = {
+  brackets: function brackets(t) {
+    return t + "[]";
+  },
+  comma: "comma",
+  indices: function indices(t, r) {
+    return t + "[" + r + "]";
+  },
+  repeat: function repeat(t) {
+    return t;
+  }
+},
+    m = Array.isArray,
+    g = String.prototype.split,
+    j = Array.prototype.push,
+    w = function w(t, r) {
+  j.apply(t, m(r) ? r : [r]);
+},
+    O = Date.prototype.toISOString,
+    E = l["default"],
+    R = {
+  addQueryPrefix: !1,
+  allowDots: !1,
+  charset: "utf-8",
+  charsetSentinel: !1,
+  delimiter: "&",
+  encode: !0,
+  encoder: d.encode,
+  encodeValuesOnly: !1,
+  format: E,
+  formatter: l.formatters[E],
+  indices: !1,
+  serializeDate: function serializeDate(t) {
+    return O.call(t);
+  },
+  skipNulls: !1,
+  strictNullHandling: !1
+},
+    S = function t(r, n, e, o, i, u, f, a, c, l, s, v, p, y) {
+  var b,
+      h = r;
+
+  if ("function" == typeof f ? h = f(n, h) : h instanceof Date ? h = l(h) : "comma" === e && m(h) && (h = d.maybeMap(h, function (t) {
+    return t instanceof Date ? l(t) : t;
+  })), null === h) {
+    if (o) return u && !p ? u(n, R.encoder, y, "key", s) : n;
+    h = "";
+  }
+
+  if ("string" == typeof (b = h) || "number" == typeof b || "boolean" == typeof b || "symbol" == _typeof(b) || "bigint" == typeof b || d.isBuffer(h)) {
+    if (u) {
+      var j = p ? n : u(n, R.encoder, y, "key", s);
+
+      if ("comma" === e && p) {
+        for (var O = g.call(String(h), ","), E = "", S = 0; S < O.length; ++S) {
+          E += (0 === S ? "" : ",") + v(u(O[S], R.encoder, y, "value", s));
+        }
+
+        return [v(j) + "=" + E];
+      }
+
+      return [v(j) + "=" + v(u(h, R.encoder, y, "value", s))];
+    }
+
+    return [v(n) + "=" + v(String(h))];
+  }
+
+  var k,
+      x = [];
+  if (void 0 === h) return x;
+  if ("comma" === e && m(h)) k = [{
+    value: h.length > 0 ? h.join(",") || null : void 0
+  }];else if (m(f)) k = f;else {
+    var C = Object.keys(h);
+    k = a ? C.sort(a) : C;
+  }
+
+  for (var N = 0; N < k.length; ++N) {
+    var T = k[N],
+        F = "object" == _typeof(T) && void 0 !== T.value ? T.value : h[T];
+
+    if (!i || null !== F) {
+      var D = m(h) ? "function" == typeof e ? e(n, T) : n : n + (c ? "." + T : "[" + T + "]");
+      w(x, t(F, D, e, o, i, u, f, a, c, l, s, v, p, y));
+    }
+  }
+
+  return x;
+},
+    k = Object.prototype.hasOwnProperty,
+    x = Array.isArray,
+    C = {
+  allowDots: !1,
+  allowPrototypes: !1,
+  arrayLimit: 20,
+  charset: "utf-8",
+  charsetSentinel: !1,
+  comma: !1,
+  decoder: d.decode,
+  delimiter: "&",
+  depth: 5,
+  ignoreQueryPrefix: !1,
+  interpretNumericEntities: !1,
+  parameterLimit: 1e3,
+  parseArrays: !0,
+  plainObjects: !1,
+  strictNullHandling: !1
+},
+    N = function N(t) {
+  return t.replace(/&#(\d+);/g, function (t, r) {
+    return String.fromCharCode(parseInt(r, 10));
+  });
+},
+    T = function T(t, r) {
+  return t && "string" == typeof t && r.comma && t.indexOf(",") > -1 ? t.split(",") : t;
+},
+    F = function F(t, r, n, e) {
+  if (t) {
+    var o = n.allowDots ? t.replace(/\.([^.[]+)/g, "[$1]") : t,
+        i = /(\[[^[\]]*])/g,
+        u = n.depth > 0 && /(\[[^[\]]*])/.exec(o),
+        f = u ? o.slice(0, u.index) : o,
+        a = [];
+
+    if (f) {
+      if (!n.plainObjects && k.call(Object.prototype, f) && !n.allowPrototypes) return;
+      a.push(f);
+    }
+
+    for (var c = 0; n.depth > 0 && null !== (u = i.exec(o)) && c < n.depth;) {
+      if (c += 1, !n.plainObjects && k.call(Object.prototype, u[1].slice(1, -1)) && !n.allowPrototypes) return;
+      a.push(u[1]);
+    }
+
+    return u && a.push("[" + o.slice(u.index) + "]"), function (t, r, n, e) {
+      for (var o = e ? r : T(r, n), i = t.length - 1; i >= 0; --i) {
+        var u,
+            f = t[i];
+        if ("[]" === f && n.parseArrays) u = [].concat(o);else {
+          u = n.plainObjects ? Object.create(null) : {};
+          var a = "[" === f.charAt(0) && "]" === f.charAt(f.length - 1) ? f.slice(1, -1) : f,
+              c = parseInt(a, 10);
+          n.parseArrays || "" !== a ? !isNaN(c) && f !== a && String(c) === a && c >= 0 && n.parseArrays && c <= n.arrayLimit ? (u = [])[c] = o : "__proto__" !== a && (u[a] = o) : u = {
+            0: o
+          };
+        }
+        o = u;
+      }
+
+      return o;
+    }(a, r, n, e);
+  }
+},
+    D = function D(t, r) {
+  var n = function (t) {
+    if (!t) return C;
+    if (null != t.decoder && "function" != typeof t.decoder) throw new TypeError("Decoder has to be a function.");
+    if (void 0 !== t.charset && "utf-8" !== t.charset && "iso-8859-1" !== t.charset) throw new TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");
+    return {
+      allowDots: void 0 === t.allowDots ? C.allowDots : !!t.allowDots,
+      allowPrototypes: "boolean" == typeof t.allowPrototypes ? t.allowPrototypes : C.allowPrototypes,
+      arrayLimit: "number" == typeof t.arrayLimit ? t.arrayLimit : C.arrayLimit,
+      charset: void 0 === t.charset ? C.charset : t.charset,
+      charsetSentinel: "boolean" == typeof t.charsetSentinel ? t.charsetSentinel : C.charsetSentinel,
+      comma: "boolean" == typeof t.comma ? t.comma : C.comma,
+      decoder: "function" == typeof t.decoder ? t.decoder : C.decoder,
+      delimiter: "string" == typeof t.delimiter || d.isRegExp(t.delimiter) ? t.delimiter : C.delimiter,
+      depth: "number" == typeof t.depth || !1 === t.depth ? +t.depth : C.depth,
+      ignoreQueryPrefix: !0 === t.ignoreQueryPrefix,
+      interpretNumericEntities: "boolean" == typeof t.interpretNumericEntities ? t.interpretNumericEntities : C.interpretNumericEntities,
+      parameterLimit: "number" == typeof t.parameterLimit ? t.parameterLimit : C.parameterLimit,
+      parseArrays: !1 !== t.parseArrays,
+      plainObjects: "boolean" == typeof t.plainObjects ? t.plainObjects : C.plainObjects,
+      strictNullHandling: "boolean" == typeof t.strictNullHandling ? t.strictNullHandling : C.strictNullHandling
+    };
+  }(r);
+
+  if ("" === t || null == t) return n.plainObjects ? Object.create(null) : {};
+
+  for (var e = "string" == typeof t ? function (t, r) {
+    var n,
+        e = {},
+        o = (r.ignoreQueryPrefix ? t.replace(/^\?/, "") : t).split(r.delimiter, Infinity === r.parameterLimit ? void 0 : r.parameterLimit),
+        i = -1,
+        u = r.charset;
+    if (r.charsetSentinel) for (n = 0; n < o.length; ++n) {
+      0 === o[n].indexOf("utf8=") && ("utf8=%E2%9C%93" === o[n] ? u = "utf-8" : "utf8=%26%2310003%3B" === o[n] && (u = "iso-8859-1"), i = n, n = o.length);
+    }
+
+    for (n = 0; n < o.length; ++n) {
+      if (n !== i) {
+        var f,
+            a,
+            c = o[n],
+            l = c.indexOf("]="),
+            s = -1 === l ? c.indexOf("=") : l + 1;
+        -1 === s ? (f = r.decoder(c, C.decoder, u, "key"), a = r.strictNullHandling ? null : "") : (f = r.decoder(c.slice(0, s), C.decoder, u, "key"), a = d.maybeMap(T(c.slice(s + 1), r), function (t) {
+          return r.decoder(t, C.decoder, u, "value");
+        })), a && r.interpretNumericEntities && "iso-8859-1" === u && (a = N(a)), c.indexOf("[]=") > -1 && (a = x(a) ? [a] : a), e[f] = k.call(e, f) ? d.combine(e[f], a) : a;
+      }
+    }
+
+    return e;
+  }(t, n) : t, o = n.plainObjects ? Object.create(null) : {}, i = Object.keys(e), u = 0; u < i.length; ++u) {
+    var f = i[u],
+        a = F(f, e[f], n, "string" == typeof t);
+    o = d.merge(o, a, n);
+  }
+
+  return d.compact(o);
+},
+    $ = /*#__PURE__*/function () {
+  function t(t, r, n) {
+    var e, o;
+    this.name = t, this.definition = r, this.bindings = null != (e = r.bindings) ? e : {}, this.wheres = null != (o = r.wheres) ? o : {}, this.config = n;
+  }
+
+  var n = t.prototype;
+  return n.matchesUrl = function (t) {
+    var r = this;
+    if (!this.definition.methods.includes("GET")) return !1;
+    var n = this.template.replace(/(\/?){([^}?]*)(\??)}/g, function (t, n, e, o) {
+      var i,
+          u = "(?<" + e + ">" + ((null == (i = r.wheres[e]) ? void 0 : i.replace(/(^\^)|(\$$)/g, "")) || "[^/?]+") + ")";
+      return o ? "(" + n + u + ")?" : "" + n + u;
+    }).replace(/^\w+:\/\//, ""),
+        e = t.replace(/^\w+:\/\//, "").split("?"),
+        o = e[0],
+        i = e[1],
+        u = new RegExp("^" + n + "/?$").exec(o);
+    return !!u && {
+      params: u.groups,
+      query: D(i)
+    };
+  }, n.compile = function (t) {
+    var r = this,
+        n = this.parameterSegments;
+    return n.length ? this.template.replace(/{([^}?]+)(\??)}/g, function (e, o, i) {
+      var u, f, a;
+      if (!i && [null, void 0].includes(t[o])) throw new Error("Ziggy error: '" + o + "' parameter is required for route '" + r.name + "'.");
+      if (n[n.length - 1].name === o && ".*" === r.wheres[o]) return encodeURIComponent(null != (a = t[o]) ? a : "").replace(/%2F/g, "/");
+      if (r.wheres[o] && !new RegExp("^" + (i ? "(" + r.wheres[o] + ")?" : r.wheres[o]) + "$").test(null != (u = t[o]) ? u : "")) throw new Error("Ziggy error: '" + o + "' parameter does not match required format '" + r.wheres[o] + "' for route '" + r.name + "'.");
+      return encodeURIComponent(null != (f = t[o]) ? f : "");
+    }).replace(/\/+$/, "") : this.template;
+  }, r(t, [{
+    key: "template",
+    get: function get() {
+      return ((this.config.absolute ? this.definition.domain ? "" + this.config.url.match(/^\w+:\/\//)[0] + this.definition.domain + (this.config.port ? ":" + this.config.port : "") : this.config.url : "") + "/" + this.definition.uri).replace(/\/+$/, "");
+    }
+  }, {
+    key: "parameterSegments",
+    get: function get() {
+      var t, r;
+      return null != (t = null == (r = this.template.match(/{[^}?]+\??}/g)) ? void 0 : r.map(function (t) {
+        return {
+          name: t.replace(/{|\??}/g, ""),
+          required: !/\?}$/.test(t)
+        };
+      })) ? t : [];
+    }
+  }]), t;
+}(),
+    A = /*#__PURE__*/function (t) {
+  var e, i;
+
+  function u(r, e, o, i) {
+    var u;
+
+    if (void 0 === o && (o = !0), (u = t.call(this) || this).t = null != i ? i : "undefined" != typeof Ziggy ? Ziggy : null == globalThis ? void 0 : globalThis.Ziggy, u.t = n({}, u.t, {
+      absolute: o
+    }), r) {
+      if (!u.t.routes[r]) throw new Error("Ziggy error: route '" + r + "' is not in the route list.");
+      u.i = new $(r, u.t.routes[r], u.t), u.u = u.l(e);
+    }
+
+    return u;
+  }
+
+  i = t, (e = u).prototype = Object.create(i.prototype), e.prototype.constructor = e, o(e, i);
+  var f = u.prototype;
+  return f.toString = function () {
+    var t = this,
+        r = Object.keys(this.u).filter(function (r) {
+      return !t.i.parameterSegments.some(function (t) {
+        return t.name === r;
+      });
+    }).filter(function (t) {
+      return "_query" !== t;
+    }).reduce(function (r, e) {
+      var o;
+      return n({}, r, ((o = {})[e] = t.u[e], o));
+    }, {});
+    return this.i.compile(this.u) + function (t, r) {
+      var n,
+          e = t,
+          o = function (t) {
+        if (!t) return R;
+        if (null != t.encoder && "function" != typeof t.encoder) throw new TypeError("Encoder has to be a function.");
+        var r = t.charset || R.charset;
+        if (void 0 !== t.charset && "utf-8" !== t.charset && "iso-8859-1" !== t.charset) throw new TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");
+        var n = l["default"];
+
+        if (void 0 !== t.format) {
+          if (!b.call(l.formatters, t.format)) throw new TypeError("Unknown format option provided.");
+          n = t.format;
+        }
+
+        var e = l.formatters[n],
+            o = R.filter;
+        return ("function" == typeof t.filter || m(t.filter)) && (o = t.filter), {
+          addQueryPrefix: "boolean" == typeof t.addQueryPrefix ? t.addQueryPrefix : R.addQueryPrefix,
+          allowDots: void 0 === t.allowDots ? R.allowDots : !!t.allowDots,
+          charset: r,
+          charsetSentinel: "boolean" == typeof t.charsetSentinel ? t.charsetSentinel : R.charsetSentinel,
+          delimiter: void 0 === t.delimiter ? R.delimiter : t.delimiter,
+          encode: "boolean" == typeof t.encode ? t.encode : R.encode,
+          encoder: "function" == typeof t.encoder ? t.encoder : R.encoder,
+          encodeValuesOnly: "boolean" == typeof t.encodeValuesOnly ? t.encodeValuesOnly : R.encodeValuesOnly,
+          filter: o,
+          format: n,
+          formatter: e,
+          serializeDate: "function" == typeof t.serializeDate ? t.serializeDate : R.serializeDate,
+          skipNulls: "boolean" == typeof t.skipNulls ? t.skipNulls : R.skipNulls,
+          sort: "function" == typeof t.sort ? t.sort : null,
+          strictNullHandling: "boolean" == typeof t.strictNullHandling ? t.strictNullHandling : R.strictNullHandling
+        };
+      }(r);
+
+      "function" == typeof o.filter ? e = (0, o.filter)("", e) : m(o.filter) && (n = o.filter);
+      var i = [];
+      if ("object" != _typeof(e) || null === e) return "";
+      var u = h[r && r.arrayFormat in h ? r.arrayFormat : r && "indices" in r ? r.indices ? "indices" : "repeat" : "indices"];
+      n || (n = Object.keys(e)), o.sort && n.sort(o.sort);
+
+      for (var f = 0; f < n.length; ++f) {
+        var a = n[f];
+        o.skipNulls && null === e[a] || w(i, S(e[a], a, u, o.strictNullHandling, o.skipNulls, o.encode ? o.encoder : null, o.filter, o.sort, o.allowDots, o.serializeDate, o.format, o.formatter, o.encodeValuesOnly, o.charset));
+      }
+
+      var c = i.join(o.delimiter),
+          s = !0 === o.addQueryPrefix ? "?" : "";
+      return o.charsetSentinel && (s += "iso-8859-1" === o.charset ? "utf8=%26%2310003%3B&" : "utf8=%E2%9C%93&"), c.length > 0 ? s + c : "";
+    }(n({}, r, this.u._query), {
+      addQueryPrefix: !0,
+      arrayFormat: "indices",
+      encodeValuesOnly: !0,
+      skipNulls: !0,
+      encoder: function encoder(t, r) {
+        return "boolean" == typeof t ? Number(t) : r(t);
+      }
+    });
+  }, f.v = function (t) {
+    var r = this;
+    t ? this.t.absolute && t.startsWith("/") && (t = this.p().host + t) : t = this.h();
+    var e = {},
+        o = Object.entries(this.t.routes).find(function (n) {
+      return e = new $(n[0], n[1], r.t).matchesUrl(t);
+    }) || [void 0, void 0];
+    return n({
+      name: o[0]
+    }, e, {
+      route: o[1]
+    });
+  }, f.h = function () {
+    var t = this.p(),
+        r = t.pathname,
+        n = t.search;
+    return (this.t.absolute ? t.host + r : r.replace(this.t.url.replace(/^\w*:\/\/[^/]+/, ""), "").replace(/^\/+/, "/")) + n;
+  }, f.current = function (t, r) {
+    var e = this.v(),
+        o = e.name,
+        i = e.params,
+        u = e.query,
+        f = e.route;
+    if (!t) return o;
+    var a = new RegExp("^" + t.replace(/\./g, "\\.").replace(/\*/g, ".*") + "$").test(o);
+    if ([null, void 0].includes(r) || !a) return a;
+    var c = new $(o, f, this.t);
+    r = this.l(r, c);
+    var l = n({}, i, u);
+    return !(!Object.values(r).every(function (t) {
+      return !t;
+    }) || Object.values(l).some(function (t) {
+      return void 0 !== t;
+    })) || Object.entries(r).every(function (t) {
+      return l[t[0]] == t[1];
+    });
+  }, f.p = function () {
+    var t,
+        r,
+        n,
+        e,
+        o,
+        i,
+        u = "undefined" != typeof window ? window.location : {},
+        f = u.host,
+        a = u.pathname,
+        c = u.search;
+    return {
+      host: null != (t = null == (r = this.t.location) ? void 0 : r.host) ? t : void 0 === f ? "" : f,
+      pathname: null != (n = null == (e = this.t.location) ? void 0 : e.pathname) ? n : void 0 === a ? "" : a,
+      search: null != (o = null == (i = this.t.location) ? void 0 : i.search) ? o : void 0 === c ? "" : c
+    };
+  }, f.has = function (t) {
+    return Object.keys(this.t.routes).includes(t);
+  }, f.l = function (t, r) {
+    var e = this;
+    void 0 === t && (t = {}), void 0 === r && (r = this.i), null != t || (t = {}), t = ["string", "number"].includes(_typeof(t)) ? [t] : t;
+    var o = r.parameterSegments.filter(function (t) {
+      return !e.t.defaults[t.name];
+    });
+    if (Array.isArray(t)) t = t.reduce(function (t, r, e) {
+      var i, u;
+      return n({}, t, o[e] ? ((i = {})[o[e].name] = r, i) : "object" == _typeof(r) ? r : ((u = {})[r] = "", u));
+    }, {});else if (1 === o.length && !t[o[0].name] && (t.hasOwnProperty(Object.values(r.bindings)[0]) || t.hasOwnProperty("id"))) {
+      var i;
+      (i = {})[o[0].name] = t, t = i;
+    }
+    return n({}, this.m(r), this.g(t, r));
+  }, f.m = function (t) {
+    var r = this;
+    return t.parameterSegments.filter(function (t) {
+      return r.t.defaults[t.name];
+    }).reduce(function (t, e, o) {
+      var i,
+          u = e.name;
+      return n({}, t, ((i = {})[u] = r.t.defaults[u], i));
+    }, {});
+  }, f.g = function (t, r) {
+    var e = r.bindings,
+        o = r.parameterSegments;
+    return Object.entries(t).reduce(function (t, r) {
+      var i,
+          u,
+          f = r[0],
+          a = r[1];
+      if (!a || "object" != _typeof(a) || Array.isArray(a) || !o.some(function (t) {
+        return t.name === f;
+      })) return n({}, t, ((u = {})[f] = a, u));
+
+      if (!a.hasOwnProperty(e[f])) {
+        if (!a.hasOwnProperty("id")) throw new Error("Ziggy error: object passed as '" + f + "' parameter is missing route model binding key '" + e[f] + "'.");
+        e[f] = "id";
+      }
+
+      return n({}, t, ((i = {})[f] = a[e[f]], i));
+    }, {});
+  }, f.valueOf = function () {
+    return this.toString();
+  }, f.check = function (t) {
+    return this.has(t);
+  }, r(u, [{
+    key: "params",
+    get: function get() {
+      var t = this.v();
+      return n({}, t.params, t.query);
+    }
+  }]), u;
+}( /*#__PURE__*/f(String)),
+    I = {
+  install: function install(t, r) {
+    var n = function n(t, _n, e, o) {
+      return void 0 === o && (o = r), function (t, r, n, e) {
+        var o = new A(t, r, n, e);
+        return t ? o.toString() : o;
+      }(t, _n, e, o);
+    };
+
+    t.mixin({
+      methods: {
+        route: n
+      }
+    }), parseInt(t.version) > 2 && t.provide("route", n);
+  }
+};
+
+
 
 /***/ }),
 
-/***/ "./resources/js/router/index.js":
-/*!**************************************!*\
-  !*** ./resources/js/router/index.js ***!
-  \**************************************/
+/***/ "./node_modules/call-bind/callBound.js":
+/*!*********************************************!*\
+  !*** ./node_modules/call-bind/callBound.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var GetIntrinsic = __webpack_require__(/*! get-intrinsic */ "./node_modules/get-intrinsic/index.js");
+
+var callBind = __webpack_require__(/*! ./ */ "./node_modules/call-bind/index.js");
+
+var $indexOf = callBind(GetIntrinsic('String.prototype.indexOf'));
+
+module.exports = function callBoundIntrinsic(name, allowMissing) {
+	var intrinsic = GetIntrinsic(name, !!allowMissing);
+	if (typeof intrinsic === 'function' && $indexOf(name, '.prototype.') > -1) {
+		return callBind(intrinsic);
+	}
+	return intrinsic;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/call-bind/index.js":
+/*!*****************************************!*\
+  !*** ./node_modules/call-bind/index.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var bind = __webpack_require__(/*! function-bind */ "./node_modules/function-bind/index.js");
+var GetIntrinsic = __webpack_require__(/*! get-intrinsic */ "./node_modules/get-intrinsic/index.js");
+
+var $apply = GetIntrinsic('%Function.prototype.apply%');
+var $call = GetIntrinsic('%Function.prototype.call%');
+var $reflectApply = GetIntrinsic('%Reflect.apply%', true) || bind.call($call, $apply);
+
+var $gOPD = GetIntrinsic('%Object.getOwnPropertyDescriptor%', true);
+var $defineProperty = GetIntrinsic('%Object.defineProperty%', true);
+var $max = GetIntrinsic('%Math.max%');
+
+if ($defineProperty) {
+	try {
+		$defineProperty({}, 'a', { value: 1 });
+	} catch (e) {
+		// IE 8 has a broken defineProperty
+		$defineProperty = null;
+	}
+}
+
+module.exports = function callBind(originalFunction) {
+	var func = $reflectApply(bind, $call, arguments);
+	if ($gOPD && $defineProperty) {
+		var desc = $gOPD(func, 'length');
+		if (desc.configurable) {
+			// original length, plus the receiver, minus any additional arguments (after the receiver)
+			$defineProperty(
+				func,
+				'length',
+				{ value: 1 + $max(0, originalFunction.length - (arguments.length - 1)) }
+			);
+		}
+	}
+	return func;
+};
+
+var applyBind = function applyBind() {
+	return $reflectApply(bind, $apply, arguments);
+};
+
+if ($defineProperty) {
+	$defineProperty(module.exports, 'apply', { value: applyBind });
+} else {
+	module.exports.apply = applyBind;
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/deepmerge/dist/cjs.js":
+/*!********************************************!*\
+  !*** ./node_modules/deepmerge/dist/cjs.js ***!
+  \********************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+var isMergeableObject = function isMergeableObject(value) {
+	return isNonNullObject(value)
+		&& !isSpecial(value)
+};
+
+function isNonNullObject(value) {
+	return !!value && typeof value === 'object'
+}
+
+function isSpecial(value) {
+	var stringValue = Object.prototype.toString.call(value);
+
+	return stringValue === '[object RegExp]'
+		|| stringValue === '[object Date]'
+		|| isReactElement(value)
+}
+
+// see https://github.com/facebook/react/blob/b5ac963fb791d1298e7f396236383bc955f916c1/src/isomorphic/classic/element/ReactElement.js#L21-L25
+var canUseSymbol = typeof Symbol === 'function' && Symbol.for;
+var REACT_ELEMENT_TYPE = canUseSymbol ? Symbol.for('react.element') : 0xeac7;
+
+function isReactElement(value) {
+	return value.$$typeof === REACT_ELEMENT_TYPE
+}
+
+function emptyTarget(val) {
+	return Array.isArray(val) ? [] : {}
+}
+
+function cloneUnlessOtherwiseSpecified(value, options) {
+	return (options.clone !== false && options.isMergeableObject(value))
+		? deepmerge(emptyTarget(value), value, options)
+		: value
+}
+
+function defaultArrayMerge(target, source, options) {
+	return target.concat(source).map(function(element) {
+		return cloneUnlessOtherwiseSpecified(element, options)
+	})
+}
+
+function getMergeFunction(key, options) {
+	if (!options.customMerge) {
+		return deepmerge
+	}
+	var customMerge = options.customMerge(key);
+	return typeof customMerge === 'function' ? customMerge : deepmerge
+}
+
+function getEnumerableOwnPropertySymbols(target) {
+	return Object.getOwnPropertySymbols
+		? Object.getOwnPropertySymbols(target).filter(function(symbol) {
+			return target.propertyIsEnumerable(symbol)
+		})
+		: []
+}
+
+function getKeys(target) {
+	return Object.keys(target).concat(getEnumerableOwnPropertySymbols(target))
+}
+
+function propertyIsOnObject(object, property) {
+	try {
+		return property in object
+	} catch(_) {
+		return false
+	}
+}
+
+// Protects from prototype poisoning and unexpected merging up the prototype chain.
+function propertyIsUnsafe(target, key) {
+	return propertyIsOnObject(target, key) // Properties are safe to merge if they don't exist in the target yet,
+		&& !(Object.hasOwnProperty.call(target, key) // unsafe if they exist up the prototype chain,
+			&& Object.propertyIsEnumerable.call(target, key)) // and also unsafe if they're nonenumerable.
+}
+
+function mergeObject(target, source, options) {
+	var destination = {};
+	if (options.isMergeableObject(target)) {
+		getKeys(target).forEach(function(key) {
+			destination[key] = cloneUnlessOtherwiseSpecified(target[key], options);
+		});
+	}
+	getKeys(source).forEach(function(key) {
+		if (propertyIsUnsafe(target, key)) {
+			return
+		}
+
+		if (propertyIsOnObject(target, key) && options.isMergeableObject(source[key])) {
+			destination[key] = getMergeFunction(key, options)(target[key], source[key], options);
+		} else {
+			destination[key] = cloneUnlessOtherwiseSpecified(source[key], options);
+		}
+	});
+	return destination
+}
+
+function deepmerge(target, source, options) {
+	options = options || {};
+	options.arrayMerge = options.arrayMerge || defaultArrayMerge;
+	options.isMergeableObject = options.isMergeableObject || isMergeableObject;
+	// cloneUnlessOtherwiseSpecified is added to `options` so that custom arrayMerge()
+	// implementations can use it. The caller may not replace it.
+	options.cloneUnlessOtherwiseSpecified = cloneUnlessOtherwiseSpecified;
+
+	var sourceIsArray = Array.isArray(source);
+	var targetIsArray = Array.isArray(target);
+	var sourceAndTargetTypesMatch = sourceIsArray === targetIsArray;
+
+	if (!sourceAndTargetTypesMatch) {
+		return cloneUnlessOtherwiseSpecified(source, options)
+	} else if (sourceIsArray) {
+		return options.arrayMerge(target, source, options)
+	} else {
+		return mergeObject(target, source, options)
+	}
+}
+
+deepmerge.all = function deepmergeAll(array, options) {
+	if (!Array.isArray(array)) {
+		throw new Error('first argument should be an array')
+	}
+
+	return array.reduce(function(prev, next) {
+		return deepmerge(prev, next, options)
+	}, {})
+};
+
+var deepmerge_1 = deepmerge;
+
+module.exports = deepmerge_1;
+
+
+/***/ }),
+
+/***/ "./node_modules/function-bind/implementation.js":
+/*!******************************************************!*\
+  !*** ./node_modules/function-bind/implementation.js ***!
+  \******************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/* eslint no-invalid-this: 1 */
+
+var ERROR_MESSAGE = 'Function.prototype.bind called on incompatible ';
+var slice = Array.prototype.slice;
+var toStr = Object.prototype.toString;
+var funcType = '[object Function]';
+
+module.exports = function bind(that) {
+    var target = this;
+    if (typeof target !== 'function' || toStr.call(target) !== funcType) {
+        throw new TypeError(ERROR_MESSAGE + target);
+    }
+    var args = slice.call(arguments, 1);
+
+    var bound;
+    var binder = function () {
+        if (this instanceof bound) {
+            var result = target.apply(
+                this,
+                args.concat(slice.call(arguments))
+            );
+            if (Object(result) === result) {
+                return result;
+            }
+            return this;
+        } else {
+            return target.apply(
+                that,
+                args.concat(slice.call(arguments))
+            );
+        }
+    };
+
+    var boundLength = Math.max(0, target.length - args.length);
+    var boundArgs = [];
+    for (var i = 0; i < boundLength; i++) {
+        boundArgs.push('$' + i);
+    }
+
+    bound = Function('binder', 'return function (' + boundArgs.join(',') + '){ return binder.apply(this,arguments); }')(binder);
+
+    if (target.prototype) {
+        var Empty = function Empty() {};
+        Empty.prototype = target.prototype;
+        bound.prototype = new Empty();
+        Empty.prototype = null;
+    }
+
+    return bound;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/function-bind/index.js":
+/*!*********************************************!*\
+  !*** ./node_modules/function-bind/index.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var implementation = __webpack_require__(/*! ./implementation */ "./node_modules/function-bind/implementation.js");
+
+module.exports = Function.prototype.bind || implementation;
+
+
+/***/ }),
+
+/***/ "./node_modules/get-intrinsic/index.js":
+/*!*********************************************!*\
+  !*** ./node_modules/get-intrinsic/index.js ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var undefined;
+
+var $SyntaxError = SyntaxError;
+var $Function = Function;
+var $TypeError = TypeError;
+
+// eslint-disable-next-line consistent-return
+var getEvalledConstructor = function (expressionSyntax) {
+	try {
+		return $Function('"use strict"; return (' + expressionSyntax + ').constructor;')();
+	} catch (e) {}
+};
+
+var $gOPD = Object.getOwnPropertyDescriptor;
+if ($gOPD) {
+	try {
+		$gOPD({}, '');
+	} catch (e) {
+		$gOPD = null; // this is IE 8, which has a broken gOPD
+	}
+}
+
+var throwTypeError = function () {
+	throw new $TypeError();
+};
+var ThrowTypeError = $gOPD
+	? (function () {
+		try {
+			// eslint-disable-next-line no-unused-expressions, no-caller, no-restricted-properties
+			arguments.callee; // IE 8 does not throw here
+			return throwTypeError;
+		} catch (calleeThrows) {
+			try {
+				// IE 8 throws on Object.getOwnPropertyDescriptor(arguments, '')
+				return $gOPD(arguments, 'callee').get;
+			} catch (gOPDthrows) {
+				return throwTypeError;
+			}
+		}
+	}())
+	: throwTypeError;
+
+var hasSymbols = __webpack_require__(/*! has-symbols */ "./node_modules/has-symbols/index.js")();
+
+var getProto = Object.getPrototypeOf || function (x) { return x.__proto__; }; // eslint-disable-line no-proto
+
+var needsEval = {};
+
+var TypedArray = typeof Uint8Array === 'undefined' ? undefined : getProto(Uint8Array);
+
+var INTRINSICS = {
+	'%AggregateError%': typeof AggregateError === 'undefined' ? undefined : AggregateError,
+	'%Array%': Array,
+	'%ArrayBuffer%': typeof ArrayBuffer === 'undefined' ? undefined : ArrayBuffer,
+	'%ArrayIteratorPrototype%': hasSymbols ? getProto([][Symbol.iterator]()) : undefined,
+	'%AsyncFromSyncIteratorPrototype%': undefined,
+	'%AsyncFunction%': needsEval,
+	'%AsyncGenerator%': needsEval,
+	'%AsyncGeneratorFunction%': needsEval,
+	'%AsyncIteratorPrototype%': needsEval,
+	'%Atomics%': typeof Atomics === 'undefined' ? undefined : Atomics,
+	'%BigInt%': typeof BigInt === 'undefined' ? undefined : BigInt,
+	'%Boolean%': Boolean,
+	'%DataView%': typeof DataView === 'undefined' ? undefined : DataView,
+	'%Date%': Date,
+	'%decodeURI%': decodeURI,
+	'%decodeURIComponent%': decodeURIComponent,
+	'%encodeURI%': encodeURI,
+	'%encodeURIComponent%': encodeURIComponent,
+	'%Error%': Error,
+	'%eval%': eval, // eslint-disable-line no-eval
+	'%EvalError%': EvalError,
+	'%Float32Array%': typeof Float32Array === 'undefined' ? undefined : Float32Array,
+	'%Float64Array%': typeof Float64Array === 'undefined' ? undefined : Float64Array,
+	'%FinalizationRegistry%': typeof FinalizationRegistry === 'undefined' ? undefined : FinalizationRegistry,
+	'%Function%': $Function,
+	'%GeneratorFunction%': needsEval,
+	'%Int8Array%': typeof Int8Array === 'undefined' ? undefined : Int8Array,
+	'%Int16Array%': typeof Int16Array === 'undefined' ? undefined : Int16Array,
+	'%Int32Array%': typeof Int32Array === 'undefined' ? undefined : Int32Array,
+	'%isFinite%': isFinite,
+	'%isNaN%': isNaN,
+	'%IteratorPrototype%': hasSymbols ? getProto(getProto([][Symbol.iterator]())) : undefined,
+	'%JSON%': typeof JSON === 'object' ? JSON : undefined,
+	'%Map%': typeof Map === 'undefined' ? undefined : Map,
+	'%MapIteratorPrototype%': typeof Map === 'undefined' || !hasSymbols ? undefined : getProto(new Map()[Symbol.iterator]()),
+	'%Math%': Math,
+	'%Number%': Number,
+	'%Object%': Object,
+	'%parseFloat%': parseFloat,
+	'%parseInt%': parseInt,
+	'%Promise%': typeof Promise === 'undefined' ? undefined : Promise,
+	'%Proxy%': typeof Proxy === 'undefined' ? undefined : Proxy,
+	'%RangeError%': RangeError,
+	'%ReferenceError%': ReferenceError,
+	'%Reflect%': typeof Reflect === 'undefined' ? undefined : Reflect,
+	'%RegExp%': RegExp,
+	'%Set%': typeof Set === 'undefined' ? undefined : Set,
+	'%SetIteratorPrototype%': typeof Set === 'undefined' || !hasSymbols ? undefined : getProto(new Set()[Symbol.iterator]()),
+	'%SharedArrayBuffer%': typeof SharedArrayBuffer === 'undefined' ? undefined : SharedArrayBuffer,
+	'%String%': String,
+	'%StringIteratorPrototype%': hasSymbols ? getProto(''[Symbol.iterator]()) : undefined,
+	'%Symbol%': hasSymbols ? Symbol : undefined,
+	'%SyntaxError%': $SyntaxError,
+	'%ThrowTypeError%': ThrowTypeError,
+	'%TypedArray%': TypedArray,
+	'%TypeError%': $TypeError,
+	'%Uint8Array%': typeof Uint8Array === 'undefined' ? undefined : Uint8Array,
+	'%Uint8ClampedArray%': typeof Uint8ClampedArray === 'undefined' ? undefined : Uint8ClampedArray,
+	'%Uint16Array%': typeof Uint16Array === 'undefined' ? undefined : Uint16Array,
+	'%Uint32Array%': typeof Uint32Array === 'undefined' ? undefined : Uint32Array,
+	'%URIError%': URIError,
+	'%WeakMap%': typeof WeakMap === 'undefined' ? undefined : WeakMap,
+	'%WeakRef%': typeof WeakRef === 'undefined' ? undefined : WeakRef,
+	'%WeakSet%': typeof WeakSet === 'undefined' ? undefined : WeakSet
+};
+
+var doEval = function doEval(name) {
+	var value;
+	if (name === '%AsyncFunction%') {
+		value = getEvalledConstructor('async function () {}');
+	} else if (name === '%GeneratorFunction%') {
+		value = getEvalledConstructor('function* () {}');
+	} else if (name === '%AsyncGeneratorFunction%') {
+		value = getEvalledConstructor('async function* () {}');
+	} else if (name === '%AsyncGenerator%') {
+		var fn = doEval('%AsyncGeneratorFunction%');
+		if (fn) {
+			value = fn.prototype;
+		}
+	} else if (name === '%AsyncIteratorPrototype%') {
+		var gen = doEval('%AsyncGenerator%');
+		if (gen) {
+			value = getProto(gen.prototype);
+		}
+	}
+
+	INTRINSICS[name] = value;
+
+	return value;
+};
+
+var LEGACY_ALIASES = {
+	'%ArrayBufferPrototype%': ['ArrayBuffer', 'prototype'],
+	'%ArrayPrototype%': ['Array', 'prototype'],
+	'%ArrayProto_entries%': ['Array', 'prototype', 'entries'],
+	'%ArrayProto_forEach%': ['Array', 'prototype', 'forEach'],
+	'%ArrayProto_keys%': ['Array', 'prototype', 'keys'],
+	'%ArrayProto_values%': ['Array', 'prototype', 'values'],
+	'%AsyncFunctionPrototype%': ['AsyncFunction', 'prototype'],
+	'%AsyncGenerator%': ['AsyncGeneratorFunction', 'prototype'],
+	'%AsyncGeneratorPrototype%': ['AsyncGeneratorFunction', 'prototype', 'prototype'],
+	'%BooleanPrototype%': ['Boolean', 'prototype'],
+	'%DataViewPrototype%': ['DataView', 'prototype'],
+	'%DatePrototype%': ['Date', 'prototype'],
+	'%ErrorPrototype%': ['Error', 'prototype'],
+	'%EvalErrorPrototype%': ['EvalError', 'prototype'],
+	'%Float32ArrayPrototype%': ['Float32Array', 'prototype'],
+	'%Float64ArrayPrototype%': ['Float64Array', 'prototype'],
+	'%FunctionPrototype%': ['Function', 'prototype'],
+	'%Generator%': ['GeneratorFunction', 'prototype'],
+	'%GeneratorPrototype%': ['GeneratorFunction', 'prototype', 'prototype'],
+	'%Int8ArrayPrototype%': ['Int8Array', 'prototype'],
+	'%Int16ArrayPrototype%': ['Int16Array', 'prototype'],
+	'%Int32ArrayPrototype%': ['Int32Array', 'prototype'],
+	'%JSONParse%': ['JSON', 'parse'],
+	'%JSONStringify%': ['JSON', 'stringify'],
+	'%MapPrototype%': ['Map', 'prototype'],
+	'%NumberPrototype%': ['Number', 'prototype'],
+	'%ObjectPrototype%': ['Object', 'prototype'],
+	'%ObjProto_toString%': ['Object', 'prototype', 'toString'],
+	'%ObjProto_valueOf%': ['Object', 'prototype', 'valueOf'],
+	'%PromisePrototype%': ['Promise', 'prototype'],
+	'%PromiseProto_then%': ['Promise', 'prototype', 'then'],
+	'%Promise_all%': ['Promise', 'all'],
+	'%Promise_reject%': ['Promise', 'reject'],
+	'%Promise_resolve%': ['Promise', 'resolve'],
+	'%RangeErrorPrototype%': ['RangeError', 'prototype'],
+	'%ReferenceErrorPrototype%': ['ReferenceError', 'prototype'],
+	'%RegExpPrototype%': ['RegExp', 'prototype'],
+	'%SetPrototype%': ['Set', 'prototype'],
+	'%SharedArrayBufferPrototype%': ['SharedArrayBuffer', 'prototype'],
+	'%StringPrototype%': ['String', 'prototype'],
+	'%SymbolPrototype%': ['Symbol', 'prototype'],
+	'%SyntaxErrorPrototype%': ['SyntaxError', 'prototype'],
+	'%TypedArrayPrototype%': ['TypedArray', 'prototype'],
+	'%TypeErrorPrototype%': ['TypeError', 'prototype'],
+	'%Uint8ArrayPrototype%': ['Uint8Array', 'prototype'],
+	'%Uint8ClampedArrayPrototype%': ['Uint8ClampedArray', 'prototype'],
+	'%Uint16ArrayPrototype%': ['Uint16Array', 'prototype'],
+	'%Uint32ArrayPrototype%': ['Uint32Array', 'prototype'],
+	'%URIErrorPrototype%': ['URIError', 'prototype'],
+	'%WeakMapPrototype%': ['WeakMap', 'prototype'],
+	'%WeakSetPrototype%': ['WeakSet', 'prototype']
+};
+
+var bind = __webpack_require__(/*! function-bind */ "./node_modules/function-bind/index.js");
+var hasOwn = __webpack_require__(/*! has */ "./node_modules/has/src/index.js");
+var $concat = bind.call(Function.call, Array.prototype.concat);
+var $spliceApply = bind.call(Function.apply, Array.prototype.splice);
+var $replace = bind.call(Function.call, String.prototype.replace);
+var $strSlice = bind.call(Function.call, String.prototype.slice);
+var $exec = bind.call(Function.call, RegExp.prototype.exec);
+
+/* adapted from https://github.com/lodash/lodash/blob/4.17.15/dist/lodash.js#L6735-L6744 */
+var rePropName = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g;
+var reEscapeChar = /\\(\\)?/g; /** Used to match backslashes in property paths. */
+var stringToPath = function stringToPath(string) {
+	var first = $strSlice(string, 0, 1);
+	var last = $strSlice(string, -1);
+	if (first === '%' && last !== '%') {
+		throw new $SyntaxError('invalid intrinsic syntax, expected closing `%`');
+	} else if (last === '%' && first !== '%') {
+		throw new $SyntaxError('invalid intrinsic syntax, expected opening `%`');
+	}
+	var result = [];
+	$replace(string, rePropName, function (match, number, quote, subString) {
+		result[result.length] = quote ? $replace(subString, reEscapeChar, '$1') : number || match;
+	});
+	return result;
+};
+/* end adaptation */
+
+var getBaseIntrinsic = function getBaseIntrinsic(name, allowMissing) {
+	var intrinsicName = name;
+	var alias;
+	if (hasOwn(LEGACY_ALIASES, intrinsicName)) {
+		alias = LEGACY_ALIASES[intrinsicName];
+		intrinsicName = '%' + alias[0] + '%';
+	}
+
+	if (hasOwn(INTRINSICS, intrinsicName)) {
+		var value = INTRINSICS[intrinsicName];
+		if (value === needsEval) {
+			value = doEval(intrinsicName);
+		}
+		if (typeof value === 'undefined' && !allowMissing) {
+			throw new $TypeError('intrinsic ' + name + ' exists, but is not available. Please file an issue!');
+		}
+
+		return {
+			alias: alias,
+			name: intrinsicName,
+			value: value
+		};
+	}
+
+	throw new $SyntaxError('intrinsic ' + name + ' does not exist!');
+};
+
+module.exports = function GetIntrinsic(name, allowMissing) {
+	if (typeof name !== 'string' || name.length === 0) {
+		throw new $TypeError('intrinsic name must be a non-empty string');
+	}
+	if (arguments.length > 1 && typeof allowMissing !== 'boolean') {
+		throw new $TypeError('"allowMissing" argument must be a boolean');
+	}
+
+	if ($exec(/^%?[^%]*%?$/, name) === null) {
+		throw new $SyntaxError('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
+	}
+	var parts = stringToPath(name);
+	var intrinsicBaseName = parts.length > 0 ? parts[0] : '';
+
+	var intrinsic = getBaseIntrinsic('%' + intrinsicBaseName + '%', allowMissing);
+	var intrinsicRealName = intrinsic.name;
+	var value = intrinsic.value;
+	var skipFurtherCaching = false;
+
+	var alias = intrinsic.alias;
+	if (alias) {
+		intrinsicBaseName = alias[0];
+		$spliceApply(parts, $concat([0, 1], alias));
+	}
+
+	for (var i = 1, isOwn = true; i < parts.length; i += 1) {
+		var part = parts[i];
+		var first = $strSlice(part, 0, 1);
+		var last = $strSlice(part, -1);
+		if (
+			(
+				(first === '"' || first === "'" || first === '`')
+				|| (last === '"' || last === "'" || last === '`')
+			)
+			&& first !== last
+		) {
+			throw new $SyntaxError('property names with quotes must have matching quotes');
+		}
+		if (part === 'constructor' || !isOwn) {
+			skipFurtherCaching = true;
+		}
+
+		intrinsicBaseName += '.' + part;
+		intrinsicRealName = '%' + intrinsicBaseName + '%';
+
+		if (hasOwn(INTRINSICS, intrinsicRealName)) {
+			value = INTRINSICS[intrinsicRealName];
+		} else if (value != null) {
+			if (!(part in value)) {
+				if (!allowMissing) {
+					throw new $TypeError('base intrinsic for ' + name + ' exists, but the property is not available.');
+				}
+				return void undefined;
+			}
+			if ($gOPD && (i + 1) >= parts.length) {
+				var desc = $gOPD(value, part);
+				isOwn = !!desc;
+
+				// By convention, when a data property is converted to an accessor
+				// property to emulate a data property that does not suffer from
+				// the override mistake, that accessor's getter is marked with
+				// an `originalValue` property. Here, when we detect this, we
+				// uphold the illusion by pretending to see that original data
+				// property, i.e., returning the value rather than the getter
+				// itself.
+				if (isOwn && 'get' in desc && !('originalValue' in desc.get)) {
+					value = desc.get;
+				} else {
+					value = value[part];
+				}
+			} else {
+				isOwn = hasOwn(value, part);
+				value = value[part];
+			}
+
+			if (isOwn && !skipFurtherCaching) {
+				INTRINSICS[intrinsicRealName] = value;
+			}
+		}
+	}
+	return value;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/has-symbols/index.js":
+/*!*******************************************!*\
+  !*** ./node_modules/has-symbols/index.js ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var origSymbol = typeof Symbol !== 'undefined' && Symbol;
+var hasSymbolSham = __webpack_require__(/*! ./shams */ "./node_modules/has-symbols/shams.js");
+
+module.exports = function hasNativeSymbols() {
+	if (typeof origSymbol !== 'function') { return false; }
+	if (typeof Symbol !== 'function') { return false; }
+	if (typeof origSymbol('foo') !== 'symbol') { return false; }
+	if (typeof Symbol('bar') !== 'symbol') { return false; }
+
+	return hasSymbolSham();
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/has-symbols/shams.js":
+/*!*******************************************!*\
+  !*** ./node_modules/has-symbols/shams.js ***!
+  \*******************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/* eslint complexity: [2, 18], max-statements: [2, 33] */
+module.exports = function hasSymbols() {
+	if (typeof Symbol !== 'function' || typeof Object.getOwnPropertySymbols !== 'function') { return false; }
+	if (typeof Symbol.iterator === 'symbol') { return true; }
+
+	var obj = {};
+	var sym = Symbol('test');
+	var symObj = Object(sym);
+	if (typeof sym === 'string') { return false; }
+
+	if (Object.prototype.toString.call(sym) !== '[object Symbol]') { return false; }
+	if (Object.prototype.toString.call(symObj) !== '[object Symbol]') { return false; }
+
+	// temp disabled per https://github.com/ljharb/object.assign/issues/17
+	// if (sym instanceof Symbol) { return false; }
+	// temp disabled per https://github.com/WebReflection/get-own-property-symbols/issues/4
+	// if (!(symObj instanceof Symbol)) { return false; }
+
+	// if (typeof Symbol.prototype.toString !== 'function') { return false; }
+	// if (String(sym) !== Symbol.prototype.toString.call(sym)) { return false; }
+
+	var symVal = 42;
+	obj[sym] = symVal;
+	for (sym in obj) { return false; } // eslint-disable-line no-restricted-syntax, no-unreachable-loop
+	if (typeof Object.keys === 'function' && Object.keys(obj).length !== 0) { return false; }
+
+	if (typeof Object.getOwnPropertyNames === 'function' && Object.getOwnPropertyNames(obj).length !== 0) { return false; }
+
+	var syms = Object.getOwnPropertySymbols(obj);
+	if (syms.length !== 1 || syms[0] !== sym) { return false; }
+
+	if (!Object.prototype.propertyIsEnumerable.call(obj, sym)) { return false; }
+
+	if (typeof Object.getOwnPropertyDescriptor === 'function') {
+		var descriptor = Object.getOwnPropertyDescriptor(obj, sym);
+		if (descriptor.value !== symVal || descriptor.enumerable !== true) { return false; }
+	}
+
+	return true;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/has/src/index.js":
+/*!***************************************!*\
+  !*** ./node_modules/has/src/index.js ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var bind = __webpack_require__(/*! function-bind */ "./node_modules/function-bind/index.js");
+
+module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
+
+
+/***/ }),
+
+/***/ "./node_modules/laravel-vite-plugin/inertia-helpers/index.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/laravel-vite-plugin/inertia-helpers/index.js ***!
+  \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "resolvePageComponent": () => (/* binding */ resolvePageComponent)
 /* harmony export */ });
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.mjs");
-/* harmony import */ var _components_beer_board_BeerBoardIndex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/beer-board/BeerBoardIndex */ "./resources/js/components/beer-board/BeerBoardIndex.vue");
+async function resolvePageComponent(path, pages) {
+    const page = pages[path];
+    if (typeof page === 'undefined') {
+        throw new Error(`Page not found: ${path}`);
+    }
+    return typeof page === 'function' ? page() : page;
+}
 
 
-var routes = [{
-  path: '/',
-  name: 'beer-board.index',
-  component: _components_beer_board_BeerBoardIndex__WEBPACK_IMPORTED_MODULE_0__["default"]
-}];
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue_router__WEBPACK_IMPORTED_MODULE_1__.createRouter)({
-  history: (0,vue_router__WEBPACK_IMPORTED_MODULE_1__.createWebHistory)(),
-  routes: routes
-}));
+/***/ }),
+
+/***/ "./node_modules/lodash.clonedeep/index.js":
+/*!************************************************!*\
+  !*** ./node_modules/lodash.clonedeep/index.js ***!
+  \************************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+/* module decorator */ module = __webpack_require__.nmd(module);
+/**
+ * lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/** Used as the size to enable large array optimizations. */
+var LARGE_ARRAY_SIZE = 200;
+
+/** Used to stand-in for `undefined` hash values. */
+var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+/** Used as references for various `Number` constants. */
+var MAX_SAFE_INTEGER = 9007199254740991;
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]',
+    arrayTag = '[object Array]',
+    boolTag = '[object Boolean]',
+    dateTag = '[object Date]',
+    errorTag = '[object Error]',
+    funcTag = '[object Function]',
+    genTag = '[object GeneratorFunction]',
+    mapTag = '[object Map]',
+    numberTag = '[object Number]',
+    objectTag = '[object Object]',
+    promiseTag = '[object Promise]',
+    regexpTag = '[object RegExp]',
+    setTag = '[object Set]',
+    stringTag = '[object String]',
+    symbolTag = '[object Symbol]',
+    weakMapTag = '[object WeakMap]';
+
+var arrayBufferTag = '[object ArrayBuffer]',
+    dataViewTag = '[object DataView]',
+    float32Tag = '[object Float32Array]',
+    float64Tag = '[object Float64Array]',
+    int8Tag = '[object Int8Array]',
+    int16Tag = '[object Int16Array]',
+    int32Tag = '[object Int32Array]',
+    uint8Tag = '[object Uint8Array]',
+    uint8ClampedTag = '[object Uint8ClampedArray]',
+    uint16Tag = '[object Uint16Array]',
+    uint32Tag = '[object Uint32Array]';
+
+/**
+ * Used to match `RegExp`
+ * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+ */
+var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+/** Used to match `RegExp` flags from their coerced string values. */
+var reFlags = /\w*$/;
+
+/** Used to detect host constructors (Safari). */
+var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+/** Used to detect unsigned integer values. */
+var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+/** Used to identify `toStringTag` values supported by `_.clone`. */
+var cloneableTags = {};
+cloneableTags[argsTag] = cloneableTags[arrayTag] =
+cloneableTags[arrayBufferTag] = cloneableTags[dataViewTag] =
+cloneableTags[boolTag] = cloneableTags[dateTag] =
+cloneableTags[float32Tag] = cloneableTags[float64Tag] =
+cloneableTags[int8Tag] = cloneableTags[int16Tag] =
+cloneableTags[int32Tag] = cloneableTags[mapTag] =
+cloneableTags[numberTag] = cloneableTags[objectTag] =
+cloneableTags[regexpTag] = cloneableTags[setTag] =
+cloneableTags[stringTag] = cloneableTags[symbolTag] =
+cloneableTags[uint8Tag] = cloneableTags[uint8ClampedTag] =
+cloneableTags[uint16Tag] = cloneableTags[uint32Tag] = true;
+cloneableTags[errorTag] = cloneableTags[funcTag] =
+cloneableTags[weakMapTag] = false;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof __webpack_require__.g == 'object' && __webpack_require__.g && __webpack_require__.g.Object === Object && __webpack_require__.g;
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+/** Detect free variable `exports`. */
+var freeExports =  true && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && "object" == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/**
+ * Adds the key-value `pair` to `map`.
+ *
+ * @private
+ * @param {Object} map The map to modify.
+ * @param {Array} pair The key-value pair to add.
+ * @returns {Object} Returns `map`.
+ */
+function addMapEntry(map, pair) {
+  // Don't return `map.set` because it's not chainable in IE 11.
+  map.set(pair[0], pair[1]);
+  return map;
+}
+
+/**
+ * Adds `value` to `set`.
+ *
+ * @private
+ * @param {Object} set The set to modify.
+ * @param {*} value The value to add.
+ * @returns {Object} Returns `set`.
+ */
+function addSetEntry(set, value) {
+  // Don't return `set.add` because it's not chainable in IE 11.
+  set.add(value);
+  return set;
+}
+
+/**
+ * A specialized version of `_.forEach` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns `array`.
+ */
+function arrayEach(array, iteratee) {
+  var index = -1,
+      length = array ? array.length : 0;
+
+  while (++index < length) {
+    if (iteratee(array[index], index, array) === false) {
+      break;
+    }
+  }
+  return array;
+}
+
+/**
+ * Appends the elements of `values` to `array`.
+ *
+ * @private
+ * @param {Array} array The array to modify.
+ * @param {Array} values The values to append.
+ * @returns {Array} Returns `array`.
+ */
+function arrayPush(array, values) {
+  var index = -1,
+      length = values.length,
+      offset = array.length;
+
+  while (++index < length) {
+    array[offset + index] = values[index];
+  }
+  return array;
+}
+
+/**
+ * A specialized version of `_.reduce` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @param {*} [accumulator] The initial value.
+ * @param {boolean} [initAccum] Specify using the first element of `array` as
+ *  the initial value.
+ * @returns {*} Returns the accumulated value.
+ */
+function arrayReduce(array, iteratee, accumulator, initAccum) {
+  var index = -1,
+      length = array ? array.length : 0;
+
+  if (initAccum && length) {
+    accumulator = array[++index];
+  }
+  while (++index < length) {
+    accumulator = iteratee(accumulator, array[index], index, array);
+  }
+  return accumulator;
+}
+
+/**
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
+ *
+ * @private
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
+ */
+function baseTimes(n, iteratee) {
+  var index = -1,
+      result = Array(n);
+
+  while (++index < n) {
+    result[index] = iteratee(index);
+  }
+  return result;
+}
+
+/**
+ * Gets the value at `key` of `object`.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {string} key The key of the property to get.
+ * @returns {*} Returns the property value.
+ */
+function getValue(object, key) {
+  return object == null ? undefined : object[key];
+}
+
+/**
+ * Checks if `value` is a host object in IE < 9.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
+ */
+function isHostObject(value) {
+  // Many host objects are `Object` objects that can coerce to strings
+  // despite having improperly defined `toString` methods.
+  var result = false;
+  if (value != null && typeof value.toString != 'function') {
+    try {
+      result = !!(value + '');
+    } catch (e) {}
+  }
+  return result;
+}
+
+/**
+ * Converts `map` to its key-value pairs.
+ *
+ * @private
+ * @param {Object} map The map to convert.
+ * @returns {Array} Returns the key-value pairs.
+ */
+function mapToArray(map) {
+  var index = -1,
+      result = Array(map.size);
+
+  map.forEach(function(value, key) {
+    result[++index] = [key, value];
+  });
+  return result;
+}
+
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */
+function overArg(func, transform) {
+  return function(arg) {
+    return func(transform(arg));
+  };
+}
+
+/**
+ * Converts `set` to an array of its values.
+ *
+ * @private
+ * @param {Object} set The set to convert.
+ * @returns {Array} Returns the values.
+ */
+function setToArray(set) {
+  var index = -1,
+      result = Array(set.size);
+
+  set.forEach(function(value) {
+    result[++index] = value;
+  });
+  return result;
+}
+
+/** Used for built-in method references. */
+var arrayProto = Array.prototype,
+    funcProto = Function.prototype,
+    objectProto = Object.prototype;
+
+/** Used to detect overreaching core-js shims. */
+var coreJsData = root['__core-js_shared__'];
+
+/** Used to detect methods masquerading as native. */
+var maskSrcKey = (function() {
+  var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+  return uid ? ('Symbol(src)_1.' + uid) : '';
+}());
+
+/** Used to resolve the decompiled source of functions. */
+var funcToString = funcProto.toString;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/** Used to detect if a method is native. */
+var reIsNative = RegExp('^' +
+  funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&')
+  .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
+);
+
+/** Built-in value references. */
+var Buffer = moduleExports ? root.Buffer : undefined,
+    Symbol = root.Symbol,
+    Uint8Array = root.Uint8Array,
+    getPrototype = overArg(Object.getPrototypeOf, Object),
+    objectCreate = Object.create,
+    propertyIsEnumerable = objectProto.propertyIsEnumerable,
+    splice = arrayProto.splice;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeGetSymbols = Object.getOwnPropertySymbols,
+    nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined,
+    nativeKeys = overArg(Object.keys, Object);
+
+/* Built-in method references that are verified to be native. */
+var DataView = getNative(root, 'DataView'),
+    Map = getNative(root, 'Map'),
+    Promise = getNative(root, 'Promise'),
+    Set = getNative(root, 'Set'),
+    WeakMap = getNative(root, 'WeakMap'),
+    nativeCreate = getNative(Object, 'create');
+
+/** Used to detect maps, sets, and weakmaps. */
+var dataViewCtorString = toSource(DataView),
+    mapCtorString = toSource(Map),
+    promiseCtorString = toSource(Promise),
+    setCtorString = toSource(Set),
+    weakMapCtorString = toSource(WeakMap);
+
+/** Used to convert symbols to primitives and strings. */
+var symbolProto = Symbol ? Symbol.prototype : undefined,
+    symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
+
+/**
+ * Creates a hash object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Hash(entries) {
+  var index = -1,
+      length = entries ? entries.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the hash.
+ *
+ * @private
+ * @name clear
+ * @memberOf Hash
+ */
+function hashClear() {
+  this.__data__ = nativeCreate ? nativeCreate(null) : {};
+}
+
+/**
+ * Removes `key` and its value from the hash.
+ *
+ * @private
+ * @name delete
+ * @memberOf Hash
+ * @param {Object} hash The hash to modify.
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function hashDelete(key) {
+  return this.has(key) && delete this.__data__[key];
+}
+
+/**
+ * Gets the hash value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Hash
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function hashGet(key) {
+  var data = this.__data__;
+  if (nativeCreate) {
+    var result = data[key];
+    return result === HASH_UNDEFINED ? undefined : result;
+  }
+  return hasOwnProperty.call(data, key) ? data[key] : undefined;
+}
+
+/**
+ * Checks if a hash value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Hash
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function hashHas(key) {
+  var data = this.__data__;
+  return nativeCreate ? data[key] !== undefined : hasOwnProperty.call(data, key);
+}
+
+/**
+ * Sets the hash `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Hash
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the hash instance.
+ */
+function hashSet(key, value) {
+  var data = this.__data__;
+  data[key] = (nativeCreate && value === undefined) ? HASH_UNDEFINED : value;
+  return this;
+}
+
+// Add methods to `Hash`.
+Hash.prototype.clear = hashClear;
+Hash.prototype['delete'] = hashDelete;
+Hash.prototype.get = hashGet;
+Hash.prototype.has = hashHas;
+Hash.prototype.set = hashSet;
+
+/**
+ * Creates an list cache object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function ListCache(entries) {
+  var index = -1,
+      length = entries ? entries.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the list cache.
+ *
+ * @private
+ * @name clear
+ * @memberOf ListCache
+ */
+function listCacheClear() {
+  this.__data__ = [];
+}
+
+/**
+ * Removes `key` and its value from the list cache.
+ *
+ * @private
+ * @name delete
+ * @memberOf ListCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function listCacheDelete(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    return false;
+  }
+  var lastIndex = data.length - 1;
+  if (index == lastIndex) {
+    data.pop();
+  } else {
+    splice.call(data, index, 1);
+  }
+  return true;
+}
+
+/**
+ * Gets the list cache value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf ListCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function listCacheGet(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  return index < 0 ? undefined : data[index][1];
+}
+
+/**
+ * Checks if a list cache value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf ListCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function listCacheHas(key) {
+  return assocIndexOf(this.__data__, key) > -1;
+}
+
+/**
+ * Sets the list cache `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf ListCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the list cache instance.
+ */
+function listCacheSet(key, value) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    data.push([key, value]);
+  } else {
+    data[index][1] = value;
+  }
+  return this;
+}
+
+// Add methods to `ListCache`.
+ListCache.prototype.clear = listCacheClear;
+ListCache.prototype['delete'] = listCacheDelete;
+ListCache.prototype.get = listCacheGet;
+ListCache.prototype.has = listCacheHas;
+ListCache.prototype.set = listCacheSet;
+
+/**
+ * Creates a map cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function MapCache(entries) {
+  var index = -1,
+      length = entries ? entries.length : 0;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the map.
+ *
+ * @private
+ * @name clear
+ * @memberOf MapCache
+ */
+function mapCacheClear() {
+  this.__data__ = {
+    'hash': new Hash,
+    'map': new (Map || ListCache),
+    'string': new Hash
+  };
+}
+
+/**
+ * Removes `key` and its value from the map.
+ *
+ * @private
+ * @name delete
+ * @memberOf MapCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function mapCacheDelete(key) {
+  return getMapData(this, key)['delete'](key);
+}
+
+/**
+ * Gets the map value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf MapCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function mapCacheGet(key) {
+  return getMapData(this, key).get(key);
+}
+
+/**
+ * Checks if a map value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf MapCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function mapCacheHas(key) {
+  return getMapData(this, key).has(key);
+}
+
+/**
+ * Sets the map `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf MapCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the map cache instance.
+ */
+function mapCacheSet(key, value) {
+  getMapData(this, key).set(key, value);
+  return this;
+}
+
+// Add methods to `MapCache`.
+MapCache.prototype.clear = mapCacheClear;
+MapCache.prototype['delete'] = mapCacheDelete;
+MapCache.prototype.get = mapCacheGet;
+MapCache.prototype.has = mapCacheHas;
+MapCache.prototype.set = mapCacheSet;
+
+/**
+ * Creates a stack cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Stack(entries) {
+  this.__data__ = new ListCache(entries);
+}
+
+/**
+ * Removes all key-value entries from the stack.
+ *
+ * @private
+ * @name clear
+ * @memberOf Stack
+ */
+function stackClear() {
+  this.__data__ = new ListCache;
+}
+
+/**
+ * Removes `key` and its value from the stack.
+ *
+ * @private
+ * @name delete
+ * @memberOf Stack
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function stackDelete(key) {
+  return this.__data__['delete'](key);
+}
+
+/**
+ * Gets the stack value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Stack
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function stackGet(key) {
+  return this.__data__.get(key);
+}
+
+/**
+ * Checks if a stack value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Stack
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function stackHas(key) {
+  return this.__data__.has(key);
+}
+
+/**
+ * Sets the stack `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Stack
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the stack cache instance.
+ */
+function stackSet(key, value) {
+  var cache = this.__data__;
+  if (cache instanceof ListCache) {
+    var pairs = cache.__data__;
+    if (!Map || (pairs.length < LARGE_ARRAY_SIZE - 1)) {
+      pairs.push([key, value]);
+      return this;
+    }
+    cache = this.__data__ = new MapCache(pairs);
+  }
+  cache.set(key, value);
+  return this;
+}
+
+// Add methods to `Stack`.
+Stack.prototype.clear = stackClear;
+Stack.prototype['delete'] = stackDelete;
+Stack.prototype.get = stackGet;
+Stack.prototype.has = stackHas;
+Stack.prototype.set = stackSet;
+
+/**
+ * Creates an array of the enumerable property names of the array-like `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @param {boolean} inherited Specify returning inherited property names.
+ * @returns {Array} Returns the array of property names.
+ */
+function arrayLikeKeys(value, inherited) {
+  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+  // Safari 9 makes `arguments.length` enumerable in strict mode.
+  var result = (isArray(value) || isArguments(value))
+    ? baseTimes(value.length, String)
+    : [];
+
+  var length = result.length,
+      skipIndexes = !!length;
+
+  for (var key in value) {
+    if ((inherited || hasOwnProperty.call(value, key)) &&
+        !(skipIndexes && (key == 'length' || isIndex(key, length)))) {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * Assigns `value` to `key` of `object` if the existing value is not equivalent
+ * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * for equality comparisons.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {string} key The key of the property to assign.
+ * @param {*} value The value to assign.
+ */
+function assignValue(object, key, value) {
+  var objValue = object[key];
+  if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) ||
+      (value === undefined && !(key in object))) {
+    object[key] = value;
+  }
+}
+
+/**
+ * Gets the index at which the `key` is found in `array` of key-value pairs.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} key The key to search for.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function assocIndexOf(array, key) {
+  var length = array.length;
+  while (length--) {
+    if (eq(array[length][0], key)) {
+      return length;
+    }
+  }
+  return -1;
+}
+
+/**
+ * The base implementation of `_.assign` without support for multiple sources
+ * or `customizer` functions.
+ *
+ * @private
+ * @param {Object} object The destination object.
+ * @param {Object} source The source object.
+ * @returns {Object} Returns `object`.
+ */
+function baseAssign(object, source) {
+  return object && copyObject(source, keys(source), object);
+}
+
+/**
+ * The base implementation of `_.clone` and `_.cloneDeep` which tracks
+ * traversed objects.
+ *
+ * @private
+ * @param {*} value The value to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @param {boolean} [isFull] Specify a clone including symbols.
+ * @param {Function} [customizer] The function to customize cloning.
+ * @param {string} [key] The key of `value`.
+ * @param {Object} [object] The parent object of `value`.
+ * @param {Object} [stack] Tracks traversed objects and their clone counterparts.
+ * @returns {*} Returns the cloned value.
+ */
+function baseClone(value, isDeep, isFull, customizer, key, object, stack) {
+  var result;
+  if (customizer) {
+    result = object ? customizer(value, key, object, stack) : customizer(value);
+  }
+  if (result !== undefined) {
+    return result;
+  }
+  if (!isObject(value)) {
+    return value;
+  }
+  var isArr = isArray(value);
+  if (isArr) {
+    result = initCloneArray(value);
+    if (!isDeep) {
+      return copyArray(value, result);
+    }
+  } else {
+    var tag = getTag(value),
+        isFunc = tag == funcTag || tag == genTag;
+
+    if (isBuffer(value)) {
+      return cloneBuffer(value, isDeep);
+    }
+    if (tag == objectTag || tag == argsTag || (isFunc && !object)) {
+      if (isHostObject(value)) {
+        return object ? value : {};
+      }
+      result = initCloneObject(isFunc ? {} : value);
+      if (!isDeep) {
+        return copySymbols(value, baseAssign(result, value));
+      }
+    } else {
+      if (!cloneableTags[tag]) {
+        return object ? value : {};
+      }
+      result = initCloneByTag(value, tag, baseClone, isDeep);
+    }
+  }
+  // Check for circular references and return its corresponding clone.
+  stack || (stack = new Stack);
+  var stacked = stack.get(value);
+  if (stacked) {
+    return stacked;
+  }
+  stack.set(value, result);
+
+  if (!isArr) {
+    var props = isFull ? getAllKeys(value) : keys(value);
+  }
+  arrayEach(props || value, function(subValue, key) {
+    if (props) {
+      key = subValue;
+      subValue = value[key];
+    }
+    // Recursively populate clone (susceptible to call stack limits).
+    assignValue(result, key, baseClone(subValue, isDeep, isFull, customizer, key, value, stack));
+  });
+  return result;
+}
+
+/**
+ * The base implementation of `_.create` without support for assigning
+ * properties to the created object.
+ *
+ * @private
+ * @param {Object} prototype The object to inherit from.
+ * @returns {Object} Returns the new object.
+ */
+function baseCreate(proto) {
+  return isObject(proto) ? objectCreate(proto) : {};
+}
+
+/**
+ * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
+ * `keysFunc` and `symbolsFunc` to get the enumerable property names and
+ * symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Function} keysFunc The function to get the keys of `object`.
+ * @param {Function} symbolsFunc The function to get the symbols of `object`.
+ * @returns {Array} Returns the array of property names and symbols.
+ */
+function baseGetAllKeys(object, keysFunc, symbolsFunc) {
+  var result = keysFunc(object);
+  return isArray(object) ? result : arrayPush(result, symbolsFunc(object));
+}
+
+/**
+ * The base implementation of `getTag`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function baseGetTag(value) {
+  return objectToString.call(value);
+}
+
+/**
+ * The base implementation of `_.isNative` without bad shim checks.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a native function,
+ *  else `false`.
+ */
+function baseIsNative(value) {
+  if (!isObject(value) || isMasked(value)) {
+    return false;
+  }
+  var pattern = (isFunction(value) || isHostObject(value)) ? reIsNative : reIsHostCtor;
+  return pattern.test(toSource(value));
+}
+
+/**
+ * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */
+function baseKeys(object) {
+  if (!isPrototype(object)) {
+    return nativeKeys(object);
+  }
+  var result = [];
+  for (var key in Object(object)) {
+    if (hasOwnProperty.call(object, key) && key != 'constructor') {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * Creates a clone of  `buffer`.
+ *
+ * @private
+ * @param {Buffer} buffer The buffer to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Buffer} Returns the cloned buffer.
+ */
+function cloneBuffer(buffer, isDeep) {
+  if (isDeep) {
+    return buffer.slice();
+  }
+  var result = new buffer.constructor(buffer.length);
+  buffer.copy(result);
+  return result;
+}
+
+/**
+ * Creates a clone of `arrayBuffer`.
+ *
+ * @private
+ * @param {ArrayBuffer} arrayBuffer The array buffer to clone.
+ * @returns {ArrayBuffer} Returns the cloned array buffer.
+ */
+function cloneArrayBuffer(arrayBuffer) {
+  var result = new arrayBuffer.constructor(arrayBuffer.byteLength);
+  new Uint8Array(result).set(new Uint8Array(arrayBuffer));
+  return result;
+}
+
+/**
+ * Creates a clone of `dataView`.
+ *
+ * @private
+ * @param {Object} dataView The data view to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the cloned data view.
+ */
+function cloneDataView(dataView, isDeep) {
+  var buffer = isDeep ? cloneArrayBuffer(dataView.buffer) : dataView.buffer;
+  return new dataView.constructor(buffer, dataView.byteOffset, dataView.byteLength);
+}
+
+/**
+ * Creates a clone of `map`.
+ *
+ * @private
+ * @param {Object} map The map to clone.
+ * @param {Function} cloneFunc The function to clone values.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the cloned map.
+ */
+function cloneMap(map, isDeep, cloneFunc) {
+  var array = isDeep ? cloneFunc(mapToArray(map), true) : mapToArray(map);
+  return arrayReduce(array, addMapEntry, new map.constructor);
+}
+
+/**
+ * Creates a clone of `regexp`.
+ *
+ * @private
+ * @param {Object} regexp The regexp to clone.
+ * @returns {Object} Returns the cloned regexp.
+ */
+function cloneRegExp(regexp) {
+  var result = new regexp.constructor(regexp.source, reFlags.exec(regexp));
+  result.lastIndex = regexp.lastIndex;
+  return result;
+}
+
+/**
+ * Creates a clone of `set`.
+ *
+ * @private
+ * @param {Object} set The set to clone.
+ * @param {Function} cloneFunc The function to clone values.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the cloned set.
+ */
+function cloneSet(set, isDeep, cloneFunc) {
+  var array = isDeep ? cloneFunc(setToArray(set), true) : setToArray(set);
+  return arrayReduce(array, addSetEntry, new set.constructor);
+}
+
+/**
+ * Creates a clone of the `symbol` object.
+ *
+ * @private
+ * @param {Object} symbol The symbol object to clone.
+ * @returns {Object} Returns the cloned symbol object.
+ */
+function cloneSymbol(symbol) {
+  return symbolValueOf ? Object(symbolValueOf.call(symbol)) : {};
+}
+
+/**
+ * Creates a clone of `typedArray`.
+ *
+ * @private
+ * @param {Object} typedArray The typed array to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the cloned typed array.
+ */
+function cloneTypedArray(typedArray, isDeep) {
+  var buffer = isDeep ? cloneArrayBuffer(typedArray.buffer) : typedArray.buffer;
+  return new typedArray.constructor(buffer, typedArray.byteOffset, typedArray.length);
+}
+
+/**
+ * Copies the values of `source` to `array`.
+ *
+ * @private
+ * @param {Array} source The array to copy values from.
+ * @param {Array} [array=[]] The array to copy values to.
+ * @returns {Array} Returns `array`.
+ */
+function copyArray(source, array) {
+  var index = -1,
+      length = source.length;
+
+  array || (array = Array(length));
+  while (++index < length) {
+    array[index] = source[index];
+  }
+  return array;
+}
+
+/**
+ * Copies properties of `source` to `object`.
+ *
+ * @private
+ * @param {Object} source The object to copy properties from.
+ * @param {Array} props The property identifiers to copy.
+ * @param {Object} [object={}] The object to copy properties to.
+ * @param {Function} [customizer] The function to customize copied values.
+ * @returns {Object} Returns `object`.
+ */
+function copyObject(source, props, object, customizer) {
+  object || (object = {});
+
+  var index = -1,
+      length = props.length;
+
+  while (++index < length) {
+    var key = props[index];
+
+    var newValue = customizer
+      ? customizer(object[key], source[key], key, object, source)
+      : undefined;
+
+    assignValue(object, key, newValue === undefined ? source[key] : newValue);
+  }
+  return object;
+}
+
+/**
+ * Copies own symbol properties of `source` to `object`.
+ *
+ * @private
+ * @param {Object} source The object to copy symbols from.
+ * @param {Object} [object={}] The object to copy symbols to.
+ * @returns {Object} Returns `object`.
+ */
+function copySymbols(source, object) {
+  return copyObject(source, getSymbols(source), object);
+}
+
+/**
+ * Creates an array of own enumerable property names and symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names and symbols.
+ */
+function getAllKeys(object) {
+  return baseGetAllKeys(object, keys, getSymbols);
+}
+
+/**
+ * Gets the data for `map`.
+ *
+ * @private
+ * @param {Object} map The map to query.
+ * @param {string} key The reference key.
+ * @returns {*} Returns the map data.
+ */
+function getMapData(map, key) {
+  var data = map.__data__;
+  return isKeyable(key)
+    ? data[typeof key == 'string' ? 'string' : 'hash']
+    : data.map;
+}
+
+/**
+ * Gets the native function at `key` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {string} key The key of the method to get.
+ * @returns {*} Returns the function if it's native, else `undefined`.
+ */
+function getNative(object, key) {
+  var value = getValue(object, key);
+  return baseIsNative(value) ? value : undefined;
+}
+
+/**
+ * Creates an array of the own enumerable symbol properties of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of symbols.
+ */
+var getSymbols = nativeGetSymbols ? overArg(nativeGetSymbols, Object) : stubArray;
+
+/**
+ * Gets the `toStringTag` of `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+var getTag = baseGetTag;
+
+// Fallback for data views, maps, sets, and weak maps in IE 11,
+// for data views in Edge < 14, and promises in Node.js.
+if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
+    (Map && getTag(new Map) != mapTag) ||
+    (Promise && getTag(Promise.resolve()) != promiseTag) ||
+    (Set && getTag(new Set) != setTag) ||
+    (WeakMap && getTag(new WeakMap) != weakMapTag)) {
+  getTag = function(value) {
+    var result = objectToString.call(value),
+        Ctor = result == objectTag ? value.constructor : undefined,
+        ctorString = Ctor ? toSource(Ctor) : undefined;
+
+    if (ctorString) {
+      switch (ctorString) {
+        case dataViewCtorString: return dataViewTag;
+        case mapCtorString: return mapTag;
+        case promiseCtorString: return promiseTag;
+        case setCtorString: return setTag;
+        case weakMapCtorString: return weakMapTag;
+      }
+    }
+    return result;
+  };
+}
+
+/**
+ * Initializes an array clone.
+ *
+ * @private
+ * @param {Array} array The array to clone.
+ * @returns {Array} Returns the initialized clone.
+ */
+function initCloneArray(array) {
+  var length = array.length,
+      result = array.constructor(length);
+
+  // Add properties assigned by `RegExp#exec`.
+  if (length && typeof array[0] == 'string' && hasOwnProperty.call(array, 'index')) {
+    result.index = array.index;
+    result.input = array.input;
+  }
+  return result;
+}
+
+/**
+ * Initializes an object clone.
+ *
+ * @private
+ * @param {Object} object The object to clone.
+ * @returns {Object} Returns the initialized clone.
+ */
+function initCloneObject(object) {
+  return (typeof object.constructor == 'function' && !isPrototype(object))
+    ? baseCreate(getPrototype(object))
+    : {};
+}
+
+/**
+ * Initializes an object clone based on its `toStringTag`.
+ *
+ * **Note:** This function only supports cloning values with tags of
+ * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
+ *
+ * @private
+ * @param {Object} object The object to clone.
+ * @param {string} tag The `toStringTag` of the object to clone.
+ * @param {Function} cloneFunc The function to clone values.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the initialized clone.
+ */
+function initCloneByTag(object, tag, cloneFunc, isDeep) {
+  var Ctor = object.constructor;
+  switch (tag) {
+    case arrayBufferTag:
+      return cloneArrayBuffer(object);
+
+    case boolTag:
+    case dateTag:
+      return new Ctor(+object);
+
+    case dataViewTag:
+      return cloneDataView(object, isDeep);
+
+    case float32Tag: case float64Tag:
+    case int8Tag: case int16Tag: case int32Tag:
+    case uint8Tag: case uint8ClampedTag: case uint16Tag: case uint32Tag:
+      return cloneTypedArray(object, isDeep);
+
+    case mapTag:
+      return cloneMap(object, isDeep, cloneFunc);
+
+    case numberTag:
+    case stringTag:
+      return new Ctor(object);
+
+    case regexpTag:
+      return cloneRegExp(object);
+
+    case setTag:
+      return cloneSet(object, isDeep, cloneFunc);
+
+    case symbolTag:
+      return cloneSymbol(object);
+  }
+}
+
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */
+function isIndex(value, length) {
+  length = length == null ? MAX_SAFE_INTEGER : length;
+  return !!length &&
+    (typeof value == 'number' || reIsUint.test(value)) &&
+    (value > -1 && value % 1 == 0 && value < length);
+}
+
+/**
+ * Checks if `value` is suitable for use as unique object key.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+ */
+function isKeyable(value) {
+  var type = typeof value;
+  return (type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean')
+    ? (value !== '__proto__')
+    : (value === null);
+}
+
+/**
+ * Checks if `func` has its source masked.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+ */
+function isMasked(func) {
+  return !!maskSrcKey && (maskSrcKey in func);
+}
+
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */
+function isPrototype(value) {
+  var Ctor = value && value.constructor,
+      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
+
+  return value === proto;
+}
+
+/**
+ * Converts `func` to its source code.
+ *
+ * @private
+ * @param {Function} func The function to process.
+ * @returns {string} Returns the source code.
+ */
+function toSource(func) {
+  if (func != null) {
+    try {
+      return funcToString.call(func);
+    } catch (e) {}
+    try {
+      return (func + '');
+    } catch (e) {}
+  }
+  return '';
+}
+
+/**
+ * This method is like `_.clone` except that it recursively clones `value`.
+ *
+ * @static
+ * @memberOf _
+ * @since 1.0.0
+ * @category Lang
+ * @param {*} value The value to recursively clone.
+ * @returns {*} Returns the deep cloned value.
+ * @see _.clone
+ * @example
+ *
+ * var objects = [{ 'a': 1 }, { 'b': 2 }];
+ *
+ * var deep = _.cloneDeep(objects);
+ * console.log(deep[0] === objects[0]);
+ * // => false
+ */
+function cloneDeep(value) {
+  return baseClone(value, true, true);
+}
+
+/**
+ * Performs a
+ * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * comparison between two values to determine if they are equivalent.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.eq(object, object);
+ * // => true
+ *
+ * _.eq(object, other);
+ * // => false
+ *
+ * _.eq('a', 'a');
+ * // => true
+ *
+ * _.eq('a', Object('a'));
+ * // => false
+ *
+ * _.eq(NaN, NaN);
+ * // => true
+ */
+function eq(value, other) {
+  return value === other || (value !== value && other !== other);
+}
+
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */
+function isArguments(value) {
+  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
+  return isArrayLikeObject(value) && hasOwnProperty.call(value, 'callee') &&
+    (!propertyIsEnumerable.call(value, 'callee') || objectToString.call(value) == argsTag);
+}
+
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */
+var isArray = Array.isArray;
+
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */
+function isArrayLike(value) {
+  return value != null && isLength(value.length) && !isFunction(value);
+}
+
+/**
+ * This method is like `_.isArrayLike` except that it also checks if `value`
+ * is an object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array-like object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArrayLikeObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLikeObject(document.body.children);
+ * // => true
+ *
+ * _.isArrayLikeObject('abc');
+ * // => false
+ *
+ * _.isArrayLikeObject(_.noop);
+ * // => false
+ */
+function isArrayLikeObject(value) {
+  return isObjectLike(value) && isArrayLike(value);
+}
+
+/**
+ * Checks if `value` is a buffer.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+ * @example
+ *
+ * _.isBuffer(new Buffer(2));
+ * // => true
+ *
+ * _.isBuffer(new Uint8Array(2));
+ * // => false
+ */
+var isBuffer = nativeIsBuffer || stubFalse;
+
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */
+function isFunction(value) {
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+  // in Safari 8-9 which returns 'object' for typed array and other constructors.
+  var tag = isObject(value) ? objectToString.call(value) : '';
+  return tag == funcTag || tag == genTag;
+}
+
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */
+function isLength(value) {
+  return typeof value == 'number' &&
+    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return !!value && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return !!value && typeof value == 'object';
+}
+
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */
+function keys(object) {
+  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+}
+
+/**
+ * This method returns a new empty array.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {Array} Returns the new empty array.
+ * @example
+ *
+ * var arrays = _.times(2, _.stubArray);
+ *
+ * console.log(arrays);
+ * // => [[], []]
+ *
+ * console.log(arrays[0] === arrays[1]);
+ * // => false
+ */
+function stubArray() {
+  return [];
+}
+
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */
+function stubFalse() {
+  return false;
+}
+
+module.exports = cloneDeep;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash.isequal/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash.isequal/index.js ***!
+  \**********************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+/* module decorator */ module = __webpack_require__.nmd(module);
+/**
+ * Lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright JS Foundation and other contributors <https://js.foundation/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/** Used as the size to enable large array optimizations. */
+var LARGE_ARRAY_SIZE = 200;
+
+/** Used to stand-in for `undefined` hash values. */
+var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+/** Used to compose bitmasks for value comparisons. */
+var COMPARE_PARTIAL_FLAG = 1,
+    COMPARE_UNORDERED_FLAG = 2;
+
+/** Used as references for various `Number` constants. */
+var MAX_SAFE_INTEGER = 9007199254740991;
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]',
+    arrayTag = '[object Array]',
+    asyncTag = '[object AsyncFunction]',
+    boolTag = '[object Boolean]',
+    dateTag = '[object Date]',
+    errorTag = '[object Error]',
+    funcTag = '[object Function]',
+    genTag = '[object GeneratorFunction]',
+    mapTag = '[object Map]',
+    numberTag = '[object Number]',
+    nullTag = '[object Null]',
+    objectTag = '[object Object]',
+    promiseTag = '[object Promise]',
+    proxyTag = '[object Proxy]',
+    regexpTag = '[object RegExp]',
+    setTag = '[object Set]',
+    stringTag = '[object String]',
+    symbolTag = '[object Symbol]',
+    undefinedTag = '[object Undefined]',
+    weakMapTag = '[object WeakMap]';
+
+var arrayBufferTag = '[object ArrayBuffer]',
+    dataViewTag = '[object DataView]',
+    float32Tag = '[object Float32Array]',
+    float64Tag = '[object Float64Array]',
+    int8Tag = '[object Int8Array]',
+    int16Tag = '[object Int16Array]',
+    int32Tag = '[object Int32Array]',
+    uint8Tag = '[object Uint8Array]',
+    uint8ClampedTag = '[object Uint8ClampedArray]',
+    uint16Tag = '[object Uint16Array]',
+    uint32Tag = '[object Uint32Array]';
+
+/**
+ * Used to match `RegExp`
+ * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+ */
+var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+/** Used to detect host constructors (Safari). */
+var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+/** Used to detect unsigned integer values. */
+var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+/** Used to identify `toStringTag` values of typed arrays. */
+var typedArrayTags = {};
+typedArrayTags[float32Tag] = typedArrayTags[float64Tag] =
+typedArrayTags[int8Tag] = typedArrayTags[int16Tag] =
+typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] =
+typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] =
+typedArrayTags[uint32Tag] = true;
+typedArrayTags[argsTag] = typedArrayTags[arrayTag] =
+typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] =
+typedArrayTags[dataViewTag] = typedArrayTags[dateTag] =
+typedArrayTags[errorTag] = typedArrayTags[funcTag] =
+typedArrayTags[mapTag] = typedArrayTags[numberTag] =
+typedArrayTags[objectTag] = typedArrayTags[regexpTag] =
+typedArrayTags[setTag] = typedArrayTags[stringTag] =
+typedArrayTags[weakMapTag] = false;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof __webpack_require__.g == 'object' && __webpack_require__.g && __webpack_require__.g.Object === Object && __webpack_require__.g;
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+/** Detect free variable `exports`. */
+var freeExports =  true && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && "object" == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/** Detect free variable `process` from Node.js. */
+var freeProcess = moduleExports && freeGlobal.process;
+
+/** Used to access faster Node.js helpers. */
+var nodeUtil = (function() {
+  try {
+    return freeProcess && freeProcess.binding && freeProcess.binding('util');
+  } catch (e) {}
+}());
+
+/* Node.js helper references. */
+var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+
+/**
+ * A specialized version of `_.filter` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {Array} Returns the new filtered array.
+ */
+function arrayFilter(array, predicate) {
+  var index = -1,
+      length = array == null ? 0 : array.length,
+      resIndex = 0,
+      result = [];
+
+  while (++index < length) {
+    var value = array[index];
+    if (predicate(value, index, array)) {
+      result[resIndex++] = value;
+    }
+  }
+  return result;
+}
+
+/**
+ * Appends the elements of `values` to `array`.
+ *
+ * @private
+ * @param {Array} array The array to modify.
+ * @param {Array} values The values to append.
+ * @returns {Array} Returns `array`.
+ */
+function arrayPush(array, values) {
+  var index = -1,
+      length = values.length,
+      offset = array.length;
+
+  while (++index < length) {
+    array[offset + index] = values[index];
+  }
+  return array;
+}
+
+/**
+ * A specialized version of `_.some` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {boolean} Returns `true` if any element passes the predicate check,
+ *  else `false`.
+ */
+function arraySome(array, predicate) {
+  var index = -1,
+      length = array == null ? 0 : array.length;
+
+  while (++index < length) {
+    if (predicate(array[index], index, array)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
+ *
+ * @private
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
+ */
+function baseTimes(n, iteratee) {
+  var index = -1,
+      result = Array(n);
+
+  while (++index < n) {
+    result[index] = iteratee(index);
+  }
+  return result;
+}
+
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */
+function baseUnary(func) {
+  return function(value) {
+    return func(value);
+  };
+}
+
+/**
+ * Checks if a `cache` value for `key` exists.
+ *
+ * @private
+ * @param {Object} cache The cache to query.
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function cacheHas(cache, key) {
+  return cache.has(key);
+}
+
+/**
+ * Gets the value at `key` of `object`.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {string} key The key of the property to get.
+ * @returns {*} Returns the property value.
+ */
+function getValue(object, key) {
+  return object == null ? undefined : object[key];
+}
+
+/**
+ * Converts `map` to its key-value pairs.
+ *
+ * @private
+ * @param {Object} map The map to convert.
+ * @returns {Array} Returns the key-value pairs.
+ */
+function mapToArray(map) {
+  var index = -1,
+      result = Array(map.size);
+
+  map.forEach(function(value, key) {
+    result[++index] = [key, value];
+  });
+  return result;
+}
+
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */
+function overArg(func, transform) {
+  return function(arg) {
+    return func(transform(arg));
+  };
+}
+
+/**
+ * Converts `set` to an array of its values.
+ *
+ * @private
+ * @param {Object} set The set to convert.
+ * @returns {Array} Returns the values.
+ */
+function setToArray(set) {
+  var index = -1,
+      result = Array(set.size);
+
+  set.forEach(function(value) {
+    result[++index] = value;
+  });
+  return result;
+}
+
+/** Used for built-in method references. */
+var arrayProto = Array.prototype,
+    funcProto = Function.prototype,
+    objectProto = Object.prototype;
+
+/** Used to detect overreaching core-js shims. */
+var coreJsData = root['__core-js_shared__'];
+
+/** Used to resolve the decompiled source of functions. */
+var funcToString = funcProto.toString;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/** Used to detect methods masquerading as native. */
+var maskSrcKey = (function() {
+  var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+  return uid ? ('Symbol(src)_1.' + uid) : '';
+}());
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var nativeObjectToString = objectProto.toString;
+
+/** Used to detect if a method is native. */
+var reIsNative = RegExp('^' +
+  funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&')
+  .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
+);
+
+/** Built-in value references. */
+var Buffer = moduleExports ? root.Buffer : undefined,
+    Symbol = root.Symbol,
+    Uint8Array = root.Uint8Array,
+    propertyIsEnumerable = objectProto.propertyIsEnumerable,
+    splice = arrayProto.splice,
+    symToStringTag = Symbol ? Symbol.toStringTag : undefined;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeGetSymbols = Object.getOwnPropertySymbols,
+    nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined,
+    nativeKeys = overArg(Object.keys, Object);
+
+/* Built-in method references that are verified to be native. */
+var DataView = getNative(root, 'DataView'),
+    Map = getNative(root, 'Map'),
+    Promise = getNative(root, 'Promise'),
+    Set = getNative(root, 'Set'),
+    WeakMap = getNative(root, 'WeakMap'),
+    nativeCreate = getNative(Object, 'create');
+
+/** Used to detect maps, sets, and weakmaps. */
+var dataViewCtorString = toSource(DataView),
+    mapCtorString = toSource(Map),
+    promiseCtorString = toSource(Promise),
+    setCtorString = toSource(Set),
+    weakMapCtorString = toSource(WeakMap);
+
+/** Used to convert symbols to primitives and strings. */
+var symbolProto = Symbol ? Symbol.prototype : undefined,
+    symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
+
+/**
+ * Creates a hash object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Hash(entries) {
+  var index = -1,
+      length = entries == null ? 0 : entries.length;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the hash.
+ *
+ * @private
+ * @name clear
+ * @memberOf Hash
+ */
+function hashClear() {
+  this.__data__ = nativeCreate ? nativeCreate(null) : {};
+  this.size = 0;
+}
+
+/**
+ * Removes `key` and its value from the hash.
+ *
+ * @private
+ * @name delete
+ * @memberOf Hash
+ * @param {Object} hash The hash to modify.
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function hashDelete(key) {
+  var result = this.has(key) && delete this.__data__[key];
+  this.size -= result ? 1 : 0;
+  return result;
+}
+
+/**
+ * Gets the hash value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Hash
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function hashGet(key) {
+  var data = this.__data__;
+  if (nativeCreate) {
+    var result = data[key];
+    return result === HASH_UNDEFINED ? undefined : result;
+  }
+  return hasOwnProperty.call(data, key) ? data[key] : undefined;
+}
+
+/**
+ * Checks if a hash value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Hash
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function hashHas(key) {
+  var data = this.__data__;
+  return nativeCreate ? (data[key] !== undefined) : hasOwnProperty.call(data, key);
+}
+
+/**
+ * Sets the hash `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Hash
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the hash instance.
+ */
+function hashSet(key, value) {
+  var data = this.__data__;
+  this.size += this.has(key) ? 0 : 1;
+  data[key] = (nativeCreate && value === undefined) ? HASH_UNDEFINED : value;
+  return this;
+}
+
+// Add methods to `Hash`.
+Hash.prototype.clear = hashClear;
+Hash.prototype['delete'] = hashDelete;
+Hash.prototype.get = hashGet;
+Hash.prototype.has = hashHas;
+Hash.prototype.set = hashSet;
+
+/**
+ * Creates an list cache object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function ListCache(entries) {
+  var index = -1,
+      length = entries == null ? 0 : entries.length;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the list cache.
+ *
+ * @private
+ * @name clear
+ * @memberOf ListCache
+ */
+function listCacheClear() {
+  this.__data__ = [];
+  this.size = 0;
+}
+
+/**
+ * Removes `key` and its value from the list cache.
+ *
+ * @private
+ * @name delete
+ * @memberOf ListCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function listCacheDelete(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    return false;
+  }
+  var lastIndex = data.length - 1;
+  if (index == lastIndex) {
+    data.pop();
+  } else {
+    splice.call(data, index, 1);
+  }
+  --this.size;
+  return true;
+}
+
+/**
+ * Gets the list cache value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf ListCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function listCacheGet(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  return index < 0 ? undefined : data[index][1];
+}
+
+/**
+ * Checks if a list cache value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf ListCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function listCacheHas(key) {
+  return assocIndexOf(this.__data__, key) > -1;
+}
+
+/**
+ * Sets the list cache `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf ListCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the list cache instance.
+ */
+function listCacheSet(key, value) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    ++this.size;
+    data.push([key, value]);
+  } else {
+    data[index][1] = value;
+  }
+  return this;
+}
+
+// Add methods to `ListCache`.
+ListCache.prototype.clear = listCacheClear;
+ListCache.prototype['delete'] = listCacheDelete;
+ListCache.prototype.get = listCacheGet;
+ListCache.prototype.has = listCacheHas;
+ListCache.prototype.set = listCacheSet;
+
+/**
+ * Creates a map cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function MapCache(entries) {
+  var index = -1,
+      length = entries == null ? 0 : entries.length;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the map.
+ *
+ * @private
+ * @name clear
+ * @memberOf MapCache
+ */
+function mapCacheClear() {
+  this.size = 0;
+  this.__data__ = {
+    'hash': new Hash,
+    'map': new (Map || ListCache),
+    'string': new Hash
+  };
+}
+
+/**
+ * Removes `key` and its value from the map.
+ *
+ * @private
+ * @name delete
+ * @memberOf MapCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function mapCacheDelete(key) {
+  var result = getMapData(this, key)['delete'](key);
+  this.size -= result ? 1 : 0;
+  return result;
+}
+
+/**
+ * Gets the map value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf MapCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function mapCacheGet(key) {
+  return getMapData(this, key).get(key);
+}
+
+/**
+ * Checks if a map value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf MapCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function mapCacheHas(key) {
+  return getMapData(this, key).has(key);
+}
+
+/**
+ * Sets the map `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf MapCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the map cache instance.
+ */
+function mapCacheSet(key, value) {
+  var data = getMapData(this, key),
+      size = data.size;
+
+  data.set(key, value);
+  this.size += data.size == size ? 0 : 1;
+  return this;
+}
+
+// Add methods to `MapCache`.
+MapCache.prototype.clear = mapCacheClear;
+MapCache.prototype['delete'] = mapCacheDelete;
+MapCache.prototype.get = mapCacheGet;
+MapCache.prototype.has = mapCacheHas;
+MapCache.prototype.set = mapCacheSet;
+
+/**
+ *
+ * Creates an array cache object to store unique values.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [values] The values to cache.
+ */
+function SetCache(values) {
+  var index = -1,
+      length = values == null ? 0 : values.length;
+
+  this.__data__ = new MapCache;
+  while (++index < length) {
+    this.add(values[index]);
+  }
+}
+
+/**
+ * Adds `value` to the array cache.
+ *
+ * @private
+ * @name add
+ * @memberOf SetCache
+ * @alias push
+ * @param {*} value The value to cache.
+ * @returns {Object} Returns the cache instance.
+ */
+function setCacheAdd(value) {
+  this.__data__.set(value, HASH_UNDEFINED);
+  return this;
+}
+
+/**
+ * Checks if `value` is in the array cache.
+ *
+ * @private
+ * @name has
+ * @memberOf SetCache
+ * @param {*} value The value to search for.
+ * @returns {number} Returns `true` if `value` is found, else `false`.
+ */
+function setCacheHas(value) {
+  return this.__data__.has(value);
+}
+
+// Add methods to `SetCache`.
+SetCache.prototype.add = SetCache.prototype.push = setCacheAdd;
+SetCache.prototype.has = setCacheHas;
+
+/**
+ * Creates a stack cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Stack(entries) {
+  var data = this.__data__ = new ListCache(entries);
+  this.size = data.size;
+}
+
+/**
+ * Removes all key-value entries from the stack.
+ *
+ * @private
+ * @name clear
+ * @memberOf Stack
+ */
+function stackClear() {
+  this.__data__ = new ListCache;
+  this.size = 0;
+}
+
+/**
+ * Removes `key` and its value from the stack.
+ *
+ * @private
+ * @name delete
+ * @memberOf Stack
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function stackDelete(key) {
+  var data = this.__data__,
+      result = data['delete'](key);
+
+  this.size = data.size;
+  return result;
+}
+
+/**
+ * Gets the stack value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Stack
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function stackGet(key) {
+  return this.__data__.get(key);
+}
+
+/**
+ * Checks if a stack value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Stack
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function stackHas(key) {
+  return this.__data__.has(key);
+}
+
+/**
+ * Sets the stack `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Stack
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the stack cache instance.
+ */
+function stackSet(key, value) {
+  var data = this.__data__;
+  if (data instanceof ListCache) {
+    var pairs = data.__data__;
+    if (!Map || (pairs.length < LARGE_ARRAY_SIZE - 1)) {
+      pairs.push([key, value]);
+      this.size = ++data.size;
+      return this;
+    }
+    data = this.__data__ = new MapCache(pairs);
+  }
+  data.set(key, value);
+  this.size = data.size;
+  return this;
+}
+
+// Add methods to `Stack`.
+Stack.prototype.clear = stackClear;
+Stack.prototype['delete'] = stackDelete;
+Stack.prototype.get = stackGet;
+Stack.prototype.has = stackHas;
+Stack.prototype.set = stackSet;
+
+/**
+ * Creates an array of the enumerable property names of the array-like `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @param {boolean} inherited Specify returning inherited property names.
+ * @returns {Array} Returns the array of property names.
+ */
+function arrayLikeKeys(value, inherited) {
+  var isArr = isArray(value),
+      isArg = !isArr && isArguments(value),
+      isBuff = !isArr && !isArg && isBuffer(value),
+      isType = !isArr && !isArg && !isBuff && isTypedArray(value),
+      skipIndexes = isArr || isArg || isBuff || isType,
+      result = skipIndexes ? baseTimes(value.length, String) : [],
+      length = result.length;
+
+  for (var key in value) {
+    if ((inherited || hasOwnProperty.call(value, key)) &&
+        !(skipIndexes && (
+           // Safari 9 has enumerable `arguments.length` in strict mode.
+           key == 'length' ||
+           // Node.js 0.10 has enumerable non-index properties on buffers.
+           (isBuff && (key == 'offset' || key == 'parent')) ||
+           // PhantomJS 2 has enumerable non-index properties on typed arrays.
+           (isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset')) ||
+           // Skip index properties.
+           isIndex(key, length)
+        ))) {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * Gets the index at which the `key` is found in `array` of key-value pairs.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} key The key to search for.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function assocIndexOf(array, key) {
+  var length = array.length;
+  while (length--) {
+    if (eq(array[length][0], key)) {
+      return length;
+    }
+  }
+  return -1;
+}
+
+/**
+ * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
+ * `keysFunc` and `symbolsFunc` to get the enumerable property names and
+ * symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Function} keysFunc The function to get the keys of `object`.
+ * @param {Function} symbolsFunc The function to get the symbols of `object`.
+ * @returns {Array} Returns the array of property names and symbols.
+ */
+function baseGetAllKeys(object, keysFunc, symbolsFunc) {
+  var result = keysFunc(object);
+  return isArray(object) ? result : arrayPush(result, symbolsFunc(object));
+}
+
+/**
+ * The base implementation of `getTag` without fallbacks for buggy environments.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function baseGetTag(value) {
+  if (value == null) {
+    return value === undefined ? undefinedTag : nullTag;
+  }
+  return (symToStringTag && symToStringTag in Object(value))
+    ? getRawTag(value)
+    : objectToString(value);
+}
+
+/**
+ * The base implementation of `_.isArguments`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ */
+function baseIsArguments(value) {
+  return isObjectLike(value) && baseGetTag(value) == argsTag;
+}
+
+/**
+ * The base implementation of `_.isEqual` which supports partial comparisons
+ * and tracks traversed objects.
+ *
+ * @private
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @param {boolean} bitmask The bitmask flags.
+ *  1 - Unordered comparison
+ *  2 - Partial comparison
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @param {Object} [stack] Tracks traversed `value` and `other` objects.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ */
+function baseIsEqual(value, other, bitmask, customizer, stack) {
+  if (value === other) {
+    return true;
+  }
+  if (value == null || other == null || (!isObjectLike(value) && !isObjectLike(other))) {
+    return value !== value && other !== other;
+  }
+  return baseIsEqualDeep(value, other, bitmask, customizer, baseIsEqual, stack);
+}
+
+/**
+ * A specialized version of `baseIsEqual` for arrays and objects which performs
+ * deep comparisons and tracks traversed objects enabling objects with circular
+ * references to be compared.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} [stack] Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
+  var objIsArr = isArray(object),
+      othIsArr = isArray(other),
+      objTag = objIsArr ? arrayTag : getTag(object),
+      othTag = othIsArr ? arrayTag : getTag(other);
+
+  objTag = objTag == argsTag ? objectTag : objTag;
+  othTag = othTag == argsTag ? objectTag : othTag;
+
+  var objIsObj = objTag == objectTag,
+      othIsObj = othTag == objectTag,
+      isSameTag = objTag == othTag;
+
+  if (isSameTag && isBuffer(object)) {
+    if (!isBuffer(other)) {
+      return false;
+    }
+    objIsArr = true;
+    objIsObj = false;
+  }
+  if (isSameTag && !objIsObj) {
+    stack || (stack = new Stack);
+    return (objIsArr || isTypedArray(object))
+      ? equalArrays(object, other, bitmask, customizer, equalFunc, stack)
+      : equalByTag(object, other, objTag, bitmask, customizer, equalFunc, stack);
+  }
+  if (!(bitmask & COMPARE_PARTIAL_FLAG)) {
+    var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
+        othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
+
+    if (objIsWrapped || othIsWrapped) {
+      var objUnwrapped = objIsWrapped ? object.value() : object,
+          othUnwrapped = othIsWrapped ? other.value() : other;
+
+      stack || (stack = new Stack);
+      return equalFunc(objUnwrapped, othUnwrapped, bitmask, customizer, stack);
+    }
+  }
+  if (!isSameTag) {
+    return false;
+  }
+  stack || (stack = new Stack);
+  return equalObjects(object, other, bitmask, customizer, equalFunc, stack);
+}
+
+/**
+ * The base implementation of `_.isNative` without bad shim checks.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a native function,
+ *  else `false`.
+ */
+function baseIsNative(value) {
+  if (!isObject(value) || isMasked(value)) {
+    return false;
+  }
+  var pattern = isFunction(value) ? reIsNative : reIsHostCtor;
+  return pattern.test(toSource(value));
+}
+
+/**
+ * The base implementation of `_.isTypedArray` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ */
+function baseIsTypedArray(value) {
+  return isObjectLike(value) &&
+    isLength(value.length) && !!typedArrayTags[baseGetTag(value)];
+}
+
+/**
+ * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */
+function baseKeys(object) {
+  if (!isPrototype(object)) {
+    return nativeKeys(object);
+  }
+  var result = [];
+  for (var key in Object(object)) {
+    if (hasOwnProperty.call(object, key) && key != 'constructor') {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * A specialized version of `baseIsEqualDeep` for arrays with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Array} array The array to compare.
+ * @param {Array} other The other array to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `array` and `other` objects.
+ * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
+ */
+function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
+  var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
+      arrLength = array.length,
+      othLength = other.length;
+
+  if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
+    return false;
+  }
+  // Assume cyclic values are equal.
+  var stacked = stack.get(array);
+  if (stacked && stack.get(other)) {
+    return stacked == other;
+  }
+  var index = -1,
+      result = true,
+      seen = (bitmask & COMPARE_UNORDERED_FLAG) ? new SetCache : undefined;
+
+  stack.set(array, other);
+  stack.set(other, array);
+
+  // Ignore non-index properties.
+  while (++index < arrLength) {
+    var arrValue = array[index],
+        othValue = other[index];
+
+    if (customizer) {
+      var compared = isPartial
+        ? customizer(othValue, arrValue, index, other, array, stack)
+        : customizer(arrValue, othValue, index, array, other, stack);
+    }
+    if (compared !== undefined) {
+      if (compared) {
+        continue;
+      }
+      result = false;
+      break;
+    }
+    // Recursively compare arrays (susceptible to call stack limits).
+    if (seen) {
+      if (!arraySome(other, function(othValue, othIndex) {
+            if (!cacheHas(seen, othIndex) &&
+                (arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) {
+              return seen.push(othIndex);
+            }
+          })) {
+        result = false;
+        break;
+      }
+    } else if (!(
+          arrValue === othValue ||
+            equalFunc(arrValue, othValue, bitmask, customizer, stack)
+        )) {
+      result = false;
+      break;
+    }
+  }
+  stack['delete'](array);
+  stack['delete'](other);
+  return result;
+}
+
+/**
+ * A specialized version of `baseIsEqualDeep` for comparing objects of
+ * the same `toStringTag`.
+ *
+ * **Note:** This function only supports comparing values with tags of
+ * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {string} tag The `toStringTag` of the objects to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
+  switch (tag) {
+    case dataViewTag:
+      if ((object.byteLength != other.byteLength) ||
+          (object.byteOffset != other.byteOffset)) {
+        return false;
+      }
+      object = object.buffer;
+      other = other.buffer;
+
+    case arrayBufferTag:
+      if ((object.byteLength != other.byteLength) ||
+          !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
+        return false;
+      }
+      return true;
+
+    case boolTag:
+    case dateTag:
+    case numberTag:
+      // Coerce booleans to `1` or `0` and dates to milliseconds.
+      // Invalid dates are coerced to `NaN`.
+      return eq(+object, +other);
+
+    case errorTag:
+      return object.name == other.name && object.message == other.message;
+
+    case regexpTag:
+    case stringTag:
+      // Coerce regexes to strings and treat strings, primitives and objects,
+      // as equal. See http://www.ecma-international.org/ecma-262/7.0/#sec-regexp.prototype.tostring
+      // for more details.
+      return object == (other + '');
+
+    case mapTag:
+      var convert = mapToArray;
+
+    case setTag:
+      var isPartial = bitmask & COMPARE_PARTIAL_FLAG;
+      convert || (convert = setToArray);
+
+      if (object.size != other.size && !isPartial) {
+        return false;
+      }
+      // Assume cyclic values are equal.
+      var stacked = stack.get(object);
+      if (stacked) {
+        return stacked == other;
+      }
+      bitmask |= COMPARE_UNORDERED_FLAG;
+
+      // Recursively compare objects (susceptible to call stack limits).
+      stack.set(object, other);
+      var result = equalArrays(convert(object), convert(other), bitmask, customizer, equalFunc, stack);
+      stack['delete'](object);
+      return result;
+
+    case symbolTag:
+      if (symbolValueOf) {
+        return symbolValueOf.call(object) == symbolValueOf.call(other);
+      }
+  }
+  return false;
+}
+
+/**
+ * A specialized version of `baseIsEqualDeep` for objects with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
+  var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
+      objProps = getAllKeys(object),
+      objLength = objProps.length,
+      othProps = getAllKeys(other),
+      othLength = othProps.length;
+
+  if (objLength != othLength && !isPartial) {
+    return false;
+  }
+  var index = objLength;
+  while (index--) {
+    var key = objProps[index];
+    if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) {
+      return false;
+    }
+  }
+  // Assume cyclic values are equal.
+  var stacked = stack.get(object);
+  if (stacked && stack.get(other)) {
+    return stacked == other;
+  }
+  var result = true;
+  stack.set(object, other);
+  stack.set(other, object);
+
+  var skipCtor = isPartial;
+  while (++index < objLength) {
+    key = objProps[index];
+    var objValue = object[key],
+        othValue = other[key];
+
+    if (customizer) {
+      var compared = isPartial
+        ? customizer(othValue, objValue, key, other, object, stack)
+        : customizer(objValue, othValue, key, object, other, stack);
+    }
+    // Recursively compare objects (susceptible to call stack limits).
+    if (!(compared === undefined
+          ? (objValue === othValue || equalFunc(objValue, othValue, bitmask, customizer, stack))
+          : compared
+        )) {
+      result = false;
+      break;
+    }
+    skipCtor || (skipCtor = key == 'constructor');
+  }
+  if (result && !skipCtor) {
+    var objCtor = object.constructor,
+        othCtor = other.constructor;
+
+    // Non `Object` object instances with different constructors are not equal.
+    if (objCtor != othCtor &&
+        ('constructor' in object && 'constructor' in other) &&
+        !(typeof objCtor == 'function' && objCtor instanceof objCtor &&
+          typeof othCtor == 'function' && othCtor instanceof othCtor)) {
+      result = false;
+    }
+  }
+  stack['delete'](object);
+  stack['delete'](other);
+  return result;
+}
+
+/**
+ * Creates an array of own enumerable property names and symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names and symbols.
+ */
+function getAllKeys(object) {
+  return baseGetAllKeys(object, keys, getSymbols);
+}
+
+/**
+ * Gets the data for `map`.
+ *
+ * @private
+ * @param {Object} map The map to query.
+ * @param {string} key The reference key.
+ * @returns {*} Returns the map data.
+ */
+function getMapData(map, key) {
+  var data = map.__data__;
+  return isKeyable(key)
+    ? data[typeof key == 'string' ? 'string' : 'hash']
+    : data.map;
+}
+
+/**
+ * Gets the native function at `key` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {string} key The key of the method to get.
+ * @returns {*} Returns the function if it's native, else `undefined`.
+ */
+function getNative(object, key) {
+  var value = getValue(object, key);
+  return baseIsNative(value) ? value : undefined;
+}
+
+/**
+ * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the raw `toStringTag`.
+ */
+function getRawTag(value) {
+  var isOwn = hasOwnProperty.call(value, symToStringTag),
+      tag = value[symToStringTag];
+
+  try {
+    value[symToStringTag] = undefined;
+    var unmasked = true;
+  } catch (e) {}
+
+  var result = nativeObjectToString.call(value);
+  if (unmasked) {
+    if (isOwn) {
+      value[symToStringTag] = tag;
+    } else {
+      delete value[symToStringTag];
+    }
+  }
+  return result;
+}
+
+/**
+ * Creates an array of the own enumerable symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of symbols.
+ */
+var getSymbols = !nativeGetSymbols ? stubArray : function(object) {
+  if (object == null) {
+    return [];
+  }
+  object = Object(object);
+  return arrayFilter(nativeGetSymbols(object), function(symbol) {
+    return propertyIsEnumerable.call(object, symbol);
+  });
+};
+
+/**
+ * Gets the `toStringTag` of `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+var getTag = baseGetTag;
+
+// Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
+if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
+    (Map && getTag(new Map) != mapTag) ||
+    (Promise && getTag(Promise.resolve()) != promiseTag) ||
+    (Set && getTag(new Set) != setTag) ||
+    (WeakMap && getTag(new WeakMap) != weakMapTag)) {
+  getTag = function(value) {
+    var result = baseGetTag(value),
+        Ctor = result == objectTag ? value.constructor : undefined,
+        ctorString = Ctor ? toSource(Ctor) : '';
+
+    if (ctorString) {
+      switch (ctorString) {
+        case dataViewCtorString: return dataViewTag;
+        case mapCtorString: return mapTag;
+        case promiseCtorString: return promiseTag;
+        case setCtorString: return setTag;
+        case weakMapCtorString: return weakMapTag;
+      }
+    }
+    return result;
+  };
+}
+
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */
+function isIndex(value, length) {
+  length = length == null ? MAX_SAFE_INTEGER : length;
+  return !!length &&
+    (typeof value == 'number' || reIsUint.test(value)) &&
+    (value > -1 && value % 1 == 0 && value < length);
+}
+
+/**
+ * Checks if `value` is suitable for use as unique object key.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+ */
+function isKeyable(value) {
+  var type = typeof value;
+  return (type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean')
+    ? (value !== '__proto__')
+    : (value === null);
+}
+
+/**
+ * Checks if `func` has its source masked.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+ */
+function isMasked(func) {
+  return !!maskSrcKey && (maskSrcKey in func);
+}
+
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */
+function isPrototype(value) {
+  var Ctor = value && value.constructor,
+      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
+
+  return value === proto;
+}
+
+/**
+ * Converts `value` to a string using `Object.prototype.toString`.
+ *
+ * @private
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ */
+function objectToString(value) {
+  return nativeObjectToString.call(value);
+}
+
+/**
+ * Converts `func` to its source code.
+ *
+ * @private
+ * @param {Function} func The function to convert.
+ * @returns {string} Returns the source code.
+ */
+function toSource(func) {
+  if (func != null) {
+    try {
+      return funcToString.call(func);
+    } catch (e) {}
+    try {
+      return (func + '');
+    } catch (e) {}
+  }
+  return '';
+}
+
+/**
+ * Performs a
+ * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * comparison between two values to determine if they are equivalent.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.eq(object, object);
+ * // => true
+ *
+ * _.eq(object, other);
+ * // => false
+ *
+ * _.eq('a', 'a');
+ * // => true
+ *
+ * _.eq('a', Object('a'));
+ * // => false
+ *
+ * _.eq(NaN, NaN);
+ * // => true
+ */
+function eq(value, other) {
+  return value === other || (value !== value && other !== other);
+}
+
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */
+var isArguments = baseIsArguments(function() { return arguments; }()) ? baseIsArguments : function(value) {
+  return isObjectLike(value) && hasOwnProperty.call(value, 'callee') &&
+    !propertyIsEnumerable.call(value, 'callee');
+};
+
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */
+var isArray = Array.isArray;
+
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */
+function isArrayLike(value) {
+  return value != null && isLength(value.length) && !isFunction(value);
+}
+
+/**
+ * Checks if `value` is a buffer.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+ * @example
+ *
+ * _.isBuffer(new Buffer(2));
+ * // => true
+ *
+ * _.isBuffer(new Uint8Array(2));
+ * // => false
+ */
+var isBuffer = nativeIsBuffer || stubFalse;
+
+/**
+ * Performs a deep comparison between two values to determine if they are
+ * equivalent.
+ *
+ * **Note:** This method supports comparing arrays, array buffers, booleans,
+ * date objects, error objects, maps, numbers, `Object` objects, regexes,
+ * sets, strings, symbols, and typed arrays. `Object` objects are compared
+ * by their own, not inherited, enumerable properties. Functions and DOM
+ * nodes are compared by strict equality, i.e. `===`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.isEqual(object, other);
+ * // => true
+ *
+ * object === other;
+ * // => false
+ */
+function isEqual(value, other) {
+  return baseIsEqual(value, other);
+}
+
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */
+function isFunction(value) {
+  if (!isObject(value)) {
+    return false;
+  }
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+  // in Safari 9 which returns 'object' for typed arrays and other constructors.
+  var tag = baseGetTag(value);
+  return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
+}
+
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */
+function isLength(value) {
+  return typeof value == 'number' &&
+    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return value != null && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return value != null && typeof value == 'object';
+}
+
+/**
+ * Checks if `value` is classified as a typed array.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ * @example
+ *
+ * _.isTypedArray(new Uint8Array);
+ * // => true
+ *
+ * _.isTypedArray([]);
+ * // => false
+ */
+var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */
+function keys(object) {
+  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+}
+
+/**
+ * This method returns a new empty array.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {Array} Returns the new empty array.
+ * @example
+ *
+ * var arrays = _.times(2, _.stubArray);
+ *
+ * console.log(arrays);
+ * // => [[], []]
+ *
+ * console.log(arrays[0] === arrays[1]);
+ * // => false
+ */
+function stubArray() {
+  return [];
+}
+
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */
+function stubFalse() {
+  return false;
+}
+
+module.exports = isEqual;
+
 
 /***/ }),
 
@@ -37198,6 +41913,1014 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/nprogress/nprogress.js":
+/*!*********************************************!*\
+  !*** ./node_modules/nprogress/nprogress.js ***!
+  \*********************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* NProgress, (c) 2013, 2014 Rico Sta. Cruz - http://ricostacruz.com/nprogress
+ * @license MIT */
+
+;(function(root, factory) {
+
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+		(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
+		__WEBPACK_AMD_DEFINE_FACTORY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else {}
+
+})(this, function() {
+  var NProgress = {};
+
+  NProgress.version = '0.2.0';
+
+  var Settings = NProgress.settings = {
+    minimum: 0.08,
+    easing: 'ease',
+    positionUsing: '',
+    speed: 200,
+    trickle: true,
+    trickleRate: 0.02,
+    trickleSpeed: 800,
+    showSpinner: true,
+    barSelector: '[role="bar"]',
+    spinnerSelector: '[role="spinner"]',
+    parent: 'body',
+    template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
+  };
+
+  /**
+   * Updates configuration.
+   *
+   *     NProgress.configure({
+   *       minimum: 0.1
+   *     });
+   */
+  NProgress.configure = function(options) {
+    var key, value;
+    for (key in options) {
+      value = options[key];
+      if (value !== undefined && options.hasOwnProperty(key)) Settings[key] = value;
+    }
+
+    return this;
+  };
+
+  /**
+   * Last number.
+   */
+
+  NProgress.status = null;
+
+  /**
+   * Sets the progress bar status, where `n` is a number from `0.0` to `1.0`.
+   *
+   *     NProgress.set(0.4);
+   *     NProgress.set(1.0);
+   */
+
+  NProgress.set = function(n) {
+    var started = NProgress.isStarted();
+
+    n = clamp(n, Settings.minimum, 1);
+    NProgress.status = (n === 1 ? null : n);
+
+    var progress = NProgress.render(!started),
+        bar      = progress.querySelector(Settings.barSelector),
+        speed    = Settings.speed,
+        ease     = Settings.easing;
+
+    progress.offsetWidth; /* Repaint */
+
+    queue(function(next) {
+      // Set positionUsing if it hasn't already been set
+      if (Settings.positionUsing === '') Settings.positionUsing = NProgress.getPositioningCSS();
+
+      // Add transition
+      css(bar, barPositionCSS(n, speed, ease));
+
+      if (n === 1) {
+        // Fade out
+        css(progress, { 
+          transition: 'none', 
+          opacity: 1 
+        });
+        progress.offsetWidth; /* Repaint */
+
+        setTimeout(function() {
+          css(progress, { 
+            transition: 'all ' + speed + 'ms linear', 
+            opacity: 0 
+          });
+          setTimeout(function() {
+            NProgress.remove();
+            next();
+          }, speed);
+        }, speed);
+      } else {
+        setTimeout(next, speed);
+      }
+    });
+
+    return this;
+  };
+
+  NProgress.isStarted = function() {
+    return typeof NProgress.status === 'number';
+  };
+
+  /**
+   * Shows the progress bar.
+   * This is the same as setting the status to 0%, except that it doesn't go backwards.
+   *
+   *     NProgress.start();
+   *
+   */
+  NProgress.start = function() {
+    if (!NProgress.status) NProgress.set(0);
+
+    var work = function() {
+      setTimeout(function() {
+        if (!NProgress.status) return;
+        NProgress.trickle();
+        work();
+      }, Settings.trickleSpeed);
+    };
+
+    if (Settings.trickle) work();
+
+    return this;
+  };
+
+  /**
+   * Hides the progress bar.
+   * This is the *sort of* the same as setting the status to 100%, with the
+   * difference being `done()` makes some placebo effect of some realistic motion.
+   *
+   *     NProgress.done();
+   *
+   * If `true` is passed, it will show the progress bar even if its hidden.
+   *
+   *     NProgress.done(true);
+   */
+
+  NProgress.done = function(force) {
+    if (!force && !NProgress.status) return this;
+
+    return NProgress.inc(0.3 + 0.5 * Math.random()).set(1);
+  };
+
+  /**
+   * Increments by a random amount.
+   */
+
+  NProgress.inc = function(amount) {
+    var n = NProgress.status;
+
+    if (!n) {
+      return NProgress.start();
+    } else {
+      if (typeof amount !== 'number') {
+        amount = (1 - n) * clamp(Math.random() * n, 0.1, 0.95);
+      }
+
+      n = clamp(n + amount, 0, 0.994);
+      return NProgress.set(n);
+    }
+  };
+
+  NProgress.trickle = function() {
+    return NProgress.inc(Math.random() * Settings.trickleRate);
+  };
+
+  /**
+   * Waits for all supplied jQuery promises and
+   * increases the progress as the promises resolve.
+   *
+   * @param $promise jQUery Promise
+   */
+  (function() {
+    var initial = 0, current = 0;
+
+    NProgress.promise = function($promise) {
+      if (!$promise || $promise.state() === "resolved") {
+        return this;
+      }
+
+      if (current === 0) {
+        NProgress.start();
+      }
+
+      initial++;
+      current++;
+
+      $promise.always(function() {
+        current--;
+        if (current === 0) {
+            initial = 0;
+            NProgress.done();
+        } else {
+            NProgress.set((initial - current) / initial);
+        }
+      });
+
+      return this;
+    };
+
+  })();
+
+  /**
+   * (Internal) renders the progress bar markup based on the `template`
+   * setting.
+   */
+
+  NProgress.render = function(fromStart) {
+    if (NProgress.isRendered()) return document.getElementById('nprogress');
+
+    addClass(document.documentElement, 'nprogress-busy');
+    
+    var progress = document.createElement('div');
+    progress.id = 'nprogress';
+    progress.innerHTML = Settings.template;
+
+    var bar      = progress.querySelector(Settings.barSelector),
+        perc     = fromStart ? '-100' : toBarPerc(NProgress.status || 0),
+        parent   = document.querySelector(Settings.parent),
+        spinner;
+    
+    css(bar, {
+      transition: 'all 0 linear',
+      transform: 'translate3d(' + perc + '%,0,0)'
+    });
+
+    if (!Settings.showSpinner) {
+      spinner = progress.querySelector(Settings.spinnerSelector);
+      spinner && removeElement(spinner);
+    }
+
+    if (parent != document.body) {
+      addClass(parent, 'nprogress-custom-parent');
+    }
+
+    parent.appendChild(progress);
+    return progress;
+  };
+
+  /**
+   * Removes the element. Opposite of render().
+   */
+
+  NProgress.remove = function() {
+    removeClass(document.documentElement, 'nprogress-busy');
+    removeClass(document.querySelector(Settings.parent), 'nprogress-custom-parent');
+    var progress = document.getElementById('nprogress');
+    progress && removeElement(progress);
+  };
+
+  /**
+   * Checks if the progress bar is rendered.
+   */
+
+  NProgress.isRendered = function() {
+    return !!document.getElementById('nprogress');
+  };
+
+  /**
+   * Determine which positioning CSS rule to use.
+   */
+
+  NProgress.getPositioningCSS = function() {
+    // Sniff on document.body.style
+    var bodyStyle = document.body.style;
+
+    // Sniff prefixes
+    var vendorPrefix = ('WebkitTransform' in bodyStyle) ? 'Webkit' :
+                       ('MozTransform' in bodyStyle) ? 'Moz' :
+                       ('msTransform' in bodyStyle) ? 'ms' :
+                       ('OTransform' in bodyStyle) ? 'O' : '';
+
+    if (vendorPrefix + 'Perspective' in bodyStyle) {
+      // Modern browsers with 3D support, e.g. Webkit, IE10
+      return 'translate3d';
+    } else if (vendorPrefix + 'Transform' in bodyStyle) {
+      // Browsers without 3D support, e.g. IE9
+      return 'translate';
+    } else {
+      // Browsers without translate() support, e.g. IE7-8
+      return 'margin';
+    }
+  };
+
+  /**
+   * Helpers
+   */
+
+  function clamp(n, min, max) {
+    if (n < min) return min;
+    if (n > max) return max;
+    return n;
+  }
+
+  /**
+   * (Internal) converts a percentage (`0..1`) to a bar translateX
+   * percentage (`-100%..0%`).
+   */
+
+  function toBarPerc(n) {
+    return (-1 + n) * 100;
+  }
+
+
+  /**
+   * (Internal) returns the correct CSS for changing the bar's
+   * position given an n percentage, and speed and ease from Settings
+   */
+
+  function barPositionCSS(n, speed, ease) {
+    var barCSS;
+
+    if (Settings.positionUsing === 'translate3d') {
+      barCSS = { transform: 'translate3d('+toBarPerc(n)+'%,0,0)' };
+    } else if (Settings.positionUsing === 'translate') {
+      barCSS = { transform: 'translate('+toBarPerc(n)+'%,0)' };
+    } else {
+      barCSS = { 'margin-left': toBarPerc(n)+'%' };
+    }
+
+    barCSS.transition = 'all '+speed+'ms '+ease;
+
+    return barCSS;
+  }
+
+  /**
+   * (Internal) Queues a function to be executed.
+   */
+
+  var queue = (function() {
+    var pending = [];
+    
+    function next() {
+      var fn = pending.shift();
+      if (fn) {
+        fn(next);
+      }
+    }
+
+    return function(fn) {
+      pending.push(fn);
+      if (pending.length == 1) next();
+    };
+  })();
+
+  /**
+   * (Internal) Applies css properties to an element, similar to the jQuery 
+   * css method.
+   *
+   * While this helper does assist with vendor prefixed property names, it 
+   * does not perform any manipulation of values prior to setting styles.
+   */
+
+  var css = (function() {
+    var cssPrefixes = [ 'Webkit', 'O', 'Moz', 'ms' ],
+        cssProps    = {};
+
+    function camelCase(string) {
+      return string.replace(/^-ms-/, 'ms-').replace(/-([\da-z])/gi, function(match, letter) {
+        return letter.toUpperCase();
+      });
+    }
+
+    function getVendorProp(name) {
+      var style = document.body.style;
+      if (name in style) return name;
+
+      var i = cssPrefixes.length,
+          capName = name.charAt(0).toUpperCase() + name.slice(1),
+          vendorName;
+      while (i--) {
+        vendorName = cssPrefixes[i] + capName;
+        if (vendorName in style) return vendorName;
+      }
+
+      return name;
+    }
+
+    function getStyleProp(name) {
+      name = camelCase(name);
+      return cssProps[name] || (cssProps[name] = getVendorProp(name));
+    }
+
+    function applyCss(element, prop, value) {
+      prop = getStyleProp(prop);
+      element.style[prop] = value;
+    }
+
+    return function(element, properties) {
+      var args = arguments,
+          prop, 
+          value;
+
+      if (args.length == 2) {
+        for (prop in properties) {
+          value = properties[prop];
+          if (value !== undefined && properties.hasOwnProperty(prop)) applyCss(element, prop, value);
+        }
+      } else {
+        applyCss(element, args[1], args[2]);
+      }
+    }
+  })();
+
+  /**
+   * (Internal) Determines if an element or space separated list of class names contains a class name.
+   */
+
+  function hasClass(element, name) {
+    var list = typeof element == 'string' ? element : classList(element);
+    return list.indexOf(' ' + name + ' ') >= 0;
+  }
+
+  /**
+   * (Internal) Adds a class to an element.
+   */
+
+  function addClass(element, name) {
+    var oldList = classList(element),
+        newList = oldList + name;
+
+    if (hasClass(oldList, name)) return; 
+
+    // Trim the opening space.
+    element.className = newList.substring(1);
+  }
+
+  /**
+   * (Internal) Removes a class from an element.
+   */
+
+  function removeClass(element, name) {
+    var oldList = classList(element),
+        newList;
+
+    if (!hasClass(element, name)) return;
+
+    // Replace the class name.
+    newList = oldList.replace(' ' + name + ' ', ' ');
+
+    // Trim the opening and closing spaces.
+    element.className = newList.substring(1, newList.length - 1);
+  }
+
+  /**
+   * (Internal) Gets a space separated list of the class names on the element. 
+   * The list is wrapped with a single space on each end to facilitate finding 
+   * matches within the list.
+   */
+
+  function classList(element) {
+    return (' ' + (element.className || '') + ' ').replace(/\s+/gi, ' ');
+  }
+
+  /**
+   * (Internal) Removes an element from the DOM.
+   */
+
+  function removeElement(element) {
+    element && element.parentNode && element.parentNode.removeChild(element);
+  }
+
+  return NProgress;
+});
+
+
+
+/***/ }),
+
+/***/ "./node_modules/object-inspect/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/object-inspect/index.js ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var hasMap = typeof Map === 'function' && Map.prototype;
+var mapSizeDescriptor = Object.getOwnPropertyDescriptor && hasMap ? Object.getOwnPropertyDescriptor(Map.prototype, 'size') : null;
+var mapSize = hasMap && mapSizeDescriptor && typeof mapSizeDescriptor.get === 'function' ? mapSizeDescriptor.get : null;
+var mapForEach = hasMap && Map.prototype.forEach;
+var hasSet = typeof Set === 'function' && Set.prototype;
+var setSizeDescriptor = Object.getOwnPropertyDescriptor && hasSet ? Object.getOwnPropertyDescriptor(Set.prototype, 'size') : null;
+var setSize = hasSet && setSizeDescriptor && typeof setSizeDescriptor.get === 'function' ? setSizeDescriptor.get : null;
+var setForEach = hasSet && Set.prototype.forEach;
+var hasWeakMap = typeof WeakMap === 'function' && WeakMap.prototype;
+var weakMapHas = hasWeakMap ? WeakMap.prototype.has : null;
+var hasWeakSet = typeof WeakSet === 'function' && WeakSet.prototype;
+var weakSetHas = hasWeakSet ? WeakSet.prototype.has : null;
+var hasWeakRef = typeof WeakRef === 'function' && WeakRef.prototype;
+var weakRefDeref = hasWeakRef ? WeakRef.prototype.deref : null;
+var booleanValueOf = Boolean.prototype.valueOf;
+var objectToString = Object.prototype.toString;
+var functionToString = Function.prototype.toString;
+var $match = String.prototype.match;
+var $slice = String.prototype.slice;
+var $replace = String.prototype.replace;
+var $toUpperCase = String.prototype.toUpperCase;
+var $toLowerCase = String.prototype.toLowerCase;
+var $test = RegExp.prototype.test;
+var $concat = Array.prototype.concat;
+var $join = Array.prototype.join;
+var $arrSlice = Array.prototype.slice;
+var $floor = Math.floor;
+var bigIntValueOf = typeof BigInt === 'function' ? BigInt.prototype.valueOf : null;
+var gOPS = Object.getOwnPropertySymbols;
+var symToString = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? Symbol.prototype.toString : null;
+var hasShammedSymbols = typeof Symbol === 'function' && typeof Symbol.iterator === 'object';
+// ie, `has-tostringtag/shams
+var toStringTag = typeof Symbol === 'function' && Symbol.toStringTag && (typeof Symbol.toStringTag === hasShammedSymbols ? 'object' : 'symbol')
+    ? Symbol.toStringTag
+    : null;
+var isEnumerable = Object.prototype.propertyIsEnumerable;
+
+var gPO = (typeof Reflect === 'function' ? Reflect.getPrototypeOf : Object.getPrototypeOf) || (
+    [].__proto__ === Array.prototype // eslint-disable-line no-proto
+        ? function (O) {
+            return O.__proto__; // eslint-disable-line no-proto
+        }
+        : null
+);
+
+function addNumericSeparator(num, str) {
+    if (
+        num === Infinity
+        || num === -Infinity
+        || num !== num
+        || (num && num > -1000 && num < 1000)
+        || $test.call(/e/, str)
+    ) {
+        return str;
+    }
+    var sepRegex = /[0-9](?=(?:[0-9]{3})+(?![0-9]))/g;
+    if (typeof num === 'number') {
+        var int = num < 0 ? -$floor(-num) : $floor(num); // trunc(num)
+        if (int !== num) {
+            var intStr = String(int);
+            var dec = $slice.call(str, intStr.length + 1);
+            return $replace.call(intStr, sepRegex, '$&_') + '.' + $replace.call($replace.call(dec, /([0-9]{3})/g, '$&_'), /_$/, '');
+        }
+    }
+    return $replace.call(str, sepRegex, '$&_');
+}
+
+var utilInspect = __webpack_require__(/*! ./util.inspect */ "?2128");
+var inspectCustom = utilInspect.custom;
+var inspectSymbol = isSymbol(inspectCustom) ? inspectCustom : null;
+
+module.exports = function inspect_(obj, options, depth, seen) {
+    var opts = options || {};
+
+    if (has(opts, 'quoteStyle') && (opts.quoteStyle !== 'single' && opts.quoteStyle !== 'double')) {
+        throw new TypeError('option "quoteStyle" must be "single" or "double"');
+    }
+    if (
+        has(opts, 'maxStringLength') && (typeof opts.maxStringLength === 'number'
+            ? opts.maxStringLength < 0 && opts.maxStringLength !== Infinity
+            : opts.maxStringLength !== null
+        )
+    ) {
+        throw new TypeError('option "maxStringLength", if provided, must be a positive integer, Infinity, or `null`');
+    }
+    var customInspect = has(opts, 'customInspect') ? opts.customInspect : true;
+    if (typeof customInspect !== 'boolean' && customInspect !== 'symbol') {
+        throw new TypeError('option "customInspect", if provided, must be `true`, `false`, or `\'symbol\'`');
+    }
+
+    if (
+        has(opts, 'indent')
+        && opts.indent !== null
+        && opts.indent !== '\t'
+        && !(parseInt(opts.indent, 10) === opts.indent && opts.indent > 0)
+    ) {
+        throw new TypeError('option "indent" must be "\\t", an integer > 0, or `null`');
+    }
+    if (has(opts, 'numericSeparator') && typeof opts.numericSeparator !== 'boolean') {
+        throw new TypeError('option "numericSeparator", if provided, must be `true` or `false`');
+    }
+    var numericSeparator = opts.numericSeparator;
+
+    if (typeof obj === 'undefined') {
+        return 'undefined';
+    }
+    if (obj === null) {
+        return 'null';
+    }
+    if (typeof obj === 'boolean') {
+        return obj ? 'true' : 'false';
+    }
+
+    if (typeof obj === 'string') {
+        return inspectString(obj, opts);
+    }
+    if (typeof obj === 'number') {
+        if (obj === 0) {
+            return Infinity / obj > 0 ? '0' : '-0';
+        }
+        var str = String(obj);
+        return numericSeparator ? addNumericSeparator(obj, str) : str;
+    }
+    if (typeof obj === 'bigint') {
+        var bigIntStr = String(obj) + 'n';
+        return numericSeparator ? addNumericSeparator(obj, bigIntStr) : bigIntStr;
+    }
+
+    var maxDepth = typeof opts.depth === 'undefined' ? 5 : opts.depth;
+    if (typeof depth === 'undefined') { depth = 0; }
+    if (depth >= maxDepth && maxDepth > 0 && typeof obj === 'object') {
+        return isArray(obj) ? '[Array]' : '[Object]';
+    }
+
+    var indent = getIndent(opts, depth);
+
+    if (typeof seen === 'undefined') {
+        seen = [];
+    } else if (indexOf(seen, obj) >= 0) {
+        return '[Circular]';
+    }
+
+    function inspect(value, from, noIndent) {
+        if (from) {
+            seen = $arrSlice.call(seen);
+            seen.push(from);
+        }
+        if (noIndent) {
+            var newOpts = {
+                depth: opts.depth
+            };
+            if (has(opts, 'quoteStyle')) {
+                newOpts.quoteStyle = opts.quoteStyle;
+            }
+            return inspect_(value, newOpts, depth + 1, seen);
+        }
+        return inspect_(value, opts, depth + 1, seen);
+    }
+
+    if (typeof obj === 'function' && !isRegExp(obj)) { // in older engines, regexes are callable
+        var name = nameOf(obj);
+        var keys = arrObjKeys(obj, inspect);
+        return '[Function' + (name ? ': ' + name : ' (anonymous)') + ']' + (keys.length > 0 ? ' { ' + $join.call(keys, ', ') + ' }' : '');
+    }
+    if (isSymbol(obj)) {
+        var symString = hasShammedSymbols ? $replace.call(String(obj), /^(Symbol\(.*\))_[^)]*$/, '$1') : symToString.call(obj);
+        return typeof obj === 'object' && !hasShammedSymbols ? markBoxed(symString) : symString;
+    }
+    if (isElement(obj)) {
+        var s = '<' + $toLowerCase.call(String(obj.nodeName));
+        var attrs = obj.attributes || [];
+        for (var i = 0; i < attrs.length; i++) {
+            s += ' ' + attrs[i].name + '=' + wrapQuotes(quote(attrs[i].value), 'double', opts);
+        }
+        s += '>';
+        if (obj.childNodes && obj.childNodes.length) { s += '...'; }
+        s += '</' + $toLowerCase.call(String(obj.nodeName)) + '>';
+        return s;
+    }
+    if (isArray(obj)) {
+        if (obj.length === 0) { return '[]'; }
+        var xs = arrObjKeys(obj, inspect);
+        if (indent && !singleLineValues(xs)) {
+            return '[' + indentedJoin(xs, indent) + ']';
+        }
+        return '[ ' + $join.call(xs, ', ') + ' ]';
+    }
+    if (isError(obj)) {
+        var parts = arrObjKeys(obj, inspect);
+        if (!('cause' in Error.prototype) && 'cause' in obj && !isEnumerable.call(obj, 'cause')) {
+            return '{ [' + String(obj) + '] ' + $join.call($concat.call('[cause]: ' + inspect(obj.cause), parts), ', ') + ' }';
+        }
+        if (parts.length === 0) { return '[' + String(obj) + ']'; }
+        return '{ [' + String(obj) + '] ' + $join.call(parts, ', ') + ' }';
+    }
+    if (typeof obj === 'object' && customInspect) {
+        if (inspectSymbol && typeof obj[inspectSymbol] === 'function' && utilInspect) {
+            return utilInspect(obj, { depth: maxDepth - depth });
+        } else if (customInspect !== 'symbol' && typeof obj.inspect === 'function') {
+            return obj.inspect();
+        }
+    }
+    if (isMap(obj)) {
+        var mapParts = [];
+        mapForEach.call(obj, function (value, key) {
+            mapParts.push(inspect(key, obj, true) + ' => ' + inspect(value, obj));
+        });
+        return collectionOf('Map', mapSize.call(obj), mapParts, indent);
+    }
+    if (isSet(obj)) {
+        var setParts = [];
+        setForEach.call(obj, function (value) {
+            setParts.push(inspect(value, obj));
+        });
+        return collectionOf('Set', setSize.call(obj), setParts, indent);
+    }
+    if (isWeakMap(obj)) {
+        return weakCollectionOf('WeakMap');
+    }
+    if (isWeakSet(obj)) {
+        return weakCollectionOf('WeakSet');
+    }
+    if (isWeakRef(obj)) {
+        return weakCollectionOf('WeakRef');
+    }
+    if (isNumber(obj)) {
+        return markBoxed(inspect(Number(obj)));
+    }
+    if (isBigInt(obj)) {
+        return markBoxed(inspect(bigIntValueOf.call(obj)));
+    }
+    if (isBoolean(obj)) {
+        return markBoxed(booleanValueOf.call(obj));
+    }
+    if (isString(obj)) {
+        return markBoxed(inspect(String(obj)));
+    }
+    if (!isDate(obj) && !isRegExp(obj)) {
+        var ys = arrObjKeys(obj, inspect);
+        var isPlainObject = gPO ? gPO(obj) === Object.prototype : obj instanceof Object || obj.constructor === Object;
+        var protoTag = obj instanceof Object ? '' : 'null prototype';
+        var stringTag = !isPlainObject && toStringTag && Object(obj) === obj && toStringTag in obj ? $slice.call(toStr(obj), 8, -1) : protoTag ? 'Object' : '';
+        var constructorTag = isPlainObject || typeof obj.constructor !== 'function' ? '' : obj.constructor.name ? obj.constructor.name + ' ' : '';
+        var tag = constructorTag + (stringTag || protoTag ? '[' + $join.call($concat.call([], stringTag || [], protoTag || []), ': ') + '] ' : '');
+        if (ys.length === 0) { return tag + '{}'; }
+        if (indent) {
+            return tag + '{' + indentedJoin(ys, indent) + '}';
+        }
+        return tag + '{ ' + $join.call(ys, ', ') + ' }';
+    }
+    return String(obj);
+};
+
+function wrapQuotes(s, defaultStyle, opts) {
+    var quoteChar = (opts.quoteStyle || defaultStyle) === 'double' ? '"' : "'";
+    return quoteChar + s + quoteChar;
+}
+
+function quote(s) {
+    return $replace.call(String(s), /"/g, '&quot;');
+}
+
+function isArray(obj) { return toStr(obj) === '[object Array]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
+function isDate(obj) { return toStr(obj) === '[object Date]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
+function isRegExp(obj) { return toStr(obj) === '[object RegExp]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
+function isError(obj) { return toStr(obj) === '[object Error]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
+function isString(obj) { return toStr(obj) === '[object String]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
+function isNumber(obj) { return toStr(obj) === '[object Number]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
+function isBoolean(obj) { return toStr(obj) === '[object Boolean]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
+
+// Symbol and BigInt do have Symbol.toStringTag by spec, so that can't be used to eliminate false positives
+function isSymbol(obj) {
+    if (hasShammedSymbols) {
+        return obj && typeof obj === 'object' && obj instanceof Symbol;
+    }
+    if (typeof obj === 'symbol') {
+        return true;
+    }
+    if (!obj || typeof obj !== 'object' || !symToString) {
+        return false;
+    }
+    try {
+        symToString.call(obj);
+        return true;
+    } catch (e) {}
+    return false;
+}
+
+function isBigInt(obj) {
+    if (!obj || typeof obj !== 'object' || !bigIntValueOf) {
+        return false;
+    }
+    try {
+        bigIntValueOf.call(obj);
+        return true;
+    } catch (e) {}
+    return false;
+}
+
+var hasOwn = Object.prototype.hasOwnProperty || function (key) { return key in this; };
+function has(obj, key) {
+    return hasOwn.call(obj, key);
+}
+
+function toStr(obj) {
+    return objectToString.call(obj);
+}
+
+function nameOf(f) {
+    if (f.name) { return f.name; }
+    var m = $match.call(functionToString.call(f), /^function\s*([\w$]+)/);
+    if (m) { return m[1]; }
+    return null;
+}
+
+function indexOf(xs, x) {
+    if (xs.indexOf) { return xs.indexOf(x); }
+    for (var i = 0, l = xs.length; i < l; i++) {
+        if (xs[i] === x) { return i; }
+    }
+    return -1;
+}
+
+function isMap(x) {
+    if (!mapSize || !x || typeof x !== 'object') {
+        return false;
+    }
+    try {
+        mapSize.call(x);
+        try {
+            setSize.call(x);
+        } catch (s) {
+            return true;
+        }
+        return x instanceof Map; // core-js workaround, pre-v2.5.0
+    } catch (e) {}
+    return false;
+}
+
+function isWeakMap(x) {
+    if (!weakMapHas || !x || typeof x !== 'object') {
+        return false;
+    }
+    try {
+        weakMapHas.call(x, weakMapHas);
+        try {
+            weakSetHas.call(x, weakSetHas);
+        } catch (s) {
+            return true;
+        }
+        return x instanceof WeakMap; // core-js workaround, pre-v2.5.0
+    } catch (e) {}
+    return false;
+}
+
+function isWeakRef(x) {
+    if (!weakRefDeref || !x || typeof x !== 'object') {
+        return false;
+    }
+    try {
+        weakRefDeref.call(x);
+        return true;
+    } catch (e) {}
+    return false;
+}
+
+function isSet(x) {
+    if (!setSize || !x || typeof x !== 'object') {
+        return false;
+    }
+    try {
+        setSize.call(x);
+        try {
+            mapSize.call(x);
+        } catch (m) {
+            return true;
+        }
+        return x instanceof Set; // core-js workaround, pre-v2.5.0
+    } catch (e) {}
+    return false;
+}
+
+function isWeakSet(x) {
+    if (!weakSetHas || !x || typeof x !== 'object') {
+        return false;
+    }
+    try {
+        weakSetHas.call(x, weakSetHas);
+        try {
+            weakMapHas.call(x, weakMapHas);
+        } catch (s) {
+            return true;
+        }
+        return x instanceof WeakSet; // core-js workaround, pre-v2.5.0
+    } catch (e) {}
+    return false;
+}
+
+function isElement(x) {
+    if (!x || typeof x !== 'object') { return false; }
+    if (typeof HTMLElement !== 'undefined' && x instanceof HTMLElement) {
+        return true;
+    }
+    return typeof x.nodeName === 'string' && typeof x.getAttribute === 'function';
+}
+
+function inspectString(str, opts) {
+    if (str.length > opts.maxStringLength) {
+        var remaining = str.length - opts.maxStringLength;
+        var trailer = '... ' + remaining + ' more character' + (remaining > 1 ? 's' : '');
+        return inspectString($slice.call(str, 0, opts.maxStringLength), opts) + trailer;
+    }
+    // eslint-disable-next-line no-control-regex
+    var s = $replace.call($replace.call(str, /(['\\])/g, '\\$1'), /[\x00-\x1f]/g, lowbyte);
+    return wrapQuotes(s, 'single', opts);
+}
+
+function lowbyte(c) {
+    var n = c.charCodeAt(0);
+    var x = {
+        8: 'b',
+        9: 't',
+        10: 'n',
+        12: 'f',
+        13: 'r'
+    }[n];
+    if (x) { return '\\' + x; }
+    return '\\x' + (n < 0x10 ? '0' : '') + $toUpperCase.call(n.toString(16));
+}
+
+function markBoxed(str) {
+    return 'Object(' + str + ')';
+}
+
+function weakCollectionOf(type) {
+    return type + ' { ? }';
+}
+
+function collectionOf(type, size, entries, indent) {
+    var joinedEntries = indent ? indentedJoin(entries, indent) : $join.call(entries, ', ');
+    return type + ' (' + size + ') {' + joinedEntries + '}';
+}
+
+function singleLineValues(xs) {
+    for (var i = 0; i < xs.length; i++) {
+        if (indexOf(xs[i], '\n') >= 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function getIndent(opts, depth) {
+    var baseIndent;
+    if (opts.indent === '\t') {
+        baseIndent = '\t';
+    } else if (typeof opts.indent === 'number' && opts.indent > 0) {
+        baseIndent = $join.call(Array(opts.indent + 1), ' ');
+    } else {
+        return null;
+    }
+    return {
+        base: baseIndent,
+        prev: $join.call(Array(depth + 1), baseIndent)
+    };
+}
+
+function indentedJoin(xs, indent) {
+    if (xs.length === 0) { return ''; }
+    var lineJoiner = '\n' + indent.prev + indent.base;
+    return lineJoiner + $join.call(xs, ',' + lineJoiner) + '\n' + indent.prev;
+}
+
+function arrObjKeys(obj, inspect) {
+    var isArr = isArray(obj);
+    var xs = [];
+    if (isArr) {
+        xs.length = obj.length;
+        for (var i = 0; i < obj.length; i++) {
+            xs[i] = has(obj, i) ? inspect(obj[i], obj) : '';
+        }
+    }
+    var syms = typeof gOPS === 'function' ? gOPS(obj) : [];
+    var symMap;
+    if (hasShammedSymbols) {
+        symMap = {};
+        for (var k = 0; k < syms.length; k++) {
+            symMap['$' + syms[k]] = syms[k];
+        }
+    }
+
+    for (var key in obj) { // eslint-disable-line no-restricted-syntax
+        if (!has(obj, key)) { continue; } // eslint-disable-line no-restricted-syntax, no-continue
+        if (isArr && String(Number(key)) === key && key < obj.length) { continue; } // eslint-disable-line no-restricted-syntax, no-continue
+        if (hasShammedSymbols && symMap['$' + key] instanceof Symbol) {
+            // this is to prevent shammed Symbols, which are stored as strings, from being included in the string key section
+            continue; // eslint-disable-line no-restricted-syntax, no-continue
+        } else if ($test.call(/[^\w$]/, key)) {
+            xs.push(inspect(key, obj) + ': ' + inspect(obj[key], obj));
+        } else {
+            xs.push(key + ': ' + inspect(obj[key], obj));
+        }
+    }
+    if (typeof gOPS === 'function') {
+        for (var j = 0; j < syms.length; j++) {
+            if (isEnumerable.call(obj, syms[j])) {
+                xs.push('[' + inspect(syms[j]) + ']: ' + inspect(obj[syms[j]], obj));
+            }
+        }
+    }
+    return xs;
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -37392,84 +43115,1058 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/dist/exportHelper.js":
-/*!******************************************************!*\
-  !*** ./node_modules/vue-loader/dist/exportHelper.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, exports) => {
+/***/ "./node_modules/qs/lib/formats.js":
+/*!****************************************!*\
+  !*** ./node_modules/qs/lib/formats.js ***!
+  \****************************************/
+/***/ ((module) => {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-// runtime helper for setting properties on components
-// in a tree-shakable way
-exports["default"] = (sfc, props) => {
-    const target = sfc.__vccOpts || sfc;
-    for (const [key, val] of props) {
-        target[key] = val;
-    }
-    return target;
+
+var replace = String.prototype.replace;
+var percentTwenties = /%20/g;
+
+var Format = {
+    RFC1738: 'RFC1738',
+    RFC3986: 'RFC3986'
+};
+
+module.exports = {
+    'default': Format.RFC3986,
+    formatters: {
+        RFC1738: function (value) {
+            return replace.call(value, percentTwenties, '+');
+        },
+        RFC3986: function (value) {
+            return String(value);
+        }
+    },
+    RFC1738: Format.RFC1738,
+    RFC3986: Format.RFC3986
 };
 
 
 /***/ }),
 
-/***/ "./resources/js/components/beer-board/BeerBoardIndex.vue":
-/*!***************************************************************!*\
-  !*** ./resources/js/components/beer-board/BeerBoardIndex.vue ***!
-  \***************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "./node_modules/qs/lib/index.js":
+/*!**************************************!*\
+  !*** ./node_modules/qs/lib/index.js ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _BeerBoardIndex_vue_vue_type_template_id_819d15f2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BeerBoardIndex.vue?vue&type=template&id=819d15f2 */ "./resources/js/components/beer-board/BeerBoardIndex.vue?vue&type=template&id=819d15f2");
-/* harmony import */ var _BeerBoardIndex_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BeerBoardIndex.vue?vue&type=script&lang=js */ "./resources/js/components/beer-board/BeerBoardIndex.vue?vue&type=script&lang=js");
-/* harmony import */ var C_Users_olive_Documents_code_beer_board_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
+var stringify = __webpack_require__(/*! ./stringify */ "./node_modules/qs/lib/stringify.js");
+var parse = __webpack_require__(/*! ./parse */ "./node_modules/qs/lib/parse.js");
+var formats = __webpack_require__(/*! ./formats */ "./node_modules/qs/lib/formats.js");
 
+module.exports = {
+    formats: formats,
+    parse: parse,
+    stringify: stringify
+};
 
-;
-const __exports__ = /*#__PURE__*/(0,C_Users_olive_Documents_code_beer_board_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_BeerBoardIndex_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_BeerBoardIndex_vue_vue_type_template_id_819d15f2__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/beer-board/BeerBoardIndex.vue"]])
-/* hot reload */
-if (false) {}
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/beer-board/BeerBoardIndex.vue?vue&type=script&lang=js":
-/*!***************************************************************************************!*\
-  !*** ./resources/js/components/beer-board/BeerBoardIndex.vue?vue&type=script&lang=js ***!
-  \***************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "./node_modules/qs/lib/parse.js":
+/*!**************************************!*\
+  !*** ./node_modules/qs/lib/parse.js ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_BeerBoardIndex_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_BeerBoardIndex_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./BeerBoardIndex.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/beer-board/BeerBoardIndex.vue?vue&type=script&lang=js");
- 
+
+
+var utils = __webpack_require__(/*! ./utils */ "./node_modules/qs/lib/utils.js");
+
+var has = Object.prototype.hasOwnProperty;
+var isArray = Array.isArray;
+
+var defaults = {
+    allowDots: false,
+    allowPrototypes: false,
+    allowSparse: false,
+    arrayLimit: 20,
+    charset: 'utf-8',
+    charsetSentinel: false,
+    comma: false,
+    decoder: utils.decode,
+    delimiter: '&',
+    depth: 5,
+    ignoreQueryPrefix: false,
+    interpretNumericEntities: false,
+    parameterLimit: 1000,
+    parseArrays: true,
+    plainObjects: false,
+    strictNullHandling: false
+};
+
+var interpretNumericEntities = function (str) {
+    return str.replace(/&#(\d+);/g, function ($0, numberStr) {
+        return String.fromCharCode(parseInt(numberStr, 10));
+    });
+};
+
+var parseArrayValue = function (val, options) {
+    if (val && typeof val === 'string' && options.comma && val.indexOf(',') > -1) {
+        return val.split(',');
+    }
+
+    return val;
+};
+
+// This is what browsers will submit when the ✓ character occurs in an
+// application/x-www-form-urlencoded body and the encoding of the page containing
+// the form is iso-8859-1, or when the submitted form has an accept-charset
+// attribute of iso-8859-1. Presumably also with other charsets that do not contain
+// the ✓ character, such as us-ascii.
+var isoSentinel = 'utf8=%26%2310003%3B'; // encodeURIComponent('&#10003;')
+
+// These are the percent-encoded utf-8 octets representing a checkmark, indicating that the request actually is utf-8 encoded.
+var charsetSentinel = 'utf8=%E2%9C%93'; // encodeURIComponent('✓')
+
+var parseValues = function parseQueryStringValues(str, options) {
+    var obj = {};
+    var cleanStr = options.ignoreQueryPrefix ? str.replace(/^\?/, '') : str;
+    var limit = options.parameterLimit === Infinity ? undefined : options.parameterLimit;
+    var parts = cleanStr.split(options.delimiter, limit);
+    var skipIndex = -1; // Keep track of where the utf8 sentinel was found
+    var i;
+
+    var charset = options.charset;
+    if (options.charsetSentinel) {
+        for (i = 0; i < parts.length; ++i) {
+            if (parts[i].indexOf('utf8=') === 0) {
+                if (parts[i] === charsetSentinel) {
+                    charset = 'utf-8';
+                } else if (parts[i] === isoSentinel) {
+                    charset = 'iso-8859-1';
+                }
+                skipIndex = i;
+                i = parts.length; // The eslint settings do not allow break;
+            }
+        }
+    }
+
+    for (i = 0; i < parts.length; ++i) {
+        if (i === skipIndex) {
+            continue;
+        }
+        var part = parts[i];
+
+        var bracketEqualsPos = part.indexOf(']=');
+        var pos = bracketEqualsPos === -1 ? part.indexOf('=') : bracketEqualsPos + 1;
+
+        var key, val;
+        if (pos === -1) {
+            key = options.decoder(part, defaults.decoder, charset, 'key');
+            val = options.strictNullHandling ? null : '';
+        } else {
+            key = options.decoder(part.slice(0, pos), defaults.decoder, charset, 'key');
+            val = utils.maybeMap(
+                parseArrayValue(part.slice(pos + 1), options),
+                function (encodedVal) {
+                    return options.decoder(encodedVal, defaults.decoder, charset, 'value');
+                }
+            );
+        }
+
+        if (val && options.interpretNumericEntities && charset === 'iso-8859-1') {
+            val = interpretNumericEntities(val);
+        }
+
+        if (part.indexOf('[]=') > -1) {
+            val = isArray(val) ? [val] : val;
+        }
+
+        if (has.call(obj, key)) {
+            obj[key] = utils.combine(obj[key], val);
+        } else {
+            obj[key] = val;
+        }
+    }
+
+    return obj;
+};
+
+var parseObject = function (chain, val, options, valuesParsed) {
+    var leaf = valuesParsed ? val : parseArrayValue(val, options);
+
+    for (var i = chain.length - 1; i >= 0; --i) {
+        var obj;
+        var root = chain[i];
+
+        if (root === '[]' && options.parseArrays) {
+            obj = [].concat(leaf);
+        } else {
+            obj = options.plainObjects ? Object.create(null) : {};
+            var cleanRoot = root.charAt(0) === '[' && root.charAt(root.length - 1) === ']' ? root.slice(1, -1) : root;
+            var index = parseInt(cleanRoot, 10);
+            if (!options.parseArrays && cleanRoot === '') {
+                obj = { 0: leaf };
+            } else if (
+                !isNaN(index)
+                && root !== cleanRoot
+                && String(index) === cleanRoot
+                && index >= 0
+                && (options.parseArrays && index <= options.arrayLimit)
+            ) {
+                obj = [];
+                obj[index] = leaf;
+            } else if (cleanRoot !== '__proto__') {
+                obj[cleanRoot] = leaf;
+            }
+        }
+
+        leaf = obj;
+    }
+
+    return leaf;
+};
+
+var parseKeys = function parseQueryStringKeys(givenKey, val, options, valuesParsed) {
+    if (!givenKey) {
+        return;
+    }
+
+    // Transform dot notation to bracket notation
+    var key = options.allowDots ? givenKey.replace(/\.([^.[]+)/g, '[$1]') : givenKey;
+
+    // The regex chunks
+
+    var brackets = /(\[[^[\]]*])/;
+    var child = /(\[[^[\]]*])/g;
+
+    // Get the parent
+
+    var segment = options.depth > 0 && brackets.exec(key);
+    var parent = segment ? key.slice(0, segment.index) : key;
+
+    // Stash the parent if it exists
+
+    var keys = [];
+    if (parent) {
+        // If we aren't using plain objects, optionally prefix keys that would overwrite object prototype properties
+        if (!options.plainObjects && has.call(Object.prototype, parent)) {
+            if (!options.allowPrototypes) {
+                return;
+            }
+        }
+
+        keys.push(parent);
+    }
+
+    // Loop through children appending to the array until we hit depth
+
+    var i = 0;
+    while (options.depth > 0 && (segment = child.exec(key)) !== null && i < options.depth) {
+        i += 1;
+        if (!options.plainObjects && has.call(Object.prototype, segment[1].slice(1, -1))) {
+            if (!options.allowPrototypes) {
+                return;
+            }
+        }
+        keys.push(segment[1]);
+    }
+
+    // If there's a remainder, just add whatever is left
+
+    if (segment) {
+        keys.push('[' + key.slice(segment.index) + ']');
+    }
+
+    return parseObject(keys, val, options, valuesParsed);
+};
+
+var normalizeParseOptions = function normalizeParseOptions(opts) {
+    if (!opts) {
+        return defaults;
+    }
+
+    if (opts.decoder !== null && opts.decoder !== undefined && typeof opts.decoder !== 'function') {
+        throw new TypeError('Decoder has to be a function.');
+    }
+
+    if (typeof opts.charset !== 'undefined' && opts.charset !== 'utf-8' && opts.charset !== 'iso-8859-1') {
+        throw new TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
+    }
+    var charset = typeof opts.charset === 'undefined' ? defaults.charset : opts.charset;
+
+    return {
+        allowDots: typeof opts.allowDots === 'undefined' ? defaults.allowDots : !!opts.allowDots,
+        allowPrototypes: typeof opts.allowPrototypes === 'boolean' ? opts.allowPrototypes : defaults.allowPrototypes,
+        allowSparse: typeof opts.allowSparse === 'boolean' ? opts.allowSparse : defaults.allowSparse,
+        arrayLimit: typeof opts.arrayLimit === 'number' ? opts.arrayLimit : defaults.arrayLimit,
+        charset: charset,
+        charsetSentinel: typeof opts.charsetSentinel === 'boolean' ? opts.charsetSentinel : defaults.charsetSentinel,
+        comma: typeof opts.comma === 'boolean' ? opts.comma : defaults.comma,
+        decoder: typeof opts.decoder === 'function' ? opts.decoder : defaults.decoder,
+        delimiter: typeof opts.delimiter === 'string' || utils.isRegExp(opts.delimiter) ? opts.delimiter : defaults.delimiter,
+        // eslint-disable-next-line no-implicit-coercion, no-extra-parens
+        depth: (typeof opts.depth === 'number' || opts.depth === false) ? +opts.depth : defaults.depth,
+        ignoreQueryPrefix: opts.ignoreQueryPrefix === true,
+        interpretNumericEntities: typeof opts.interpretNumericEntities === 'boolean' ? opts.interpretNumericEntities : defaults.interpretNumericEntities,
+        parameterLimit: typeof opts.parameterLimit === 'number' ? opts.parameterLimit : defaults.parameterLimit,
+        parseArrays: opts.parseArrays !== false,
+        plainObjects: typeof opts.plainObjects === 'boolean' ? opts.plainObjects : defaults.plainObjects,
+        strictNullHandling: typeof opts.strictNullHandling === 'boolean' ? opts.strictNullHandling : defaults.strictNullHandling
+    };
+};
+
+module.exports = function (str, opts) {
+    var options = normalizeParseOptions(opts);
+
+    if (str === '' || str === null || typeof str === 'undefined') {
+        return options.plainObjects ? Object.create(null) : {};
+    }
+
+    var tempObj = typeof str === 'string' ? parseValues(str, options) : str;
+    var obj = options.plainObjects ? Object.create(null) : {};
+
+    // Iterate over the keys and setup the new object
+
+    var keys = Object.keys(tempObj);
+    for (var i = 0; i < keys.length; ++i) {
+        var key = keys[i];
+        var newObj = parseKeys(key, tempObj[key], options, typeof str === 'string');
+        obj = utils.merge(obj, newObj, options);
+    }
+
+    if (options.allowSparse === true) {
+        return obj;
+    }
+
+    return utils.compact(obj);
+};
+
 
 /***/ }),
 
-/***/ "./resources/js/components/beer-board/BeerBoardIndex.vue?vue&type=template&id=819d15f2":
-/*!*********************************************************************************************!*\
-  !*** ./resources/js/components/beer-board/BeerBoardIndex.vue?vue&type=template&id=819d15f2 ***!
-  \*********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "./node_modules/qs/lib/stringify.js":
+/*!******************************************!*\
+  !*** ./node_modules/qs/lib/stringify.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_BeerBoardIndex_vue_vue_type_template_id_819d15f2__WEBPACK_IMPORTED_MODULE_0__.render)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_BeerBoardIndex_vue_vue_type_template_id_819d15f2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./BeerBoardIndex.vue?vue&type=template&id=819d15f2 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/beer-board/BeerBoardIndex.vue?vue&type=template&id=819d15f2");
+
+
+var getSideChannel = __webpack_require__(/*! side-channel */ "./node_modules/side-channel/index.js");
+var utils = __webpack_require__(/*! ./utils */ "./node_modules/qs/lib/utils.js");
+var formats = __webpack_require__(/*! ./formats */ "./node_modules/qs/lib/formats.js");
+var has = Object.prototype.hasOwnProperty;
+
+var arrayPrefixGenerators = {
+    brackets: function brackets(prefix) {
+        return prefix + '[]';
+    },
+    comma: 'comma',
+    indices: function indices(prefix, key) {
+        return prefix + '[' + key + ']';
+    },
+    repeat: function repeat(prefix) {
+        return prefix;
+    }
+};
+
+var isArray = Array.isArray;
+var split = String.prototype.split;
+var push = Array.prototype.push;
+var pushToArray = function (arr, valueOrArray) {
+    push.apply(arr, isArray(valueOrArray) ? valueOrArray : [valueOrArray]);
+};
+
+var toISO = Date.prototype.toISOString;
+
+var defaultFormat = formats['default'];
+var defaults = {
+    addQueryPrefix: false,
+    allowDots: false,
+    charset: 'utf-8',
+    charsetSentinel: false,
+    delimiter: '&',
+    encode: true,
+    encoder: utils.encode,
+    encodeValuesOnly: false,
+    format: defaultFormat,
+    formatter: formats.formatters[defaultFormat],
+    // deprecated
+    indices: false,
+    serializeDate: function serializeDate(date) {
+        return toISO.call(date);
+    },
+    skipNulls: false,
+    strictNullHandling: false
+};
+
+var isNonNullishPrimitive = function isNonNullishPrimitive(v) {
+    return typeof v === 'string'
+        || typeof v === 'number'
+        || typeof v === 'boolean'
+        || typeof v === 'symbol'
+        || typeof v === 'bigint';
+};
+
+var sentinel = {};
+
+var stringify = function stringify(
+    object,
+    prefix,
+    generateArrayPrefix,
+    strictNullHandling,
+    skipNulls,
+    encoder,
+    filter,
+    sort,
+    allowDots,
+    serializeDate,
+    format,
+    formatter,
+    encodeValuesOnly,
+    charset,
+    sideChannel
+) {
+    var obj = object;
+
+    var tmpSc = sideChannel;
+    var step = 0;
+    var findFlag = false;
+    while ((tmpSc = tmpSc.get(sentinel)) !== void undefined && !findFlag) {
+        // Where object last appeared in the ref tree
+        var pos = tmpSc.get(object);
+        step += 1;
+        if (typeof pos !== 'undefined') {
+            if (pos === step) {
+                throw new RangeError('Cyclic object value');
+            } else {
+                findFlag = true; // Break while
+            }
+        }
+        if (typeof tmpSc.get(sentinel) === 'undefined') {
+            step = 0;
+        }
+    }
+
+    if (typeof filter === 'function') {
+        obj = filter(prefix, obj);
+    } else if (obj instanceof Date) {
+        obj = serializeDate(obj);
+    } else if (generateArrayPrefix === 'comma' && isArray(obj)) {
+        obj = utils.maybeMap(obj, function (value) {
+            if (value instanceof Date) {
+                return serializeDate(value);
+            }
+            return value;
+        });
+    }
+
+    if (obj === null) {
+        if (strictNullHandling) {
+            return encoder && !encodeValuesOnly ? encoder(prefix, defaults.encoder, charset, 'key', format) : prefix;
+        }
+
+        obj = '';
+    }
+
+    if (isNonNullishPrimitive(obj) || utils.isBuffer(obj)) {
+        if (encoder) {
+            var keyValue = encodeValuesOnly ? prefix : encoder(prefix, defaults.encoder, charset, 'key', format);
+            if (generateArrayPrefix === 'comma' && encodeValuesOnly) {
+                var valuesArray = split.call(String(obj), ',');
+                var valuesJoined = '';
+                for (var i = 0; i < valuesArray.length; ++i) {
+                    valuesJoined += (i === 0 ? '' : ',') + formatter(encoder(valuesArray[i], defaults.encoder, charset, 'value', format));
+                }
+                return [formatter(keyValue) + '=' + valuesJoined];
+            }
+            return [formatter(keyValue) + '=' + formatter(encoder(obj, defaults.encoder, charset, 'value', format))];
+        }
+        return [formatter(prefix) + '=' + formatter(String(obj))];
+    }
+
+    var values = [];
+
+    if (typeof obj === 'undefined') {
+        return values;
+    }
+
+    var objKeys;
+    if (generateArrayPrefix === 'comma' && isArray(obj)) {
+        // we need to join elements in
+        objKeys = [{ value: obj.length > 0 ? obj.join(',') || null : void undefined }];
+    } else if (isArray(filter)) {
+        objKeys = filter;
+    } else {
+        var keys = Object.keys(obj);
+        objKeys = sort ? keys.sort(sort) : keys;
+    }
+
+    for (var j = 0; j < objKeys.length; ++j) {
+        var key = objKeys[j];
+        var value = typeof key === 'object' && typeof key.value !== 'undefined' ? key.value : obj[key];
+
+        if (skipNulls && value === null) {
+            continue;
+        }
+
+        var keyPrefix = isArray(obj)
+            ? typeof generateArrayPrefix === 'function' ? generateArrayPrefix(prefix, key) : prefix
+            : prefix + (allowDots ? '.' + key : '[' + key + ']');
+
+        sideChannel.set(object, step);
+        var valueSideChannel = getSideChannel();
+        valueSideChannel.set(sentinel, sideChannel);
+        pushToArray(values, stringify(
+            value,
+            keyPrefix,
+            generateArrayPrefix,
+            strictNullHandling,
+            skipNulls,
+            encoder,
+            filter,
+            sort,
+            allowDots,
+            serializeDate,
+            format,
+            formatter,
+            encodeValuesOnly,
+            charset,
+            valueSideChannel
+        ));
+    }
+
+    return values;
+};
+
+var normalizeStringifyOptions = function normalizeStringifyOptions(opts) {
+    if (!opts) {
+        return defaults;
+    }
+
+    if (opts.encoder !== null && typeof opts.encoder !== 'undefined' && typeof opts.encoder !== 'function') {
+        throw new TypeError('Encoder has to be a function.');
+    }
+
+    var charset = opts.charset || defaults.charset;
+    if (typeof opts.charset !== 'undefined' && opts.charset !== 'utf-8' && opts.charset !== 'iso-8859-1') {
+        throw new TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
+    }
+
+    var format = formats['default'];
+    if (typeof opts.format !== 'undefined') {
+        if (!has.call(formats.formatters, opts.format)) {
+            throw new TypeError('Unknown format option provided.');
+        }
+        format = opts.format;
+    }
+    var formatter = formats.formatters[format];
+
+    var filter = defaults.filter;
+    if (typeof opts.filter === 'function' || isArray(opts.filter)) {
+        filter = opts.filter;
+    }
+
+    return {
+        addQueryPrefix: typeof opts.addQueryPrefix === 'boolean' ? opts.addQueryPrefix : defaults.addQueryPrefix,
+        allowDots: typeof opts.allowDots === 'undefined' ? defaults.allowDots : !!opts.allowDots,
+        charset: charset,
+        charsetSentinel: typeof opts.charsetSentinel === 'boolean' ? opts.charsetSentinel : defaults.charsetSentinel,
+        delimiter: typeof opts.delimiter === 'undefined' ? defaults.delimiter : opts.delimiter,
+        encode: typeof opts.encode === 'boolean' ? opts.encode : defaults.encode,
+        encoder: typeof opts.encoder === 'function' ? opts.encoder : defaults.encoder,
+        encodeValuesOnly: typeof opts.encodeValuesOnly === 'boolean' ? opts.encodeValuesOnly : defaults.encodeValuesOnly,
+        filter: filter,
+        format: format,
+        formatter: formatter,
+        serializeDate: typeof opts.serializeDate === 'function' ? opts.serializeDate : defaults.serializeDate,
+        skipNulls: typeof opts.skipNulls === 'boolean' ? opts.skipNulls : defaults.skipNulls,
+        sort: typeof opts.sort === 'function' ? opts.sort : null,
+        strictNullHandling: typeof opts.strictNullHandling === 'boolean' ? opts.strictNullHandling : defaults.strictNullHandling
+    };
+};
+
+module.exports = function (object, opts) {
+    var obj = object;
+    var options = normalizeStringifyOptions(opts);
+
+    var objKeys;
+    var filter;
+
+    if (typeof options.filter === 'function') {
+        filter = options.filter;
+        obj = filter('', obj);
+    } else if (isArray(options.filter)) {
+        filter = options.filter;
+        objKeys = filter;
+    }
+
+    var keys = [];
+
+    if (typeof obj !== 'object' || obj === null) {
+        return '';
+    }
+
+    var arrayFormat;
+    if (opts && opts.arrayFormat in arrayPrefixGenerators) {
+        arrayFormat = opts.arrayFormat;
+    } else if (opts && 'indices' in opts) {
+        arrayFormat = opts.indices ? 'indices' : 'repeat';
+    } else {
+        arrayFormat = 'indices';
+    }
+
+    var generateArrayPrefix = arrayPrefixGenerators[arrayFormat];
+
+    if (!objKeys) {
+        objKeys = Object.keys(obj);
+    }
+
+    if (options.sort) {
+        objKeys.sort(options.sort);
+    }
+
+    var sideChannel = getSideChannel();
+    for (var i = 0; i < objKeys.length; ++i) {
+        var key = objKeys[i];
+
+        if (options.skipNulls && obj[key] === null) {
+            continue;
+        }
+        pushToArray(keys, stringify(
+            obj[key],
+            key,
+            generateArrayPrefix,
+            options.strictNullHandling,
+            options.skipNulls,
+            options.encode ? options.encoder : null,
+            options.filter,
+            options.sort,
+            options.allowDots,
+            options.serializeDate,
+            options.format,
+            options.formatter,
+            options.encodeValuesOnly,
+            options.charset,
+            sideChannel
+        ));
+    }
+
+    var joined = keys.join(options.delimiter);
+    var prefix = options.addQueryPrefix === true ? '?' : '';
+
+    if (options.charsetSentinel) {
+        if (options.charset === 'iso-8859-1') {
+            // encodeURIComponent('&#10003;'), the "numeric entity" representation of a checkmark
+            prefix += 'utf8=%26%2310003%3B&';
+        } else {
+            // encodeURIComponent('✓')
+            prefix += 'utf8=%E2%9C%93&';
+        }
+    }
+
+    return joined.length > 0 ? prefix + joined : '';
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/qs/lib/utils.js":
+/*!**************************************!*\
+  !*** ./node_modules/qs/lib/utils.js ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var formats = __webpack_require__(/*! ./formats */ "./node_modules/qs/lib/formats.js");
+
+var has = Object.prototype.hasOwnProperty;
+var isArray = Array.isArray;
+
+var hexTable = (function () {
+    var array = [];
+    for (var i = 0; i < 256; ++i) {
+        array.push('%' + ((i < 16 ? '0' : '') + i.toString(16)).toUpperCase());
+    }
+
+    return array;
+}());
+
+var compactQueue = function compactQueue(queue) {
+    while (queue.length > 1) {
+        var item = queue.pop();
+        var obj = item.obj[item.prop];
+
+        if (isArray(obj)) {
+            var compacted = [];
+
+            for (var j = 0; j < obj.length; ++j) {
+                if (typeof obj[j] !== 'undefined') {
+                    compacted.push(obj[j]);
+                }
+            }
+
+            item.obj[item.prop] = compacted;
+        }
+    }
+};
+
+var arrayToObject = function arrayToObject(source, options) {
+    var obj = options && options.plainObjects ? Object.create(null) : {};
+    for (var i = 0; i < source.length; ++i) {
+        if (typeof source[i] !== 'undefined') {
+            obj[i] = source[i];
+        }
+    }
+
+    return obj;
+};
+
+var merge = function merge(target, source, options) {
+    /* eslint no-param-reassign: 0 */
+    if (!source) {
+        return target;
+    }
+
+    if (typeof source !== 'object') {
+        if (isArray(target)) {
+            target.push(source);
+        } else if (target && typeof target === 'object') {
+            if ((options && (options.plainObjects || options.allowPrototypes)) || !has.call(Object.prototype, source)) {
+                target[source] = true;
+            }
+        } else {
+            return [target, source];
+        }
+
+        return target;
+    }
+
+    if (!target || typeof target !== 'object') {
+        return [target].concat(source);
+    }
+
+    var mergeTarget = target;
+    if (isArray(target) && !isArray(source)) {
+        mergeTarget = arrayToObject(target, options);
+    }
+
+    if (isArray(target) && isArray(source)) {
+        source.forEach(function (item, i) {
+            if (has.call(target, i)) {
+                var targetItem = target[i];
+                if (targetItem && typeof targetItem === 'object' && item && typeof item === 'object') {
+                    target[i] = merge(targetItem, item, options);
+                } else {
+                    target.push(item);
+                }
+            } else {
+                target[i] = item;
+            }
+        });
+        return target;
+    }
+
+    return Object.keys(source).reduce(function (acc, key) {
+        var value = source[key];
+
+        if (has.call(acc, key)) {
+            acc[key] = merge(acc[key], value, options);
+        } else {
+            acc[key] = value;
+        }
+        return acc;
+    }, mergeTarget);
+};
+
+var assign = function assignSingleSource(target, source) {
+    return Object.keys(source).reduce(function (acc, key) {
+        acc[key] = source[key];
+        return acc;
+    }, target);
+};
+
+var decode = function (str, decoder, charset) {
+    var strWithoutPlus = str.replace(/\+/g, ' ');
+    if (charset === 'iso-8859-1') {
+        // unescape never throws, no try...catch needed:
+        return strWithoutPlus.replace(/%[0-9a-f]{2}/gi, unescape);
+    }
+    // utf-8
+    try {
+        return decodeURIComponent(strWithoutPlus);
+    } catch (e) {
+        return strWithoutPlus;
+    }
+};
+
+var encode = function encode(str, defaultEncoder, charset, kind, format) {
+    // This code was originally written by Brian White (mscdex) for the io.js core querystring library.
+    // It has been adapted here for stricter adherence to RFC 3986
+    if (str.length === 0) {
+        return str;
+    }
+
+    var string = str;
+    if (typeof str === 'symbol') {
+        string = Symbol.prototype.toString.call(str);
+    } else if (typeof str !== 'string') {
+        string = String(str);
+    }
+
+    if (charset === 'iso-8859-1') {
+        return escape(string).replace(/%u[0-9a-f]{4}/gi, function ($0) {
+            return '%26%23' + parseInt($0.slice(2), 16) + '%3B';
+        });
+    }
+
+    var out = '';
+    for (var i = 0; i < string.length; ++i) {
+        var c = string.charCodeAt(i);
+
+        if (
+            c === 0x2D // -
+            || c === 0x2E // .
+            || c === 0x5F // _
+            || c === 0x7E // ~
+            || (c >= 0x30 && c <= 0x39) // 0-9
+            || (c >= 0x41 && c <= 0x5A) // a-z
+            || (c >= 0x61 && c <= 0x7A) // A-Z
+            || (format === formats.RFC1738 && (c === 0x28 || c === 0x29)) // ( )
+        ) {
+            out += string.charAt(i);
+            continue;
+        }
+
+        if (c < 0x80) {
+            out = out + hexTable[c];
+            continue;
+        }
+
+        if (c < 0x800) {
+            out = out + (hexTable[0xC0 | (c >> 6)] + hexTable[0x80 | (c & 0x3F)]);
+            continue;
+        }
+
+        if (c < 0xD800 || c >= 0xE000) {
+            out = out + (hexTable[0xE0 | (c >> 12)] + hexTable[0x80 | ((c >> 6) & 0x3F)] + hexTable[0x80 | (c & 0x3F)]);
+            continue;
+        }
+
+        i += 1;
+        c = 0x10000 + (((c & 0x3FF) << 10) | (string.charCodeAt(i) & 0x3FF));
+        /* eslint operator-linebreak: [2, "before"] */
+        out += hexTable[0xF0 | (c >> 18)]
+            + hexTable[0x80 | ((c >> 12) & 0x3F)]
+            + hexTable[0x80 | ((c >> 6) & 0x3F)]
+            + hexTable[0x80 | (c & 0x3F)];
+    }
+
+    return out;
+};
+
+var compact = function compact(value) {
+    var queue = [{ obj: { o: value }, prop: 'o' }];
+    var refs = [];
+
+    for (var i = 0; i < queue.length; ++i) {
+        var item = queue[i];
+        var obj = item.obj[item.prop];
+
+        var keys = Object.keys(obj);
+        for (var j = 0; j < keys.length; ++j) {
+            var key = keys[j];
+            var val = obj[key];
+            if (typeof val === 'object' && val !== null && refs.indexOf(val) === -1) {
+                queue.push({ obj: obj, prop: key });
+                refs.push(val);
+            }
+        }
+    }
+
+    compactQueue(queue);
+
+    return value;
+};
+
+var isRegExp = function isRegExp(obj) {
+    return Object.prototype.toString.call(obj) === '[object RegExp]';
+};
+
+var isBuffer = function isBuffer(obj) {
+    if (!obj || typeof obj !== 'object') {
+        return false;
+    }
+
+    return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));
+};
+
+var combine = function combine(a, b) {
+    return [].concat(a, b);
+};
+
+var maybeMap = function maybeMap(val, fn) {
+    if (isArray(val)) {
+        var mapped = [];
+        for (var i = 0; i < val.length; i += 1) {
+            mapped.push(fn(val[i]));
+        }
+        return mapped;
+    }
+    return fn(val);
+};
+
+module.exports = {
+    arrayToObject: arrayToObject,
+    assign: assign,
+    combine: combine,
+    compact: compact,
+    decode: decode,
+    encode: encode,
+    isBuffer: isBuffer,
+    isRegExp: isRegExp,
+    maybeMap: maybeMap,
+    merge: merge
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/side-channel/index.js":
+/*!********************************************!*\
+  !*** ./node_modules/side-channel/index.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var GetIntrinsic = __webpack_require__(/*! get-intrinsic */ "./node_modules/get-intrinsic/index.js");
+var callBound = __webpack_require__(/*! call-bind/callBound */ "./node_modules/call-bind/callBound.js");
+var inspect = __webpack_require__(/*! object-inspect */ "./node_modules/object-inspect/index.js");
+
+var $TypeError = GetIntrinsic('%TypeError%');
+var $WeakMap = GetIntrinsic('%WeakMap%', true);
+var $Map = GetIntrinsic('%Map%', true);
+
+var $weakMapGet = callBound('WeakMap.prototype.get', true);
+var $weakMapSet = callBound('WeakMap.prototype.set', true);
+var $weakMapHas = callBound('WeakMap.prototype.has', true);
+var $mapGet = callBound('Map.prototype.get', true);
+var $mapSet = callBound('Map.prototype.set', true);
+var $mapHas = callBound('Map.prototype.has', true);
+
+/*
+ * This function traverses the list returning the node corresponding to the
+ * given key.
+ *
+ * That node is also moved to the head of the list, so that if it's accessed
+ * again we don't need to traverse the whole list. By doing so, all the recently
+ * used nodes can be accessed relatively quickly.
+ */
+var listGetNode = function (list, key) { // eslint-disable-line consistent-return
+	for (var prev = list, curr; (curr = prev.next) !== null; prev = curr) {
+		if (curr.key === key) {
+			prev.next = curr.next;
+			curr.next = list.next;
+			list.next = curr; // eslint-disable-line no-param-reassign
+			return curr;
+		}
+	}
+};
+
+var listGet = function (objects, key) {
+	var node = listGetNode(objects, key);
+	return node && node.value;
+};
+var listSet = function (objects, key, value) {
+	var node = listGetNode(objects, key);
+	if (node) {
+		node.value = value;
+	} else {
+		// Prepend the new node to the beginning of the list
+		objects.next = { // eslint-disable-line no-param-reassign
+			key: key,
+			next: objects.next,
+			value: value
+		};
+	}
+};
+var listHas = function (objects, key) {
+	return !!listGetNode(objects, key);
+};
+
+module.exports = function getSideChannel() {
+	var $wm;
+	var $m;
+	var $o;
+	var channel = {
+		assert: function (key) {
+			if (!channel.has(key)) {
+				throw new $TypeError('Side channel does not contain ' + inspect(key));
+			}
+		},
+		get: function (key) { // eslint-disable-line consistent-return
+			if ($WeakMap && key && (typeof key === 'object' || typeof key === 'function')) {
+				if ($wm) {
+					return $weakMapGet($wm, key);
+				}
+			} else if ($Map) {
+				if ($m) {
+					return $mapGet($m, key);
+				}
+			} else {
+				if ($o) { // eslint-disable-line no-lonely-if
+					return listGet($o, key);
+				}
+			}
+		},
+		has: function (key) {
+			if ($WeakMap && key && (typeof key === 'object' || typeof key === 'function')) {
+				if ($wm) {
+					return $weakMapHas($wm, key);
+				}
+			} else if ($Map) {
+				if ($m) {
+					return $mapHas($m, key);
+				}
+			} else {
+				if ($o) { // eslint-disable-line no-lonely-if
+					return listHas($o, key);
+				}
+			}
+			return false;
+		},
+		set: function (key, value) {
+			if ($WeakMap && key && (typeof key === 'object' || typeof key === 'function')) {
+				if (!$wm) {
+					$wm = new $WeakMap();
+				}
+				$weakMapSet($wm, key, value);
+			} else if ($Map) {
+				if (!$m) {
+					$m = new $Map();
+				}
+				$mapSet($m, key, value);
+			} else {
+				if (!$o) {
+					/*
+					 * Initialize the linked list as an empty node, so that we don't have
+					 * to special-case handling of the first node: we can always refer to
+					 * it as (previous node).next, instead of something like (list).head
+					 */
+					$o = { key: {}, next: null };
+				}
+				listSet($o, key, value);
+			}
+		}
+	};
+	return channel;
+};
 
 
 /***/ }),
@@ -37704,3634 +44401,13 @@ function compileToFunction(template, options) {
 
 /***/ }),
 
-/***/ "./node_modules/vue-router/dist/vue-router.mjs":
-/*!*****************************************************!*\
-  !*** ./node_modules/vue-router/dist/vue-router.mjs ***!
-  \*****************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+/***/ "?2128":
+/*!********************************!*\
+  !*** ./util.inspect (ignored) ***!
+  \********************************/
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "NavigationFailureType": () => (/* binding */ NavigationFailureType),
-/* harmony export */   "RouterLink": () => (/* binding */ RouterLink),
-/* harmony export */   "RouterView": () => (/* binding */ RouterView),
-/* harmony export */   "START_LOCATION": () => (/* binding */ START_LOCATION_NORMALIZED),
-/* harmony export */   "createMemoryHistory": () => (/* binding */ createMemoryHistory),
-/* harmony export */   "createRouter": () => (/* binding */ createRouter),
-/* harmony export */   "createRouterMatcher": () => (/* binding */ createRouterMatcher),
-/* harmony export */   "createWebHashHistory": () => (/* binding */ createWebHashHistory),
-/* harmony export */   "createWebHistory": () => (/* binding */ createWebHistory),
-/* harmony export */   "isNavigationFailure": () => (/* binding */ isNavigationFailure),
-/* harmony export */   "loadRouteLocation": () => (/* binding */ loadRouteLocation),
-/* harmony export */   "matchedRouteKey": () => (/* binding */ matchedRouteKey),
-/* harmony export */   "onBeforeRouteLeave": () => (/* binding */ onBeforeRouteLeave),
-/* harmony export */   "onBeforeRouteUpdate": () => (/* binding */ onBeforeRouteUpdate),
-/* harmony export */   "parseQuery": () => (/* binding */ parseQuery),
-/* harmony export */   "routeLocationKey": () => (/* binding */ routeLocationKey),
-/* harmony export */   "routerKey": () => (/* binding */ routerKey),
-/* harmony export */   "routerViewLocationKey": () => (/* binding */ routerViewLocationKey),
-/* harmony export */   "stringifyQuery": () => (/* binding */ stringifyQuery),
-/* harmony export */   "useLink": () => (/* binding */ useLink),
-/* harmony export */   "useRoute": () => (/* binding */ useRoute),
-/* harmony export */   "useRouter": () => (/* binding */ useRouter),
-/* harmony export */   "viewDepthKey": () => (/* binding */ viewDepthKey)
-/* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-/* harmony import */ var _vue_devtools_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @vue/devtools-api */ "./node_modules/@vue/devtools-api/lib/esm/index.js");
-/*!
-  * vue-router v4.1.5
-  * (c) 2022 Eduardo San Martin Morote
-  * @license MIT
-  */
-
-
-
-const isBrowser = typeof window !== 'undefined';
-
-function isESModule(obj) {
-    return obj.__esModule || obj[Symbol.toStringTag] === 'Module';
-}
-const assign = Object.assign;
-function applyToParams(fn, params) {
-    const newParams = {};
-    for (const key in params) {
-        const value = params[key];
-        newParams[key] = isArray(value)
-            ? value.map(fn)
-            : fn(value);
-    }
-    return newParams;
-}
-const noop = () => { };
-/**
- * Typesafe alternative to Array.isArray
- * https://github.com/microsoft/TypeScript/pull/48228
- */
-const isArray = Array.isArray;
-
-function warn(msg) {
-    // avoid using ...args as it breaks in older Edge builds
-    const args = Array.from(arguments).slice(1);
-    console.warn.apply(console, ['[Vue Router warn]: ' + msg].concat(args));
-}
-
-const TRAILING_SLASH_RE = /\/$/;
-const removeTrailingSlash = (path) => path.replace(TRAILING_SLASH_RE, '');
-/**
- * Transforms a URI into a normalized history location
- *
- * @param parseQuery
- * @param location - URI to normalize
- * @param currentLocation - current absolute location. Allows resolving relative
- * paths. Must start with `/`. Defaults to `/`
- * @returns a normalized history location
- */
-function parseURL(parseQuery, location, currentLocation = '/') {
-    let path, query = {}, searchString = '', hash = '';
-    // Could use URL and URLSearchParams but IE 11 doesn't support it
-    // TODO: move to new URL()
-    const hashPos = location.indexOf('#');
-    let searchPos = location.indexOf('?');
-    // the hash appears before the search, so it's not part of the search string
-    if (hashPos < searchPos && hashPos >= 0) {
-        searchPos = -1;
-    }
-    if (searchPos > -1) {
-        path = location.slice(0, searchPos);
-        searchString = location.slice(searchPos + 1, hashPos > -1 ? hashPos : location.length);
-        query = parseQuery(searchString);
-    }
-    if (hashPos > -1) {
-        path = path || location.slice(0, hashPos);
-        // keep the # character
-        hash = location.slice(hashPos, location.length);
-    }
-    // no search and no query
-    path = resolveRelativePath(path != null ? path : location, currentLocation);
-    // empty path means a relative query or hash `?foo=f`, `#thing`
-    return {
-        fullPath: path + (searchString && '?') + searchString + hash,
-        path,
-        query,
-        hash,
-    };
-}
-/**
- * Stringifies a URL object
- *
- * @param stringifyQuery
- * @param location
- */
-function stringifyURL(stringifyQuery, location) {
-    const query = location.query ? stringifyQuery(location.query) : '';
-    return location.path + (query && '?') + query + (location.hash || '');
-}
-/**
- * Strips off the base from the beginning of a location.pathname in a non-case-sensitive way.
- *
- * @param pathname - location.pathname
- * @param base - base to strip off
- */
-function stripBase(pathname, base) {
-    // no base or base is not found at the beginning
-    if (!base || !pathname.toLowerCase().startsWith(base.toLowerCase()))
-        return pathname;
-    return pathname.slice(base.length) || '/';
-}
-/**
- * Checks if two RouteLocation are equal. This means that both locations are
- * pointing towards the same {@link RouteRecord} and that all `params`, `query`
- * parameters and `hash` are the same
- *
- * @param a - first {@link RouteLocation}
- * @param b - second {@link RouteLocation}
- */
-function isSameRouteLocation(stringifyQuery, a, b) {
-    const aLastIndex = a.matched.length - 1;
-    const bLastIndex = b.matched.length - 1;
-    return (aLastIndex > -1 &&
-        aLastIndex === bLastIndex &&
-        isSameRouteRecord(a.matched[aLastIndex], b.matched[bLastIndex]) &&
-        isSameRouteLocationParams(a.params, b.params) &&
-        stringifyQuery(a.query) === stringifyQuery(b.query) &&
-        a.hash === b.hash);
-}
-/**
- * Check if two `RouteRecords` are equal. Takes into account aliases: they are
- * considered equal to the `RouteRecord` they are aliasing.
- *
- * @param a - first {@link RouteRecord}
- * @param b - second {@link RouteRecord}
- */
-function isSameRouteRecord(a, b) {
-    // since the original record has an undefined value for aliasOf
-    // but all aliases point to the original record, this will always compare
-    // the original record
-    return (a.aliasOf || a) === (b.aliasOf || b);
-}
-function isSameRouteLocationParams(a, b) {
-    if (Object.keys(a).length !== Object.keys(b).length)
-        return false;
-    for (const key in a) {
-        if (!isSameRouteLocationParamsValue(a[key], b[key]))
-            return false;
-    }
-    return true;
-}
-function isSameRouteLocationParamsValue(a, b) {
-    return isArray(a)
-        ? isEquivalentArray(a, b)
-        : isArray(b)
-            ? isEquivalentArray(b, a)
-            : a === b;
-}
-/**
- * Check if two arrays are the same or if an array with one single entry is the
- * same as another primitive value. Used to check query and parameters
- *
- * @param a - array of values
- * @param b - array of values or a single value
- */
-function isEquivalentArray(a, b) {
-    return isArray(b)
-        ? a.length === b.length && a.every((value, i) => value === b[i])
-        : a.length === 1 && a[0] === b;
-}
-/**
- * Resolves a relative path that starts with `.`.
- *
- * @param to - path location we are resolving
- * @param from - currentLocation.path, should start with `/`
- */
-function resolveRelativePath(to, from) {
-    if (to.startsWith('/'))
-        return to;
-    if (( true) && !from.startsWith('/')) {
-        warn(`Cannot resolve a relative location without an absolute path. Trying to resolve "${to}" from "${from}". It should look like "/${from}".`);
-        return to;
-    }
-    if (!to)
-        return from;
-    const fromSegments = from.split('/');
-    const toSegments = to.split('/');
-    let position = fromSegments.length - 1;
-    let toPosition;
-    let segment;
-    for (toPosition = 0; toPosition < toSegments.length; toPosition++) {
-        segment = toSegments[toPosition];
-        // we stay on the same position
-        if (segment === '.')
-            continue;
-        // go up in the from array
-        if (segment === '..') {
-            // we can't go below zero, but we still need to increment toPosition
-            if (position > 1)
-                position--;
-            // continue
-        }
-        // we reached a non-relative path, we stop here
-        else
-            break;
-    }
-    return (fromSegments.slice(0, position).join('/') +
-        '/' +
-        toSegments
-            // ensure we use at least the last element in the toSegments
-            .slice(toPosition - (toPosition === toSegments.length ? 1 : 0))
-            .join('/'));
-}
-
-var NavigationType;
-(function (NavigationType) {
-    NavigationType["pop"] = "pop";
-    NavigationType["push"] = "push";
-})(NavigationType || (NavigationType = {}));
-var NavigationDirection;
-(function (NavigationDirection) {
-    NavigationDirection["back"] = "back";
-    NavigationDirection["forward"] = "forward";
-    NavigationDirection["unknown"] = "";
-})(NavigationDirection || (NavigationDirection = {}));
-/**
- * Starting location for Histories
- */
-const START = '';
-// Generic utils
-/**
- * Normalizes a base by removing any trailing slash and reading the base tag if
- * present.
- *
- * @param base - base to normalize
- */
-function normalizeBase(base) {
-    if (!base) {
-        if (isBrowser) {
-            // respect <base> tag
-            const baseEl = document.querySelector('base');
-            base = (baseEl && baseEl.getAttribute('href')) || '/';
-            // strip full URL origin
-            base = base.replace(/^\w+:\/\/[^\/]+/, '');
-        }
-        else {
-            base = '/';
-        }
-    }
-    // ensure leading slash when it was removed by the regex above avoid leading
-    // slash with hash because the file could be read from the disk like file://
-    // and the leading slash would cause problems
-    if (base[0] !== '/' && base[0] !== '#')
-        base = '/' + base;
-    // remove the trailing slash so all other method can just do `base + fullPath`
-    // to build an href
-    return removeTrailingSlash(base);
-}
-// remove any character before the hash
-const BEFORE_HASH_RE = /^[^#]+#/;
-function createHref(base, location) {
-    return base.replace(BEFORE_HASH_RE, '#') + location;
-}
-
-function getElementPosition(el, offset) {
-    const docRect = document.documentElement.getBoundingClientRect();
-    const elRect = el.getBoundingClientRect();
-    return {
-        behavior: offset.behavior,
-        left: elRect.left - docRect.left - (offset.left || 0),
-        top: elRect.top - docRect.top - (offset.top || 0),
-    };
-}
-const computeScrollPosition = () => ({
-    left: window.pageXOffset,
-    top: window.pageYOffset,
-});
-function scrollToPosition(position) {
-    let scrollToOptions;
-    if ('el' in position) {
-        const positionEl = position.el;
-        const isIdSelector = typeof positionEl === 'string' && positionEl.startsWith('#');
-        /**
-         * `id`s can accept pretty much any characters, including CSS combinators
-         * like `>` or `~`. It's still possible to retrieve elements using
-         * `document.getElementById('~')` but it needs to be escaped when using
-         * `document.querySelector('#\\~')` for it to be valid. The only
-         * requirements for `id`s are them to be unique on the page and to not be
-         * empty (`id=""`). Because of that, when passing an id selector, it should
-         * be properly escaped for it to work with `querySelector`. We could check
-         * for the id selector to be simple (no CSS combinators `+ >~`) but that
-         * would make things inconsistent since they are valid characters for an
-         * `id` but would need to be escaped when using `querySelector`, breaking
-         * their usage and ending up in no selector returned. Selectors need to be
-         * escaped:
-         *
-         * - `#1-thing` becomes `#\31 -thing`
-         * - `#with~symbols` becomes `#with\\~symbols`
-         *
-         * - More information about  the topic can be found at
-         *   https://mathiasbynens.be/notes/html5-id-class.
-         * - Practical example: https://mathiasbynens.be/demo/html5-id
-         */
-        if (( true) && typeof position.el === 'string') {
-            if (!isIdSelector || !document.getElementById(position.el.slice(1))) {
-                try {
-                    const foundEl = document.querySelector(position.el);
-                    if (isIdSelector && foundEl) {
-                        warn(`The selector "${position.el}" should be passed as "el: document.querySelector('${position.el}')" because it starts with "#".`);
-                        // return to avoid other warnings
-                        return;
-                    }
-                }
-                catch (err) {
-                    warn(`The selector "${position.el}" is invalid. If you are using an id selector, make sure to escape it. You can find more information about escaping characters in selectors at https://mathiasbynens.be/notes/css-escapes or use CSS.escape (https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape).`);
-                    // return to avoid other warnings
-                    return;
-                }
-            }
-        }
-        const el = typeof positionEl === 'string'
-            ? isIdSelector
-                ? document.getElementById(positionEl.slice(1))
-                : document.querySelector(positionEl)
-            : positionEl;
-        if (!el) {
-            ( true) &&
-                warn(`Couldn't find element using selector "${position.el}" returned by scrollBehavior.`);
-            return;
-        }
-        scrollToOptions = getElementPosition(el, position);
-    }
-    else {
-        scrollToOptions = position;
-    }
-    if ('scrollBehavior' in document.documentElement.style)
-        window.scrollTo(scrollToOptions);
-    else {
-        window.scrollTo(scrollToOptions.left != null ? scrollToOptions.left : window.pageXOffset, scrollToOptions.top != null ? scrollToOptions.top : window.pageYOffset);
-    }
-}
-function getScrollKey(path, delta) {
-    const position = history.state ? history.state.position - delta : -1;
-    return position + path;
-}
-const scrollPositions = new Map();
-function saveScrollPosition(key, scrollPosition) {
-    scrollPositions.set(key, scrollPosition);
-}
-function getSavedScrollPosition(key) {
-    const scroll = scrollPositions.get(key);
-    // consume it so it's not used again
-    scrollPositions.delete(key);
-    return scroll;
-}
-// TODO: RFC about how to save scroll position
-/**
- * ScrollBehavior instance used by the router to compute and restore the scroll
- * position when navigating.
- */
-// export interface ScrollHandler<ScrollPositionEntry extends HistoryStateValue, ScrollPosition extends ScrollPositionEntry> {
-//   // returns a scroll position that can be saved in history
-//   compute(): ScrollPositionEntry
-//   // can take an extended ScrollPositionEntry
-//   scroll(position: ScrollPosition): void
-// }
-// export const scrollHandler: ScrollHandler<ScrollPosition> = {
-//   compute: computeScroll,
-//   scroll: scrollToPosition,
-// }
-
-let createBaseLocation = () => location.protocol + '//' + location.host;
-/**
- * Creates a normalized history location from a window.location object
- * @param location -
- */
-function createCurrentLocation(base, location) {
-    const { pathname, search, hash } = location;
-    // allows hash bases like #, /#, #/, #!, #!/, /#!/, or even /folder#end
-    const hashPos = base.indexOf('#');
-    if (hashPos > -1) {
-        let slicePos = hash.includes(base.slice(hashPos))
-            ? base.slice(hashPos).length
-            : 1;
-        let pathFromHash = hash.slice(slicePos);
-        // prepend the starting slash to hash so the url starts with /#
-        if (pathFromHash[0] !== '/')
-            pathFromHash = '/' + pathFromHash;
-        return stripBase(pathFromHash, '');
-    }
-    const path = stripBase(pathname, base);
-    return path + search + hash;
-}
-function useHistoryListeners(base, historyState, currentLocation, replace) {
-    let listeners = [];
-    let teardowns = [];
-    // TODO: should it be a stack? a Dict. Check if the popstate listener
-    // can trigger twice
-    let pauseState = null;
-    const popStateHandler = ({ state, }) => {
-        const to = createCurrentLocation(base, location);
-        const from = currentLocation.value;
-        const fromState = historyState.value;
-        let delta = 0;
-        if (state) {
-            currentLocation.value = to;
-            historyState.value = state;
-            // ignore the popstate and reset the pauseState
-            if (pauseState && pauseState === from) {
-                pauseState = null;
-                return;
-            }
-            delta = fromState ? state.position - fromState.position : 0;
-        }
-        else {
-            replace(to);
-        }
-        // console.log({ deltaFromCurrent })
-        // Here we could also revert the navigation by calling history.go(-delta)
-        // this listener will have to be adapted to not trigger again and to wait for the url
-        // to be updated before triggering the listeners. Some kind of validation function would also
-        // need to be passed to the listeners so the navigation can be accepted
-        // call all listeners
-        listeners.forEach(listener => {
-            listener(currentLocation.value, from, {
-                delta,
-                type: NavigationType.pop,
-                direction: delta
-                    ? delta > 0
-                        ? NavigationDirection.forward
-                        : NavigationDirection.back
-                    : NavigationDirection.unknown,
-            });
-        });
-    };
-    function pauseListeners() {
-        pauseState = currentLocation.value;
-    }
-    function listen(callback) {
-        // set up the listener and prepare teardown callbacks
-        listeners.push(callback);
-        const teardown = () => {
-            const index = listeners.indexOf(callback);
-            if (index > -1)
-                listeners.splice(index, 1);
-        };
-        teardowns.push(teardown);
-        return teardown;
-    }
-    function beforeUnloadListener() {
-        const { history } = window;
-        if (!history.state)
-            return;
-        history.replaceState(assign({}, history.state, { scroll: computeScrollPosition() }), '');
-    }
-    function destroy() {
-        for (const teardown of teardowns)
-            teardown();
-        teardowns = [];
-        window.removeEventListener('popstate', popStateHandler);
-        window.removeEventListener('beforeunload', beforeUnloadListener);
-    }
-    // set up the listeners and prepare teardown callbacks
-    window.addEventListener('popstate', popStateHandler);
-    window.addEventListener('beforeunload', beforeUnloadListener);
-    return {
-        pauseListeners,
-        listen,
-        destroy,
-    };
-}
-/**
- * Creates a state object
- */
-function buildState(back, current, forward, replaced = false, computeScroll = false) {
-    return {
-        back,
-        current,
-        forward,
-        replaced,
-        position: window.history.length,
-        scroll: computeScroll ? computeScrollPosition() : null,
-    };
-}
-function useHistoryStateNavigation(base) {
-    const { history, location } = window;
-    // private variables
-    const currentLocation = {
-        value: createCurrentLocation(base, location),
-    };
-    const historyState = { value: history.state };
-    // build current history entry as this is a fresh navigation
-    if (!historyState.value) {
-        changeLocation(currentLocation.value, {
-            back: null,
-            current: currentLocation.value,
-            forward: null,
-            // the length is off by one, we need to decrease it
-            position: history.length - 1,
-            replaced: true,
-            // don't add a scroll as the user may have an anchor, and we want
-            // scrollBehavior to be triggered without a saved position
-            scroll: null,
-        }, true);
-    }
-    function changeLocation(to, state, replace) {
-        /**
-         * if a base tag is provided, and we are on a normal domain, we have to
-         * respect the provided `base` attribute because pushState() will use it and
-         * potentially erase anything before the `#` like at
-         * https://github.com/vuejs/router/issues/685 where a base of
-         * `/folder/#` but a base of `/` would erase the `/folder/` section. If
-         * there is no host, the `<base>` tag makes no sense and if there isn't a
-         * base tag we can just use everything after the `#`.
-         */
-        const hashIndex = base.indexOf('#');
-        const url = hashIndex > -1
-            ? (location.host && document.querySelector('base')
-                ? base
-                : base.slice(hashIndex)) + to
-            : createBaseLocation() + base + to;
-        try {
-            // BROWSER QUIRK
-            // NOTE: Safari throws a SecurityError when calling this function 100 times in 30 seconds
-            history[replace ? 'replaceState' : 'pushState'](state, '', url);
-            historyState.value = state;
-        }
-        catch (err) {
-            if ((true)) {
-                warn('Error with push/replace State', err);
-            }
-            else {}
-            // Force the navigation, this also resets the call count
-            location[replace ? 'replace' : 'assign'](url);
-        }
-    }
-    function replace(to, data) {
-        const state = assign({}, history.state, buildState(historyState.value.back, 
-        // keep back and forward entries but override current position
-        to, historyState.value.forward, true), data, { position: historyState.value.position });
-        changeLocation(to, state, true);
-        currentLocation.value = to;
-    }
-    function push(to, data) {
-        // Add to current entry the information of where we are going
-        // as well as saving the current position
-        const currentState = assign({}, 
-        // use current history state to gracefully handle a wrong call to
-        // history.replaceState
-        // https://github.com/vuejs/router/issues/366
-        historyState.value, history.state, {
-            forward: to,
-            scroll: computeScrollPosition(),
-        });
-        if (( true) && !history.state) {
-            warn(`history.state seems to have been manually replaced without preserving the necessary values. Make sure to preserve existing history state if you are manually calling history.replaceState:\n\n` +
-                `history.replaceState(history.state, '', url)\n\n` +
-                `You can find more information at https://next.router.vuejs.org/guide/migration/#usage-of-history-state.`);
-        }
-        changeLocation(currentState.current, currentState, true);
-        const state = assign({}, buildState(currentLocation.value, to, null), { position: currentState.position + 1 }, data);
-        changeLocation(to, state, false);
-        currentLocation.value = to;
-    }
-    return {
-        location: currentLocation,
-        state: historyState,
-        push,
-        replace,
-    };
-}
-/**
- * Creates an HTML5 history. Most common history for single page applications.
- *
- * @param base -
- */
-function createWebHistory(base) {
-    base = normalizeBase(base);
-    const historyNavigation = useHistoryStateNavigation(base);
-    const historyListeners = useHistoryListeners(base, historyNavigation.state, historyNavigation.location, historyNavigation.replace);
-    function go(delta, triggerListeners = true) {
-        if (!triggerListeners)
-            historyListeners.pauseListeners();
-        history.go(delta);
-    }
-    const routerHistory = assign({
-        // it's overridden right after
-        location: '',
-        base,
-        go,
-        createHref: createHref.bind(null, base),
-    }, historyNavigation, historyListeners);
-    Object.defineProperty(routerHistory, 'location', {
-        enumerable: true,
-        get: () => historyNavigation.location.value,
-    });
-    Object.defineProperty(routerHistory, 'state', {
-        enumerable: true,
-        get: () => historyNavigation.state.value,
-    });
-    return routerHistory;
-}
-
-/**
- * Creates an in-memory based history. The main purpose of this history is to handle SSR. It starts in a special location that is nowhere.
- * It's up to the user to replace that location with the starter location by either calling `router.push` or `router.replace`.
- *
- * @param base - Base applied to all urls, defaults to '/'
- * @returns a history object that can be passed to the router constructor
- */
-function createMemoryHistory(base = '') {
-    let listeners = [];
-    let queue = [START];
-    let position = 0;
-    base = normalizeBase(base);
-    function setLocation(location) {
-        position++;
-        if (position === queue.length) {
-            // we are at the end, we can simply append a new entry
-            queue.push(location);
-        }
-        else {
-            // we are in the middle, we remove everything from here in the queue
-            queue.splice(position);
-            queue.push(location);
-        }
-    }
-    function triggerListeners(to, from, { direction, delta }) {
-        const info = {
-            direction,
-            delta,
-            type: NavigationType.pop,
-        };
-        for (const callback of listeners) {
-            callback(to, from, info);
-        }
-    }
-    const routerHistory = {
-        // rewritten by Object.defineProperty
-        location: START,
-        // TODO: should be kept in queue
-        state: {},
-        base,
-        createHref: createHref.bind(null, base),
-        replace(to) {
-            // remove current entry and decrement position
-            queue.splice(position--, 1);
-            setLocation(to);
-        },
-        push(to, data) {
-            setLocation(to);
-        },
-        listen(callback) {
-            listeners.push(callback);
-            return () => {
-                const index = listeners.indexOf(callback);
-                if (index > -1)
-                    listeners.splice(index, 1);
-            };
-        },
-        destroy() {
-            listeners = [];
-            queue = [START];
-            position = 0;
-        },
-        go(delta, shouldTrigger = true) {
-            const from = this.location;
-            const direction = 
-            // we are considering delta === 0 going forward, but in abstract mode
-            // using 0 for the delta doesn't make sense like it does in html5 where
-            // it reloads the page
-            delta < 0 ? NavigationDirection.back : NavigationDirection.forward;
-            position = Math.max(0, Math.min(position + delta, queue.length - 1));
-            if (shouldTrigger) {
-                triggerListeners(this.location, from, {
-                    direction,
-                    delta,
-                });
-            }
-        },
-    };
-    Object.defineProperty(routerHistory, 'location', {
-        enumerable: true,
-        get: () => queue[position],
-    });
-    return routerHistory;
-}
-
-/**
- * Creates a hash history. Useful for web applications with no host (e.g. `file://`) or when configuring a server to
- * handle any URL is not possible.
- *
- * @param base - optional base to provide. Defaults to `location.pathname + location.search` If there is a `<base>` tag
- * in the `head`, its value will be ignored in favor of this parameter **but note it affects all the history.pushState()
- * calls**, meaning that if you use a `<base>` tag, it's `href` value **has to match this parameter** (ignoring anything
- * after the `#`).
- *
- * @example
- * ```js
- * // at https://example.com/folder
- * createWebHashHistory() // gives a url of `https://example.com/folder#`
- * createWebHashHistory('/folder/') // gives a url of `https://example.com/folder/#`
- * // if the `#` is provided in the base, it won't be added by `createWebHashHistory`
- * createWebHashHistory('/folder/#/app/') // gives a url of `https://example.com/folder/#/app/`
- * // you should avoid doing this because it changes the original url and breaks copying urls
- * createWebHashHistory('/other-folder/') // gives a url of `https://example.com/other-folder/#`
- *
- * // at file:///usr/etc/folder/index.html
- * // for locations with no `host`, the base is ignored
- * createWebHashHistory('/iAmIgnored') // gives a url of `file:///usr/etc/folder/index.html#`
- * ```
- */
-function createWebHashHistory(base) {
-    // Make sure this implementation is fine in terms of encoding, specially for IE11
-    // for `file://`, directly use the pathname and ignore the base
-    // location.pathname contains an initial `/` even at the root: `https://example.com`
-    base = location.host ? base || location.pathname + location.search : '';
-    // allow the user to provide a `#` in the middle: `/base/#/app`
-    if (!base.includes('#'))
-        base += '#';
-    if (( true) && !base.endsWith('#/') && !base.endsWith('#')) {
-        warn(`A hash base must end with a "#":\n"${base}" should be "${base.replace(/#.*$/, '#')}".`);
-    }
-    return createWebHistory(base);
-}
-
-function isRouteLocation(route) {
-    return typeof route === 'string' || (route && typeof route === 'object');
-}
-function isRouteName(name) {
-    return typeof name === 'string' || typeof name === 'symbol';
-}
-
-/**
- * Initial route location where the router is. Can be used in navigation guards
- * to differentiate the initial navigation.
- *
- * @example
- * ```js
- * import { START_LOCATION } from 'vue-router'
- *
- * router.beforeEach((to, from) => {
- *   if (from === START_LOCATION) {
- *     // initial navigation
- *   }
- * })
- * ```
- */
-const START_LOCATION_NORMALIZED = {
-    path: '/',
-    name: undefined,
-    params: {},
-    query: {},
-    hash: '',
-    fullPath: '/',
-    matched: [],
-    meta: {},
-    redirectedFrom: undefined,
-};
-
-const NavigationFailureSymbol = Symbol(( true) ? 'navigation failure' : 0);
-/**
- * Enumeration with all possible types for navigation failures. Can be passed to
- * {@link isNavigationFailure} to check for specific failures.
- */
-var NavigationFailureType;
-(function (NavigationFailureType) {
-    /**
-     * An aborted navigation is a navigation that failed because a navigation
-     * guard returned `false` or called `next(false)`
-     */
-    NavigationFailureType[NavigationFailureType["aborted"] = 4] = "aborted";
-    /**
-     * A cancelled navigation is a navigation that failed because a more recent
-     * navigation finished started (not necessarily finished).
-     */
-    NavigationFailureType[NavigationFailureType["cancelled"] = 8] = "cancelled";
-    /**
-     * A duplicated navigation is a navigation that failed because it was
-     * initiated while already being at the exact same location.
-     */
-    NavigationFailureType[NavigationFailureType["duplicated"] = 16] = "duplicated";
-})(NavigationFailureType || (NavigationFailureType = {}));
-// DEV only debug messages
-const ErrorTypeMessages = {
-    [1 /* ErrorTypes.MATCHER_NOT_FOUND */]({ location, currentLocation }) {
-        return `No match for\n ${JSON.stringify(location)}${currentLocation
-            ? '\nwhile being at\n' + JSON.stringify(currentLocation)
-            : ''}`;
-    },
-    [2 /* ErrorTypes.NAVIGATION_GUARD_REDIRECT */]({ from, to, }) {
-        return `Redirected from "${from.fullPath}" to "${stringifyRoute(to)}" via a navigation guard.`;
-    },
-    [4 /* ErrorTypes.NAVIGATION_ABORTED */]({ from, to }) {
-        return `Navigation aborted from "${from.fullPath}" to "${to.fullPath}" via a navigation guard.`;
-    },
-    [8 /* ErrorTypes.NAVIGATION_CANCELLED */]({ from, to }) {
-        return `Navigation cancelled from "${from.fullPath}" to "${to.fullPath}" with a new navigation.`;
-    },
-    [16 /* ErrorTypes.NAVIGATION_DUPLICATED */]({ from, to }) {
-        return `Avoided redundant navigation to current location: "${from.fullPath}".`;
-    },
-};
-function createRouterError(type, params) {
-    // keep full error messages in cjs versions
-    if (true) {
-        return assign(new Error(ErrorTypeMessages[type](params)), {
-            type,
-            [NavigationFailureSymbol]: true,
-        }, params);
-    }
-    else {}
-}
-function isNavigationFailure(error, type) {
-    return (error instanceof Error &&
-        NavigationFailureSymbol in error &&
-        (type == null || !!(error.type & type)));
-}
-const propertiesToLog = ['params', 'query', 'hash'];
-function stringifyRoute(to) {
-    if (typeof to === 'string')
-        return to;
-    if ('path' in to)
-        return to.path;
-    const location = {};
-    for (const key of propertiesToLog) {
-        if (key in to)
-            location[key] = to[key];
-    }
-    return JSON.stringify(location, null, 2);
-}
-
-// default pattern for a param: non-greedy everything but /
-const BASE_PARAM_PATTERN = '[^/]+?';
-const BASE_PATH_PARSER_OPTIONS = {
-    sensitive: false,
-    strict: false,
-    start: true,
-    end: true,
-};
-// Special Regex characters that must be escaped in static tokens
-const REGEX_CHARS_RE = /[.+*?^${}()[\]/\\]/g;
-/**
- * Creates a path parser from an array of Segments (a segment is an array of Tokens)
- *
- * @param segments - array of segments returned by tokenizePath
- * @param extraOptions - optional options for the regexp
- * @returns a PathParser
- */
-function tokensToParser(segments, extraOptions) {
-    const options = assign({}, BASE_PATH_PARSER_OPTIONS, extraOptions);
-    // the amount of scores is the same as the length of segments except for the root segment "/"
-    const score = [];
-    // the regexp as a string
-    let pattern = options.start ? '^' : '';
-    // extracted keys
-    const keys = [];
-    for (const segment of segments) {
-        // the root segment needs special treatment
-        const segmentScores = segment.length ? [] : [90 /* PathScore.Root */];
-        // allow trailing slash
-        if (options.strict && !segment.length)
-            pattern += '/';
-        for (let tokenIndex = 0; tokenIndex < segment.length; tokenIndex++) {
-            const token = segment[tokenIndex];
-            // resets the score if we are inside a sub-segment /:a-other-:b
-            let subSegmentScore = 40 /* PathScore.Segment */ +
-                (options.sensitive ? 0.25 /* PathScore.BonusCaseSensitive */ : 0);
-            if (token.type === 0 /* TokenType.Static */) {
-                // prepend the slash if we are starting a new segment
-                if (!tokenIndex)
-                    pattern += '/';
-                pattern += token.value.replace(REGEX_CHARS_RE, '\\$&');
-                subSegmentScore += 40 /* PathScore.Static */;
-            }
-            else if (token.type === 1 /* TokenType.Param */) {
-                const { value, repeatable, optional, regexp } = token;
-                keys.push({
-                    name: value,
-                    repeatable,
-                    optional,
-                });
-                const re = regexp ? regexp : BASE_PARAM_PATTERN;
-                // the user provided a custom regexp /:id(\\d+)
-                if (re !== BASE_PARAM_PATTERN) {
-                    subSegmentScore += 10 /* PathScore.BonusCustomRegExp */;
-                    // make sure the regexp is valid before using it
-                    try {
-                        new RegExp(`(${re})`);
-                    }
-                    catch (err) {
-                        throw new Error(`Invalid custom RegExp for param "${value}" (${re}): ` +
-                            err.message);
-                    }
-                }
-                // when we repeat we must take care of the repeating leading slash
-                let subPattern = repeatable ? `((?:${re})(?:/(?:${re}))*)` : `(${re})`;
-                // prepend the slash if we are starting a new segment
-                if (!tokenIndex)
-                    subPattern =
-                        // avoid an optional / if there are more segments e.g. /:p?-static
-                        // or /:p?-:p2
-                        optional && segment.length < 2
-                            ? `(?:/${subPattern})`
-                            : '/' + subPattern;
-                if (optional)
-                    subPattern += '?';
-                pattern += subPattern;
-                subSegmentScore += 20 /* PathScore.Dynamic */;
-                if (optional)
-                    subSegmentScore += -8 /* PathScore.BonusOptional */;
-                if (repeatable)
-                    subSegmentScore += -20 /* PathScore.BonusRepeatable */;
-                if (re === '.*')
-                    subSegmentScore += -50 /* PathScore.BonusWildcard */;
-            }
-            segmentScores.push(subSegmentScore);
-        }
-        // an empty array like /home/ -> [[{home}], []]
-        // if (!segment.length) pattern += '/'
-        score.push(segmentScores);
-    }
-    // only apply the strict bonus to the last score
-    if (options.strict && options.end) {
-        const i = score.length - 1;
-        score[i][score[i].length - 1] += 0.7000000000000001 /* PathScore.BonusStrict */;
-    }
-    // TODO: dev only warn double trailing slash
-    if (!options.strict)
-        pattern += '/?';
-    if (options.end)
-        pattern += '$';
-    // allow paths like /dynamic to only match dynamic or dynamic/... but not dynamic_something_else
-    else if (options.strict)
-        pattern += '(?:/|$)';
-    const re = new RegExp(pattern, options.sensitive ? '' : 'i');
-    function parse(path) {
-        const match = path.match(re);
-        const params = {};
-        if (!match)
-            return null;
-        for (let i = 1; i < match.length; i++) {
-            const value = match[i] || '';
-            const key = keys[i - 1];
-            params[key.name] = value && key.repeatable ? value.split('/') : value;
-        }
-        return params;
-    }
-    function stringify(params) {
-        let path = '';
-        // for optional parameters to allow to be empty
-        let avoidDuplicatedSlash = false;
-        for (const segment of segments) {
-            if (!avoidDuplicatedSlash || !path.endsWith('/'))
-                path += '/';
-            avoidDuplicatedSlash = false;
-            for (const token of segment) {
-                if (token.type === 0 /* TokenType.Static */) {
-                    path += token.value;
-                }
-                else if (token.type === 1 /* TokenType.Param */) {
-                    const { value, repeatable, optional } = token;
-                    const param = value in params ? params[value] : '';
-                    if (isArray(param) && !repeatable) {
-                        throw new Error(`Provided param "${value}" is an array but it is not repeatable (* or + modifiers)`);
-                    }
-                    const text = isArray(param)
-                        ? param.join('/')
-                        : param;
-                    if (!text) {
-                        if (optional) {
-                            // if we have more than one optional param like /:a?-static we don't need to care about the optional param
-                            if (segment.length < 2) {
-                                // remove the last slash as we could be at the end
-                                if (path.endsWith('/'))
-                                    path = path.slice(0, -1);
-                                // do not append a slash on the next iteration
-                                else
-                                    avoidDuplicatedSlash = true;
-                            }
-                        }
-                        else
-                            throw new Error(`Missing required param "${value}"`);
-                    }
-                    path += text;
-                }
-            }
-        }
-        // avoid empty path when we have multiple optional params
-        return path || '/';
-    }
-    return {
-        re,
-        score,
-        keys,
-        parse,
-        stringify,
-    };
-}
-/**
- * Compares an array of numbers as used in PathParser.score and returns a
- * number. This function can be used to `sort` an array
- *
- * @param a - first array of numbers
- * @param b - second array of numbers
- * @returns 0 if both are equal, < 0 if a should be sorted first, > 0 if b
- * should be sorted first
- */
-function compareScoreArray(a, b) {
-    let i = 0;
-    while (i < a.length && i < b.length) {
-        const diff = b[i] - a[i];
-        // only keep going if diff === 0
-        if (diff)
-            return diff;
-        i++;
-    }
-    // if the last subsegment was Static, the shorter segments should be sorted first
-    // otherwise sort the longest segment first
-    if (a.length < b.length) {
-        return a.length === 1 && a[0] === 40 /* PathScore.Static */ + 40 /* PathScore.Segment */
-            ? -1
-            : 1;
-    }
-    else if (a.length > b.length) {
-        return b.length === 1 && b[0] === 40 /* PathScore.Static */ + 40 /* PathScore.Segment */
-            ? 1
-            : -1;
-    }
-    return 0;
-}
-/**
- * Compare function that can be used with `sort` to sort an array of PathParser
- *
- * @param a - first PathParser
- * @param b - second PathParser
- * @returns 0 if both are equal, < 0 if a should be sorted first, > 0 if b
- */
-function comparePathParserScore(a, b) {
-    let i = 0;
-    const aScore = a.score;
-    const bScore = b.score;
-    while (i < aScore.length && i < bScore.length) {
-        const comp = compareScoreArray(aScore[i], bScore[i]);
-        // do not return if both are equal
-        if (comp)
-            return comp;
-        i++;
-    }
-    if (Math.abs(bScore.length - aScore.length) === 1) {
-        if (isLastScoreNegative(aScore))
-            return 1;
-        if (isLastScoreNegative(bScore))
-            return -1;
-    }
-    // if a and b share the same score entries but b has more, sort b first
-    return bScore.length - aScore.length;
-    // this is the ternary version
-    // return aScore.length < bScore.length
-    //   ? 1
-    //   : aScore.length > bScore.length
-    //   ? -1
-    //   : 0
-}
-/**
- * This allows detecting splats at the end of a path: /home/:id(.*)*
- *
- * @param score - score to check
- * @returns true if the last entry is negative
- */
-function isLastScoreNegative(score) {
-    const last = score[score.length - 1];
-    return score.length > 0 && last[last.length - 1] < 0;
-}
-
-const ROOT_TOKEN = {
-    type: 0 /* TokenType.Static */,
-    value: '',
-};
-const VALID_PARAM_RE = /[a-zA-Z0-9_]/;
-// After some profiling, the cache seems to be unnecessary because tokenizePath
-// (the slowest part of adding a route) is very fast
-// const tokenCache = new Map<string, Token[][]>()
-function tokenizePath(path) {
-    if (!path)
-        return [[]];
-    if (path === '/')
-        return [[ROOT_TOKEN]];
-    if (!path.startsWith('/')) {
-        throw new Error(( true)
-            ? `Route paths should start with a "/": "${path}" should be "/${path}".`
-            : 0);
-    }
-    // if (tokenCache.has(path)) return tokenCache.get(path)!
-    function crash(message) {
-        throw new Error(`ERR (${state})/"${buffer}": ${message}`);
-    }
-    let state = 0 /* TokenizerState.Static */;
-    let previousState = state;
-    const tokens = [];
-    // the segment will always be valid because we get into the initial state
-    // with the leading /
-    let segment;
-    function finalizeSegment() {
-        if (segment)
-            tokens.push(segment);
-        segment = [];
-    }
-    // index on the path
-    let i = 0;
-    // char at index
-    let char;
-    // buffer of the value read
-    let buffer = '';
-    // custom regexp for a param
-    let customRe = '';
-    function consumeBuffer() {
-        if (!buffer)
-            return;
-        if (state === 0 /* TokenizerState.Static */) {
-            segment.push({
-                type: 0 /* TokenType.Static */,
-                value: buffer,
-            });
-        }
-        else if (state === 1 /* TokenizerState.Param */ ||
-            state === 2 /* TokenizerState.ParamRegExp */ ||
-            state === 3 /* TokenizerState.ParamRegExpEnd */) {
-            if (segment.length > 1 && (char === '*' || char === '+'))
-                crash(`A repeatable param (${buffer}) must be alone in its segment. eg: '/:ids+.`);
-            segment.push({
-                type: 1 /* TokenType.Param */,
-                value: buffer,
-                regexp: customRe,
-                repeatable: char === '*' || char === '+',
-                optional: char === '*' || char === '?',
-            });
-        }
-        else {
-            crash('Invalid state to consume buffer');
-        }
-        buffer = '';
-    }
-    function addCharToBuffer() {
-        buffer += char;
-    }
-    while (i < path.length) {
-        char = path[i++];
-        if (char === '\\' && state !== 2 /* TokenizerState.ParamRegExp */) {
-            previousState = state;
-            state = 4 /* TokenizerState.EscapeNext */;
-            continue;
-        }
-        switch (state) {
-            case 0 /* TokenizerState.Static */:
-                if (char === '/') {
-                    if (buffer) {
-                        consumeBuffer();
-                    }
-                    finalizeSegment();
-                }
-                else if (char === ':') {
-                    consumeBuffer();
-                    state = 1 /* TokenizerState.Param */;
-                }
-                else {
-                    addCharToBuffer();
-                }
-                break;
-            case 4 /* TokenizerState.EscapeNext */:
-                addCharToBuffer();
-                state = previousState;
-                break;
-            case 1 /* TokenizerState.Param */:
-                if (char === '(') {
-                    state = 2 /* TokenizerState.ParamRegExp */;
-                }
-                else if (VALID_PARAM_RE.test(char)) {
-                    addCharToBuffer();
-                }
-                else {
-                    consumeBuffer();
-                    state = 0 /* TokenizerState.Static */;
-                    // go back one character if we were not modifying
-                    if (char !== '*' && char !== '?' && char !== '+')
-                        i--;
-                }
-                break;
-            case 2 /* TokenizerState.ParamRegExp */:
-                // TODO: is it worth handling nested regexp? like :p(?:prefix_([^/]+)_suffix)
-                // it already works by escaping the closing )
-                // https://paths.esm.dev/?p=AAMeJbiAwQEcDKbAoAAkP60PG2R6QAvgNaA6AFACM2ABuQBB#
-                // is this really something people need since you can also write
-                // /prefix_:p()_suffix
-                if (char === ')') {
-                    // handle the escaped )
-                    if (customRe[customRe.length - 1] == '\\')
-                        customRe = customRe.slice(0, -1) + char;
-                    else
-                        state = 3 /* TokenizerState.ParamRegExpEnd */;
-                }
-                else {
-                    customRe += char;
-                }
-                break;
-            case 3 /* TokenizerState.ParamRegExpEnd */:
-                // same as finalizing a param
-                consumeBuffer();
-                state = 0 /* TokenizerState.Static */;
-                // go back one character if we were not modifying
-                if (char !== '*' && char !== '?' && char !== '+')
-                    i--;
-                customRe = '';
-                break;
-            default:
-                crash('Unknown state');
-                break;
-        }
-    }
-    if (state === 2 /* TokenizerState.ParamRegExp */)
-        crash(`Unfinished custom RegExp for param "${buffer}"`);
-    consumeBuffer();
-    finalizeSegment();
-    // tokenCache.set(path, tokens)
-    return tokens;
-}
-
-function createRouteRecordMatcher(record, parent, options) {
-    const parser = tokensToParser(tokenizePath(record.path), options);
-    // warn against params with the same name
-    if ((true)) {
-        const existingKeys = new Set();
-        for (const key of parser.keys) {
-            if (existingKeys.has(key.name))
-                warn(`Found duplicated params with name "${key.name}" for path "${record.path}". Only the last one will be available on "$route.params".`);
-            existingKeys.add(key.name);
-        }
-    }
-    const matcher = assign(parser, {
-        record,
-        parent,
-        // these needs to be populated by the parent
-        children: [],
-        alias: [],
-    });
-    if (parent) {
-        // both are aliases or both are not aliases
-        // we don't want to mix them because the order is used when
-        // passing originalRecord in Matcher.addRoute
-        if (!matcher.record.aliasOf === !parent.record.aliasOf)
-            parent.children.push(matcher);
-    }
-    return matcher;
-}
-
-/**
- * Creates a Router Matcher.
- *
- * @internal
- * @param routes - array of initial routes
- * @param globalOptions - global route options
- */
-function createRouterMatcher(routes, globalOptions) {
-    // normalized ordered array of matchers
-    const matchers = [];
-    const matcherMap = new Map();
-    globalOptions = mergeOptions({ strict: false, end: true, sensitive: false }, globalOptions);
-    function getRecordMatcher(name) {
-        return matcherMap.get(name);
-    }
-    function addRoute(record, parent, originalRecord) {
-        // used later on to remove by name
-        const isRootAdd = !originalRecord;
-        const mainNormalizedRecord = normalizeRouteRecord(record);
-        if ((true)) {
-            checkChildMissingNameWithEmptyPath(mainNormalizedRecord, parent);
-        }
-        // we might be the child of an alias
-        mainNormalizedRecord.aliasOf = originalRecord && originalRecord.record;
-        const options = mergeOptions(globalOptions, record);
-        // generate an array of records to correctly handle aliases
-        const normalizedRecords = [
-            mainNormalizedRecord,
-        ];
-        if ('alias' in record) {
-            const aliases = typeof record.alias === 'string' ? [record.alias] : record.alias;
-            for (const alias of aliases) {
-                normalizedRecords.push(assign({}, mainNormalizedRecord, {
-                    // this allows us to hold a copy of the `components` option
-                    // so that async components cache is hold on the original record
-                    components: originalRecord
-                        ? originalRecord.record.components
-                        : mainNormalizedRecord.components,
-                    path: alias,
-                    // we might be the child of an alias
-                    aliasOf: originalRecord
-                        ? originalRecord.record
-                        : mainNormalizedRecord,
-                    // the aliases are always of the same kind as the original since they
-                    // are defined on the same record
-                }));
-            }
-        }
-        let matcher;
-        let originalMatcher;
-        for (const normalizedRecord of normalizedRecords) {
-            const { path } = normalizedRecord;
-            // Build up the path for nested routes if the child isn't an absolute
-            // route. Only add the / delimiter if the child path isn't empty and if the
-            // parent path doesn't have a trailing slash
-            if (parent && path[0] !== '/') {
-                const parentPath = parent.record.path;
-                const connectingSlash = parentPath[parentPath.length - 1] === '/' ? '' : '/';
-                normalizedRecord.path =
-                    parent.record.path + (path && connectingSlash + path);
-            }
-            if (( true) && normalizedRecord.path === '*') {
-                throw new Error('Catch all routes ("*") must now be defined using a param with a custom regexp.\n' +
-                    'See more at https://next.router.vuejs.org/guide/migration/#removed-star-or-catch-all-routes.');
-            }
-            // create the object beforehand, so it can be passed to children
-            matcher = createRouteRecordMatcher(normalizedRecord, parent, options);
-            if (( true) && parent && path[0] === '/')
-                checkMissingParamsInAbsolutePath(matcher, parent);
-            // if we are an alias we must tell the original record that we exist,
-            // so we can be removed
-            if (originalRecord) {
-                originalRecord.alias.push(matcher);
-                if ((true)) {
-                    checkSameParams(originalRecord, matcher);
-                }
-            }
-            else {
-                // otherwise, the first record is the original and others are aliases
-                originalMatcher = originalMatcher || matcher;
-                if (originalMatcher !== matcher)
-                    originalMatcher.alias.push(matcher);
-                // remove the route if named and only for the top record (avoid in nested calls)
-                // this works because the original record is the first one
-                if (isRootAdd && record.name && !isAliasRecord(matcher))
-                    removeRoute(record.name);
-            }
-            if (mainNormalizedRecord.children) {
-                const children = mainNormalizedRecord.children;
-                for (let i = 0; i < children.length; i++) {
-                    addRoute(children[i], matcher, originalRecord && originalRecord.children[i]);
-                }
-            }
-            // if there was no original record, then the first one was not an alias and all
-            // other aliases (if any) need to reference this record when adding children
-            originalRecord = originalRecord || matcher;
-            // TODO: add normalized records for more flexibility
-            // if (parent && isAliasRecord(originalRecord)) {
-            //   parent.children.push(originalRecord)
-            // }
-            insertMatcher(matcher);
-        }
-        return originalMatcher
-            ? () => {
-                // since other matchers are aliases, they should be removed by the original matcher
-                removeRoute(originalMatcher);
-            }
-            : noop;
-    }
-    function removeRoute(matcherRef) {
-        if (isRouteName(matcherRef)) {
-            const matcher = matcherMap.get(matcherRef);
-            if (matcher) {
-                matcherMap.delete(matcherRef);
-                matchers.splice(matchers.indexOf(matcher), 1);
-                matcher.children.forEach(removeRoute);
-                matcher.alias.forEach(removeRoute);
-            }
-        }
-        else {
-            const index = matchers.indexOf(matcherRef);
-            if (index > -1) {
-                matchers.splice(index, 1);
-                if (matcherRef.record.name)
-                    matcherMap.delete(matcherRef.record.name);
-                matcherRef.children.forEach(removeRoute);
-                matcherRef.alias.forEach(removeRoute);
-            }
-        }
-    }
-    function getRoutes() {
-        return matchers;
-    }
-    function insertMatcher(matcher) {
-        let i = 0;
-        while (i < matchers.length &&
-            comparePathParserScore(matcher, matchers[i]) >= 0 &&
-            // Adding children with empty path should still appear before the parent
-            // https://github.com/vuejs/router/issues/1124
-            (matcher.record.path !== matchers[i].record.path ||
-                !isRecordChildOf(matcher, matchers[i])))
-            i++;
-        matchers.splice(i, 0, matcher);
-        // only add the original record to the name map
-        if (matcher.record.name && !isAliasRecord(matcher))
-            matcherMap.set(matcher.record.name, matcher);
-    }
-    function resolve(location, currentLocation) {
-        let matcher;
-        let params = {};
-        let path;
-        let name;
-        if ('name' in location && location.name) {
-            matcher = matcherMap.get(location.name);
-            if (!matcher)
-                throw createRouterError(1 /* ErrorTypes.MATCHER_NOT_FOUND */, {
-                    location,
-                });
-            // warn if the user is passing invalid params so they can debug it better when they get removed
-            if ((true)) {
-                const invalidParams = Object.keys(location.params || {}).filter(paramName => !matcher.keys.find(k => k.name === paramName));
-                if (invalidParams.length) {
-                    warn(`Discarded invalid param(s) "${invalidParams.join('", "')}" when navigating. See https://github.com/vuejs/router/blob/main/packages/router/CHANGELOG.md#414-2022-08-22 for more details.`);
-                }
-            }
-            name = matcher.record.name;
-            params = assign(
-            // paramsFromLocation is a new object
-            paramsFromLocation(currentLocation.params, 
-            // only keep params that exist in the resolved location
-            // TODO: only keep optional params coming from a parent record
-            matcher.keys.filter(k => !k.optional).map(k => k.name)), 
-            // discard any existing params in the current location that do not exist here
-            // #1497 this ensures better active/exact matching
-            location.params &&
-                paramsFromLocation(location.params, matcher.keys.map(k => k.name)));
-            // throws if cannot be stringified
-            path = matcher.stringify(params);
-        }
-        else if ('path' in location) {
-            // no need to resolve the path with the matcher as it was provided
-            // this also allows the user to control the encoding
-            path = location.path;
-            if (( true) && !path.startsWith('/')) {
-                warn(`The Matcher cannot resolve relative paths but received "${path}". Unless you directly called \`matcher.resolve("${path}")\`, this is probably a bug in vue-router. Please open an issue at https://new-issue.vuejs.org/?repo=vuejs/router.`);
-            }
-            matcher = matchers.find(m => m.re.test(path));
-            // matcher should have a value after the loop
-            if (matcher) {
-                // we know the matcher works because we tested the regexp
-                params = matcher.parse(path);
-                name = matcher.record.name;
-            }
-            // location is a relative path
-        }
-        else {
-            // match by name or path of current route
-            matcher = currentLocation.name
-                ? matcherMap.get(currentLocation.name)
-                : matchers.find(m => m.re.test(currentLocation.path));
-            if (!matcher)
-                throw createRouterError(1 /* ErrorTypes.MATCHER_NOT_FOUND */, {
-                    location,
-                    currentLocation,
-                });
-            name = matcher.record.name;
-            // since we are navigating to the same location, we don't need to pick the
-            // params like when `name` is provided
-            params = assign({}, currentLocation.params, location.params);
-            path = matcher.stringify(params);
-        }
-        const matched = [];
-        let parentMatcher = matcher;
-        while (parentMatcher) {
-            // reversed order so parents are at the beginning
-            matched.unshift(parentMatcher.record);
-            parentMatcher = parentMatcher.parent;
-        }
-        return {
-            name,
-            path,
-            params,
-            matched,
-            meta: mergeMetaFields(matched),
-        };
-    }
-    // add initial routes
-    routes.forEach(route => addRoute(route));
-    return { addRoute, resolve, removeRoute, getRoutes, getRecordMatcher };
-}
-function paramsFromLocation(params, keys) {
-    const newParams = {};
-    for (const key of keys) {
-        if (key in params)
-            newParams[key] = params[key];
-    }
-    return newParams;
-}
-/**
- * Normalizes a RouteRecordRaw. Creates a copy
- *
- * @param record
- * @returns the normalized version
- */
-function normalizeRouteRecord(record) {
-    return {
-        path: record.path,
-        redirect: record.redirect,
-        name: record.name,
-        meta: record.meta || {},
-        aliasOf: undefined,
-        beforeEnter: record.beforeEnter,
-        props: normalizeRecordProps(record),
-        children: record.children || [],
-        instances: {},
-        leaveGuards: new Set(),
-        updateGuards: new Set(),
-        enterCallbacks: {},
-        components: 'components' in record
-            ? record.components || null
-            : record.component && { default: record.component },
-    };
-}
-/**
- * Normalize the optional `props` in a record to always be an object similar to
- * components. Also accept a boolean for components.
- * @param record
- */
-function normalizeRecordProps(record) {
-    const propsObject = {};
-    // props does not exist on redirect records, but we can set false directly
-    const props = record.props || false;
-    if ('component' in record) {
-        propsObject.default = props;
-    }
-    else {
-        // NOTE: we could also allow a function to be applied to every component.
-        // Would need user feedback for use cases
-        for (const name in record.components)
-            propsObject[name] = typeof props === 'boolean' ? props : props[name];
-    }
-    return propsObject;
-}
-/**
- * Checks if a record or any of its parent is an alias
- * @param record
- */
-function isAliasRecord(record) {
-    while (record) {
-        if (record.record.aliasOf)
-            return true;
-        record = record.parent;
-    }
-    return false;
-}
-/**
- * Merge meta fields of an array of records
- *
- * @param matched - array of matched records
- */
-function mergeMetaFields(matched) {
-    return matched.reduce((meta, record) => assign(meta, record.meta), {});
-}
-function mergeOptions(defaults, partialOptions) {
-    const options = {};
-    for (const key in defaults) {
-        options[key] = key in partialOptions ? partialOptions[key] : defaults[key];
-    }
-    return options;
-}
-function isSameParam(a, b) {
-    return (a.name === b.name &&
-        a.optional === b.optional &&
-        a.repeatable === b.repeatable);
-}
-/**
- * Check if a path and its alias have the same required params
- *
- * @param a - original record
- * @param b - alias record
- */
-function checkSameParams(a, b) {
-    for (const key of a.keys) {
-        if (!key.optional && !b.keys.find(isSameParam.bind(null, key)))
-            return warn(`Alias "${b.record.path}" and the original record: "${a.record.path}" must have the exact same param named "${key.name}"`);
-    }
-    for (const key of b.keys) {
-        if (!key.optional && !a.keys.find(isSameParam.bind(null, key)))
-            return warn(`Alias "${b.record.path}" and the original record: "${a.record.path}" must have the exact same param named "${key.name}"`);
-    }
-}
-/**
- * A route with a name and a child with an empty path without a name should warn when adding the route
- *
- * @param mainNormalizedRecord - RouteRecordNormalized
- * @param parent - RouteRecordMatcher
- */
-function checkChildMissingNameWithEmptyPath(mainNormalizedRecord, parent) {
-    if (parent &&
-        parent.record.name &&
-        !mainNormalizedRecord.name &&
-        !mainNormalizedRecord.path) {
-        warn(`The route named "${String(parent.record.name)}" has a child without a name and an empty path. Using that name won't render the empty path child so you probably want to move the name to the child instead. If this is intentional, add a name to the child route to remove the warning.`);
-    }
-}
-function checkMissingParamsInAbsolutePath(record, parent) {
-    for (const key of parent.keys) {
-        if (!record.keys.find(isSameParam.bind(null, key)))
-            return warn(`Absolute path "${record.record.path}" must have the exact same param named "${key.name}" as its parent "${parent.record.path}".`);
-    }
-}
-function isRecordChildOf(record, parent) {
-    return parent.children.some(child => child === record || isRecordChildOf(record, child));
-}
-
-/**
- * Encoding Rules ␣ = Space Path: ␣ " < > # ? { } Query: ␣ " < > # & = Hash: ␣ "
- * < > `
- *
- * On top of that, the RFC3986 (https://tools.ietf.org/html/rfc3986#section-2.2)
- * defines some extra characters to be encoded. Most browsers do not encode them
- * in encodeURI https://github.com/whatwg/url/issues/369, so it may be safer to
- * also encode `!'()*`. Leaving un-encoded only ASCII alphanumeric(`a-zA-Z0-9`)
- * plus `-._~`. This extra safety should be applied to query by patching the
- * string returned by encodeURIComponent encodeURI also encodes `[\]^`. `\`
- * should be encoded to avoid ambiguity. Browsers (IE, FF, C) transform a `\`
- * into a `/` if directly typed in. The _backtick_ (`````) should also be
- * encoded everywhere because some browsers like FF encode it when directly
- * written while others don't. Safari and IE don't encode ``"<>{}``` in hash.
- */
-// const EXTRA_RESERVED_RE = /[!'()*]/g
-// const encodeReservedReplacer = (c: string) => '%' + c.charCodeAt(0).toString(16)
-const HASH_RE = /#/g; // %23
-const AMPERSAND_RE = /&/g; // %26
-const SLASH_RE = /\//g; // %2F
-const EQUAL_RE = /=/g; // %3D
-const IM_RE = /\?/g; // %3F
-const PLUS_RE = /\+/g; // %2B
-/**
- * NOTE: It's not clear to me if we should encode the + symbol in queries, it
- * seems to be less flexible than not doing so and I can't find out the legacy
- * systems requiring this for regular requests like text/html. In the standard,
- * the encoding of the plus character is only mentioned for
- * application/x-www-form-urlencoded
- * (https://url.spec.whatwg.org/#urlencoded-parsing) and most browsers seems lo
- * leave the plus character as is in queries. To be more flexible, we allow the
- * plus character on the query, but it can also be manually encoded by the user.
- *
- * Resources:
- * - https://url.spec.whatwg.org/#urlencoded-parsing
- * - https://stackoverflow.com/questions/1634271/url-encoding-the-space-character-or-20
- */
-const ENC_BRACKET_OPEN_RE = /%5B/g; // [
-const ENC_BRACKET_CLOSE_RE = /%5D/g; // ]
-const ENC_CARET_RE = /%5E/g; // ^
-const ENC_BACKTICK_RE = /%60/g; // `
-const ENC_CURLY_OPEN_RE = /%7B/g; // {
-const ENC_PIPE_RE = /%7C/g; // |
-const ENC_CURLY_CLOSE_RE = /%7D/g; // }
-const ENC_SPACE_RE = /%20/g; // }
-/**
- * Encode characters that need to be encoded on the path, search and hash
- * sections of the URL.
- *
- * @internal
- * @param text - string to encode
- * @returns encoded string
- */
-function commonEncode(text) {
-    return encodeURI('' + text)
-        .replace(ENC_PIPE_RE, '|')
-        .replace(ENC_BRACKET_OPEN_RE, '[')
-        .replace(ENC_BRACKET_CLOSE_RE, ']');
-}
-/**
- * Encode characters that need to be encoded on the hash section of the URL.
- *
- * @param text - string to encode
- * @returns encoded string
- */
-function encodeHash(text) {
-    return commonEncode(text)
-        .replace(ENC_CURLY_OPEN_RE, '{')
-        .replace(ENC_CURLY_CLOSE_RE, '}')
-        .replace(ENC_CARET_RE, '^');
-}
-/**
- * Encode characters that need to be encoded query values on the query
- * section of the URL.
- *
- * @param text - string to encode
- * @returns encoded string
- */
-function encodeQueryValue(text) {
-    return (commonEncode(text)
-        // Encode the space as +, encode the + to differentiate it from the space
-        .replace(PLUS_RE, '%2B')
-        .replace(ENC_SPACE_RE, '+')
-        .replace(HASH_RE, '%23')
-        .replace(AMPERSAND_RE, '%26')
-        .replace(ENC_BACKTICK_RE, '`')
-        .replace(ENC_CURLY_OPEN_RE, '{')
-        .replace(ENC_CURLY_CLOSE_RE, '}')
-        .replace(ENC_CARET_RE, '^'));
-}
-/**
- * Like `encodeQueryValue` but also encodes the `=` character.
- *
- * @param text - string to encode
- */
-function encodeQueryKey(text) {
-    return encodeQueryValue(text).replace(EQUAL_RE, '%3D');
-}
-/**
- * Encode characters that need to be encoded on the path section of the URL.
- *
- * @param text - string to encode
- * @returns encoded string
- */
-function encodePath(text) {
-    return commonEncode(text).replace(HASH_RE, '%23').replace(IM_RE, '%3F');
-}
-/**
- * Encode characters that need to be encoded on the path section of the URL as a
- * param. This function encodes everything {@link encodePath} does plus the
- * slash (`/`) character. If `text` is `null` or `undefined`, returns an empty
- * string instead.
- *
- * @param text - string to encode
- * @returns encoded string
- */
-function encodeParam(text) {
-    return text == null ? '' : encodePath(text).replace(SLASH_RE, '%2F');
-}
-/**
- * Decode text using `decodeURIComponent`. Returns the original text if it
- * fails.
- *
- * @param text - string to decode
- * @returns decoded string
- */
-function decode(text) {
-    try {
-        return decodeURIComponent('' + text);
-    }
-    catch (err) {
-        ( true) && warn(`Error decoding "${text}". Using original value`);
-    }
-    return '' + text;
-}
-
-/**
- * Transforms a queryString into a {@link LocationQuery} object. Accept both, a
- * version with the leading `?` and without Should work as URLSearchParams
-
- * @internal
- *
- * @param search - search string to parse
- * @returns a query object
- */
-function parseQuery(search) {
-    const query = {};
-    // avoid creating an object with an empty key and empty value
-    // because of split('&')
-    if (search === '' || search === '?')
-        return query;
-    const hasLeadingIM = search[0] === '?';
-    const searchParams = (hasLeadingIM ? search.slice(1) : search).split('&');
-    for (let i = 0; i < searchParams.length; ++i) {
-        // pre decode the + into space
-        const searchParam = searchParams[i].replace(PLUS_RE, ' ');
-        // allow the = character
-        const eqPos = searchParam.indexOf('=');
-        const key = decode(eqPos < 0 ? searchParam : searchParam.slice(0, eqPos));
-        const value = eqPos < 0 ? null : decode(searchParam.slice(eqPos + 1));
-        if (key in query) {
-            // an extra variable for ts types
-            let currentValue = query[key];
-            if (!isArray(currentValue)) {
-                currentValue = query[key] = [currentValue];
-            }
-            currentValue.push(value);
-        }
-        else {
-            query[key] = value;
-        }
-    }
-    return query;
-}
-/**
- * Stringifies a {@link LocationQueryRaw} object. Like `URLSearchParams`, it
- * doesn't prepend a `?`
- *
- * @internal
- *
- * @param query - query object to stringify
- * @returns string version of the query without the leading `?`
- */
-function stringifyQuery(query) {
-    let search = '';
-    for (let key in query) {
-        const value = query[key];
-        key = encodeQueryKey(key);
-        if (value == null) {
-            // only null adds the value
-            if (value !== undefined) {
-                search += (search.length ? '&' : '') + key;
-            }
-            continue;
-        }
-        // keep null values
-        const values = isArray(value)
-            ? value.map(v => v && encodeQueryValue(v))
-            : [value && encodeQueryValue(value)];
-        values.forEach(value => {
-            // skip undefined values in arrays as if they were not present
-            // smaller code than using filter
-            if (value !== undefined) {
-                // only append & with non-empty search
-                search += (search.length ? '&' : '') + key;
-                if (value != null)
-                    search += '=' + value;
-            }
-        });
-    }
-    return search;
-}
-/**
- * Transforms a {@link LocationQueryRaw} into a {@link LocationQuery} by casting
- * numbers into strings, removing keys with an undefined value and replacing
- * undefined with null in arrays
- *
- * @param query - query object to normalize
- * @returns a normalized query object
- */
-function normalizeQuery(query) {
-    const normalizedQuery = {};
-    for (const key in query) {
-        const value = query[key];
-        if (value !== undefined) {
-            normalizedQuery[key] = isArray(value)
-                ? value.map(v => (v == null ? null : '' + v))
-                : value == null
-                    ? value
-                    : '' + value;
-        }
-    }
-    return normalizedQuery;
-}
-
-/**
- * RouteRecord being rendered by the closest ancestor Router View. Used for
- * `onBeforeRouteUpdate` and `onBeforeRouteLeave`. rvlm stands for Router View
- * Location Matched
- *
- * @internal
- */
-const matchedRouteKey = Symbol(( true) ? 'router view location matched' : 0);
-/**
- * Allows overriding the router view depth to control which component in
- * `matched` is rendered. rvd stands for Router View Depth
- *
- * @internal
- */
-const viewDepthKey = Symbol(( true) ? 'router view depth' : 0);
-/**
- * Allows overriding the router instance returned by `useRouter` in tests. r
- * stands for router
- *
- * @internal
- */
-const routerKey = Symbol(( true) ? 'router' : 0);
-/**
- * Allows overriding the current route returned by `useRoute` in tests. rl
- * stands for route location
- *
- * @internal
- */
-const routeLocationKey = Symbol(( true) ? 'route location' : 0);
-/**
- * Allows overriding the current route used by router-view. Internally this is
- * used when the `route` prop is passed.
- *
- * @internal
- */
-const routerViewLocationKey = Symbol(( true) ? 'router view location' : 0);
-
-/**
- * Create a list of callbacks that can be reset. Used to create before and after navigation guards list
- */
-function useCallbacks() {
-    let handlers = [];
-    function add(handler) {
-        handlers.push(handler);
-        return () => {
-            const i = handlers.indexOf(handler);
-            if (i > -1)
-                handlers.splice(i, 1);
-        };
-    }
-    function reset() {
-        handlers = [];
-    }
-    return {
-        add,
-        list: () => handlers,
-        reset,
-    };
-}
-
-function registerGuard(record, name, guard) {
-    const removeFromList = () => {
-        record[name].delete(guard);
-    };
-    (0,vue__WEBPACK_IMPORTED_MODULE_0__.onUnmounted)(removeFromList);
-    (0,vue__WEBPACK_IMPORTED_MODULE_0__.onDeactivated)(removeFromList);
-    (0,vue__WEBPACK_IMPORTED_MODULE_0__.onActivated)(() => {
-        record[name].add(guard);
-    });
-    record[name].add(guard);
-}
-/**
- * Add a navigation guard that triggers whenever the component for the current
- * location is about to be left. Similar to {@link beforeRouteLeave} but can be
- * used in any component. The guard is removed when the component is unmounted.
- *
- * @param leaveGuard - {@link NavigationGuard}
- */
-function onBeforeRouteLeave(leaveGuard) {
-    if (( true) && !(0,vue__WEBPACK_IMPORTED_MODULE_0__.getCurrentInstance)()) {
-        warn('getCurrentInstance() returned null. onBeforeRouteLeave() must be called at the top of a setup function');
-        return;
-    }
-    const activeRecord = (0,vue__WEBPACK_IMPORTED_MODULE_0__.inject)(matchedRouteKey, 
-    // to avoid warning
-    {}).value;
-    if (!activeRecord) {
-        ( true) &&
-            warn('No active route record was found when calling `onBeforeRouteLeave()`. Make sure you call this function inside a component child of <router-view>. Maybe you called it inside of App.vue?');
-        return;
-    }
-    registerGuard(activeRecord, 'leaveGuards', leaveGuard);
-}
-/**
- * Add a navigation guard that triggers whenever the current location is about
- * to be updated. Similar to {@link beforeRouteUpdate} but can be used in any
- * component. The guard is removed when the component is unmounted.
- *
- * @param updateGuard - {@link NavigationGuard}
- */
-function onBeforeRouteUpdate(updateGuard) {
-    if (( true) && !(0,vue__WEBPACK_IMPORTED_MODULE_0__.getCurrentInstance)()) {
-        warn('getCurrentInstance() returned null. onBeforeRouteUpdate() must be called at the top of a setup function');
-        return;
-    }
-    const activeRecord = (0,vue__WEBPACK_IMPORTED_MODULE_0__.inject)(matchedRouteKey, 
-    // to avoid warning
-    {}).value;
-    if (!activeRecord) {
-        ( true) &&
-            warn('No active route record was found when calling `onBeforeRouteUpdate()`. Make sure you call this function inside a component child of <router-view>. Maybe you called it inside of App.vue?');
-        return;
-    }
-    registerGuard(activeRecord, 'updateGuards', updateGuard);
-}
-function guardToPromiseFn(guard, to, from, record, name) {
-    // keep a reference to the enterCallbackArray to prevent pushing callbacks if a new navigation took place
-    const enterCallbackArray = record &&
-        // name is defined if record is because of the function overload
-        (record.enterCallbacks[name] = record.enterCallbacks[name] || []);
-    return () => new Promise((resolve, reject) => {
-        const next = (valid) => {
-            if (valid === false) {
-                reject(createRouterError(4 /* ErrorTypes.NAVIGATION_ABORTED */, {
-                    from,
-                    to,
-                }));
-            }
-            else if (valid instanceof Error) {
-                reject(valid);
-            }
-            else if (isRouteLocation(valid)) {
-                reject(createRouterError(2 /* ErrorTypes.NAVIGATION_GUARD_REDIRECT */, {
-                    from: to,
-                    to: valid,
-                }));
-            }
-            else {
-                if (enterCallbackArray &&
-                    // since enterCallbackArray is truthy, both record and name also are
-                    record.enterCallbacks[name] === enterCallbackArray &&
-                    typeof valid === 'function') {
-                    enterCallbackArray.push(valid);
-                }
-                resolve();
-            }
-        };
-        // wrapping with Promise.resolve allows it to work with both async and sync guards
-        const guardReturn = guard.call(record && record.instances[name], to, from, ( true) ? canOnlyBeCalledOnce(next, to, from) : 0);
-        let guardCall = Promise.resolve(guardReturn);
-        if (guard.length < 3)
-            guardCall = guardCall.then(next);
-        if (( true) && guard.length > 2) {
-            const message = `The "next" callback was never called inside of ${guard.name ? '"' + guard.name + '"' : ''}:\n${guard.toString()}\n. If you are returning a value instead of calling "next", make sure to remove the "next" parameter from your function.`;
-            if (typeof guardReturn === 'object' && 'then' in guardReturn) {
-                guardCall = guardCall.then(resolvedValue => {
-                    // @ts-expect-error: _called is added at canOnlyBeCalledOnce
-                    if (!next._called) {
-                        warn(message);
-                        return Promise.reject(new Error('Invalid navigation guard'));
-                    }
-                    return resolvedValue;
-                });
-            }
-            else if (guardReturn !== undefined) {
-                // @ts-expect-error: _called is added at canOnlyBeCalledOnce
-                if (!next._called) {
-                    warn(message);
-                    reject(new Error('Invalid navigation guard'));
-                    return;
-                }
-            }
-        }
-        guardCall.catch(err => reject(err));
-    });
-}
-function canOnlyBeCalledOnce(next, to, from) {
-    let called = 0;
-    return function () {
-        if (called++ === 1)
-            warn(`The "next" callback was called more than once in one navigation guard when going from "${from.fullPath}" to "${to.fullPath}". It should be called exactly one time in each navigation guard. This will fail in production.`);
-        // @ts-expect-error: we put it in the original one because it's easier to check
-        next._called = true;
-        if (called === 1)
-            next.apply(null, arguments);
-    };
-}
-function extractComponentsGuards(matched, guardType, to, from) {
-    const guards = [];
-    for (const record of matched) {
-        if (( true) && !record.components && !record.children.length) {
-            warn(`Record with path "${record.path}" is either missing a "component(s)"` +
-                ` or "children" property.`);
-        }
-        for (const name in record.components) {
-            let rawComponent = record.components[name];
-            if ((true)) {
-                if (!rawComponent ||
-                    (typeof rawComponent !== 'object' &&
-                        typeof rawComponent !== 'function')) {
-                    warn(`Component "${name}" in record with path "${record.path}" is not` +
-                        ` a valid component. Received "${String(rawComponent)}".`);
-                    // throw to ensure we stop here but warn to ensure the message isn't
-                    // missed by the user
-                    throw new Error('Invalid route component');
-                }
-                else if ('then' in rawComponent) {
-                    // warn if user wrote import('/component.vue') instead of () =>
-                    // import('./component.vue')
-                    warn(`Component "${name}" in record with path "${record.path}" is a ` +
-                        `Promise instead of a function that returns a Promise. Did you ` +
-                        `write "import('./MyPage.vue')" instead of ` +
-                        `"() => import('./MyPage.vue')" ? This will break in ` +
-                        `production if not fixed.`);
-                    const promise = rawComponent;
-                    rawComponent = () => promise;
-                }
-                else if (rawComponent.__asyncLoader &&
-                    // warn only once per component
-                    !rawComponent.__warnedDefineAsync) {
-                    rawComponent.__warnedDefineAsync = true;
-                    warn(`Component "${name}" in record with path "${record.path}" is defined ` +
-                        `using "defineAsyncComponent()". ` +
-                        `Write "() => import('./MyPage.vue')" instead of ` +
-                        `"defineAsyncComponent(() => import('./MyPage.vue'))".`);
-                }
-            }
-            // skip update and leave guards if the route component is not mounted
-            if (guardType !== 'beforeRouteEnter' && !record.instances[name])
-                continue;
-            if (isRouteComponent(rawComponent)) {
-                // __vccOpts is added by vue-class-component and contain the regular options
-                const options = rawComponent.__vccOpts || rawComponent;
-                const guard = options[guardType];
-                guard && guards.push(guardToPromiseFn(guard, to, from, record, name));
-            }
-            else {
-                // start requesting the chunk already
-                let componentPromise = rawComponent();
-                if (( true) && !('catch' in componentPromise)) {
-                    warn(`Component "${name}" in record with path "${record.path}" is a function that does not return a Promise. If you were passing a functional component, make sure to add a "displayName" to the component. This will break in production if not fixed.`);
-                    componentPromise = Promise.resolve(componentPromise);
-                }
-                guards.push(() => componentPromise.then(resolved => {
-                    if (!resolved)
-                        return Promise.reject(new Error(`Couldn't resolve component "${name}" at "${record.path}"`));
-                    const resolvedComponent = isESModule(resolved)
-                        ? resolved.default
-                        : resolved;
-                    // replace the function with the resolved component
-                    // cannot be null or undefined because we went into the for loop
-                    record.components[name] = resolvedComponent;
-                    // __vccOpts is added by vue-class-component and contain the regular options
-                    const options = resolvedComponent.__vccOpts || resolvedComponent;
-                    const guard = options[guardType];
-                    return guard && guardToPromiseFn(guard, to, from, record, name)();
-                }));
-            }
-        }
-    }
-    return guards;
-}
-/**
- * Allows differentiating lazy components from functional components and vue-class-component
- * @internal
- *
- * @param component
- */
-function isRouteComponent(component) {
-    return (typeof component === 'object' ||
-        'displayName' in component ||
-        'props' in component ||
-        '__vccOpts' in component);
-}
-/**
- * Ensures a route is loaded, so it can be passed as o prop to `<RouterView>`.
- *
- * @param route - resolved route to load
- */
-function loadRouteLocation(route) {
-    return route.matched.every(record => record.redirect)
-        ? Promise.reject(new Error('Cannot load a route that redirects.'))
-        : Promise.all(route.matched.map(record => record.components &&
-            Promise.all(Object.keys(record.components).reduce((promises, name) => {
-                const rawComponent = record.components[name];
-                if (typeof rawComponent === 'function' &&
-                    !('displayName' in rawComponent)) {
-                    promises.push(rawComponent().then(resolved => {
-                        if (!resolved)
-                            return Promise.reject(new Error(`Couldn't resolve component "${name}" at "${record.path}". Ensure you passed a function that returns a promise.`));
-                        const resolvedComponent = isESModule(resolved)
-                            ? resolved.default
-                            : resolved;
-                        // replace the function with the resolved component
-                        // cannot be null or undefined because we went into the for loop
-                        record.components[name] = resolvedComponent;
-                        return;
-                    }));
-                }
-                return promises;
-            }, [])))).then(() => route);
-}
-
-// TODO: we could allow currentRoute as a prop to expose `isActive` and
-// `isExactActive` behavior should go through an RFC
-function useLink(props) {
-    const router = (0,vue__WEBPACK_IMPORTED_MODULE_0__.inject)(routerKey);
-    const currentRoute = (0,vue__WEBPACK_IMPORTED_MODULE_0__.inject)(routeLocationKey);
-    const route = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(() => router.resolve((0,vue__WEBPACK_IMPORTED_MODULE_0__.unref)(props.to)));
-    const activeRecordIndex = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(() => {
-        const { matched } = route.value;
-        const { length } = matched;
-        const routeMatched = matched[length - 1];
-        const currentMatched = currentRoute.matched;
-        if (!routeMatched || !currentMatched.length)
-            return -1;
-        const index = currentMatched.findIndex(isSameRouteRecord.bind(null, routeMatched));
-        if (index > -1)
-            return index;
-        // possible parent record
-        const parentRecordPath = getOriginalPath(matched[length - 2]);
-        return (
-        // we are dealing with nested routes
-        length > 1 &&
-            // if the parent and matched route have the same path, this link is
-            // referring to the empty child. Or we currently are on a different
-            // child of the same parent
-            getOriginalPath(routeMatched) === parentRecordPath &&
-            // avoid comparing the child with its parent
-            currentMatched[currentMatched.length - 1].path !== parentRecordPath
-            ? currentMatched.findIndex(isSameRouteRecord.bind(null, matched[length - 2]))
-            : index);
-    });
-    const isActive = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(() => activeRecordIndex.value > -1 &&
-        includesParams(currentRoute.params, route.value.params));
-    const isExactActive = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(() => activeRecordIndex.value > -1 &&
-        activeRecordIndex.value === currentRoute.matched.length - 1 &&
-        isSameRouteLocationParams(currentRoute.params, route.value.params));
-    function navigate(e = {}) {
-        if (guardEvent(e)) {
-            return router[(0,vue__WEBPACK_IMPORTED_MODULE_0__.unref)(props.replace) ? 'replace' : 'push']((0,vue__WEBPACK_IMPORTED_MODULE_0__.unref)(props.to)
-            // avoid uncaught errors are they are logged anyway
-            ).catch(noop);
-        }
-        return Promise.resolve();
-    }
-    // devtools only
-    if (( true) && isBrowser) {
-        const instance = (0,vue__WEBPACK_IMPORTED_MODULE_0__.getCurrentInstance)();
-        if (instance) {
-            const linkContextDevtools = {
-                route: route.value,
-                isActive: isActive.value,
-                isExactActive: isExactActive.value,
-            };
-            // @ts-expect-error: this is internal
-            instance.__vrl_devtools = instance.__vrl_devtools || [];
-            // @ts-expect-error: this is internal
-            instance.__vrl_devtools.push(linkContextDevtools);
-            (0,vue__WEBPACK_IMPORTED_MODULE_0__.watchEffect)(() => {
-                linkContextDevtools.route = route.value;
-                linkContextDevtools.isActive = isActive.value;
-                linkContextDevtools.isExactActive = isExactActive.value;
-            }, { flush: 'post' });
-        }
-    }
-    return {
-        route,
-        href: (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(() => route.value.href),
-        isActive,
-        isExactActive,
-        navigate,
-    };
-}
-const RouterLinkImpl = /*#__PURE__*/ (0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
-    name: 'RouterLink',
-    compatConfig: { MODE: 3 },
-    props: {
-        to: {
-            type: [String, Object],
-            required: true,
-        },
-        replace: Boolean,
-        activeClass: String,
-        // inactiveClass: String,
-        exactActiveClass: String,
-        custom: Boolean,
-        ariaCurrentValue: {
-            type: String,
-            default: 'page',
-        },
-    },
-    useLink,
-    setup(props, { slots }) {
-        const link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.reactive)(useLink(props));
-        const { options } = (0,vue__WEBPACK_IMPORTED_MODULE_0__.inject)(routerKey);
-        const elClass = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(() => ({
-            [getLinkClass(props.activeClass, options.linkActiveClass, 'router-link-active')]: link.isActive,
-            // [getLinkClass(
-            //   props.inactiveClass,
-            //   options.linkInactiveClass,
-            //   'router-link-inactive'
-            // )]: !link.isExactActive,
-            [getLinkClass(props.exactActiveClass, options.linkExactActiveClass, 'router-link-exact-active')]: link.isExactActive,
-        }));
-        return () => {
-            const children = slots.default && slots.default(link);
-            return props.custom
-                ? children
-                : (0,vue__WEBPACK_IMPORTED_MODULE_0__.h)('a', {
-                    'aria-current': link.isExactActive
-                        ? props.ariaCurrentValue
-                        : null,
-                    href: link.href,
-                    // this would override user added attrs but Vue will still add
-                    // the listener, so we end up triggering both
-                    onClick: link.navigate,
-                    class: elClass.value,
-                }, children);
-        };
-    },
-});
-// export the public type for h/tsx inference
-// also to avoid inline import() in generated d.ts files
-/**
- * Component to render a link that triggers a navigation on click.
- */
-const RouterLink = RouterLinkImpl;
-function guardEvent(e) {
-    // don't redirect with control keys
-    if (e.metaKey || e.altKey || e.ctrlKey || e.shiftKey)
-        return;
-    // don't redirect when preventDefault called
-    if (e.defaultPrevented)
-        return;
-    // don't redirect on right click
-    if (e.button !== undefined && e.button !== 0)
-        return;
-    // don't redirect if `target="_blank"`
-    // @ts-expect-error getAttribute does exist
-    if (e.currentTarget && e.currentTarget.getAttribute) {
-        // @ts-expect-error getAttribute exists
-        const target = e.currentTarget.getAttribute('target');
-        if (/\b_blank\b/i.test(target))
-            return;
-    }
-    // this may be a Weex event which doesn't have this method
-    if (e.preventDefault)
-        e.preventDefault();
-    return true;
-}
-function includesParams(outer, inner) {
-    for (const key in inner) {
-        const innerValue = inner[key];
-        const outerValue = outer[key];
-        if (typeof innerValue === 'string') {
-            if (innerValue !== outerValue)
-                return false;
-        }
-        else {
-            if (!isArray(outerValue) ||
-                outerValue.length !== innerValue.length ||
-                innerValue.some((value, i) => value !== outerValue[i]))
-                return false;
-        }
-    }
-    return true;
-}
-/**
- * Get the original path value of a record by following its aliasOf
- * @param record
- */
-function getOriginalPath(record) {
-    return record ? (record.aliasOf ? record.aliasOf.path : record.path) : '';
-}
-/**
- * Utility class to get the active class based on defaults.
- * @param propClass
- * @param globalClass
- * @param defaultClass
- */
-const getLinkClass = (propClass, globalClass, defaultClass) => propClass != null
-    ? propClass
-    : globalClass != null
-        ? globalClass
-        : defaultClass;
-
-const RouterViewImpl = /*#__PURE__*/ (0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
-    name: 'RouterView',
-    // #674 we manually inherit them
-    inheritAttrs: false,
-    props: {
-        name: {
-            type: String,
-            default: 'default',
-        },
-        route: Object,
-    },
-    // Better compat for @vue/compat users
-    // https://github.com/vuejs/router/issues/1315
-    compatConfig: { MODE: 3 },
-    setup(props, { attrs, slots }) {
-        ( true) && warnDeprecatedUsage();
-        const injectedRoute = (0,vue__WEBPACK_IMPORTED_MODULE_0__.inject)(routerViewLocationKey);
-        const routeToDisplay = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(() => props.route || injectedRoute.value);
-        const injectedDepth = (0,vue__WEBPACK_IMPORTED_MODULE_0__.inject)(viewDepthKey, 0);
-        // The depth changes based on empty components option, which allows passthrough routes e.g. routes with children
-        // that are used to reuse the `path` property
-        const depth = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(() => {
-            let initialDepth = (0,vue__WEBPACK_IMPORTED_MODULE_0__.unref)(injectedDepth);
-            const { matched } = routeToDisplay.value;
-            let matchedRoute;
-            while ((matchedRoute = matched[initialDepth]) &&
-                !matchedRoute.components) {
-                initialDepth++;
-            }
-            return initialDepth;
-        });
-        const matchedRouteRef = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(() => routeToDisplay.value.matched[depth.value]);
-        (0,vue__WEBPACK_IMPORTED_MODULE_0__.provide)(viewDepthKey, (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(() => depth.value + 1));
-        (0,vue__WEBPACK_IMPORTED_MODULE_0__.provide)(matchedRouteKey, matchedRouteRef);
-        (0,vue__WEBPACK_IMPORTED_MODULE_0__.provide)(routerViewLocationKey, routeToDisplay);
-        const viewRef = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)();
-        // watch at the same time the component instance, the route record we are
-        // rendering, and the name
-        (0,vue__WEBPACK_IMPORTED_MODULE_0__.watch)(() => [viewRef.value, matchedRouteRef.value, props.name], ([instance, to, name], [oldInstance, from, oldName]) => {
-            // copy reused instances
-            if (to) {
-                // this will update the instance for new instances as well as reused
-                // instances when navigating to a new route
-                to.instances[name] = instance;
-                // the component instance is reused for a different route or name, so
-                // we copy any saved update or leave guards. With async setup, the
-                // mounting component will mount before the matchedRoute changes,
-                // making instance === oldInstance, so we check if guards have been
-                // added before. This works because we remove guards when
-                // unmounting/deactivating components
-                if (from && from !== to && instance && instance === oldInstance) {
-                    if (!to.leaveGuards.size) {
-                        to.leaveGuards = from.leaveGuards;
-                    }
-                    if (!to.updateGuards.size) {
-                        to.updateGuards = from.updateGuards;
-                    }
-                }
-            }
-            // trigger beforeRouteEnter next callbacks
-            if (instance &&
-                to &&
-                // if there is no instance but to and from are the same this might be
-                // the first visit
-                (!from || !isSameRouteRecord(to, from) || !oldInstance)) {
-                (to.enterCallbacks[name] || []).forEach(callback => callback(instance));
-            }
-        }, { flush: 'post' });
-        return () => {
-            const route = routeToDisplay.value;
-            // we need the value at the time we render because when we unmount, we
-            // navigated to a different location so the value is different
-            const currentName = props.name;
-            const matchedRoute = matchedRouteRef.value;
-            const ViewComponent = matchedRoute && matchedRoute.components[currentName];
-            if (!ViewComponent) {
-                return normalizeSlot(slots.default, { Component: ViewComponent, route });
-            }
-            // props from route configuration
-            const routePropsOption = matchedRoute.props[currentName];
-            const routeProps = routePropsOption
-                ? routePropsOption === true
-                    ? route.params
-                    : typeof routePropsOption === 'function'
-                        ? routePropsOption(route)
-                        : routePropsOption
-                : null;
-            const onVnodeUnmounted = vnode => {
-                // remove the instance reference to prevent leak
-                if (vnode.component.isUnmounted) {
-                    matchedRoute.instances[currentName] = null;
-                }
-            };
-            const component = (0,vue__WEBPACK_IMPORTED_MODULE_0__.h)(ViewComponent, assign({}, routeProps, attrs, {
-                onVnodeUnmounted,
-                ref: viewRef,
-            }));
-            if (( true) &&
-                isBrowser &&
-                component.ref) {
-                // TODO: can display if it's an alias, its props
-                const info = {
-                    depth: depth.value,
-                    name: matchedRoute.name,
-                    path: matchedRoute.path,
-                    meta: matchedRoute.meta,
-                };
-                const internalInstances = isArray(component.ref)
-                    ? component.ref.map(r => r.i)
-                    : [component.ref.i];
-                internalInstances.forEach(instance => {
-                    // @ts-expect-error
-                    instance.__vrv_devtools = info;
-                });
-            }
-            return (
-            // pass the vnode to the slot as a prop.
-            // h and <component :is="..."> both accept vnodes
-            normalizeSlot(slots.default, { Component: component, route }) ||
-                component);
-        };
-    },
-});
-function normalizeSlot(slot, data) {
-    if (!slot)
-        return null;
-    const slotContent = slot(data);
-    return slotContent.length === 1 ? slotContent[0] : slotContent;
-}
-// export the public type for h/tsx inference
-// also to avoid inline import() in generated d.ts files
-/**
- * Component to display the current route the user is at.
- */
-const RouterView = RouterViewImpl;
-// warn against deprecated usage with <transition> & <keep-alive>
-// due to functional component being no longer eager in Vue 3
-function warnDeprecatedUsage() {
-    const instance = (0,vue__WEBPACK_IMPORTED_MODULE_0__.getCurrentInstance)();
-    const parentName = instance.parent && instance.parent.type.name;
-    if (parentName &&
-        (parentName === 'KeepAlive' || parentName.includes('Transition'))) {
-        const comp = parentName === 'KeepAlive' ? 'keep-alive' : 'transition';
-        warn(`<router-view> can no longer be used directly inside <transition> or <keep-alive>.\n` +
-            `Use slot props instead:\n\n` +
-            `<router-view v-slot="{ Component }">\n` +
-            `  <${comp}>\n` +
-            `    <component :is="Component" />\n` +
-            `  </${comp}>\n` +
-            `</router-view>`);
-    }
-}
-
-/**
- * Copies a route location and removes any problematic properties that cannot be shown in devtools (e.g. Vue instances).
- *
- * @param routeLocation - routeLocation to format
- * @param tooltip - optional tooltip
- * @returns a copy of the routeLocation
- */
-function formatRouteLocation(routeLocation, tooltip) {
-    const copy = assign({}, routeLocation, {
-        // remove variables that can contain vue instances
-        matched: routeLocation.matched.map(matched => omit(matched, ['instances', 'children', 'aliasOf'])),
-    });
-    return {
-        _custom: {
-            type: null,
-            readOnly: true,
-            display: routeLocation.fullPath,
-            tooltip,
-            value: copy,
-        },
-    };
-}
-function formatDisplay(display) {
-    return {
-        _custom: {
-            display,
-        },
-    };
-}
-// to support multiple router instances
-let routerId = 0;
-function addDevtools(app, router, matcher) {
-    // Take over router.beforeEach and afterEach
-    // make sure we are not registering the devtool twice
-    if (router.__hasDevtools)
-        return;
-    router.__hasDevtools = true;
-    // increment to support multiple router instances
-    const id = routerId++;
-    (0,_vue_devtools_api__WEBPACK_IMPORTED_MODULE_1__.setupDevtoolsPlugin)({
-        id: 'org.vuejs.router' + (id ? '.' + id : ''),
-        label: 'Vue Router',
-        packageName: 'vue-router',
-        homepage: 'https://router.vuejs.org',
-        logo: 'https://router.vuejs.org/logo.png',
-        componentStateTypes: ['Routing'],
-        app,
-    }, api => {
-        if (typeof api.now !== 'function') {
-            console.warn('[Vue Router]: You seem to be using an outdated version of Vue Devtools. Are you still using the Beta release instead of the stable one? You can find the links at https://devtools.vuejs.org/guide/installation.html.');
-        }
-        // display state added by the router
-        api.on.inspectComponent((payload, ctx) => {
-            if (payload.instanceData) {
-                payload.instanceData.state.push({
-                    type: 'Routing',
-                    key: '$route',
-                    editable: false,
-                    value: formatRouteLocation(router.currentRoute.value, 'Current Route'),
-                });
-            }
-        });
-        // mark router-link as active and display tags on router views
-        api.on.visitComponentTree(({ treeNode: node, componentInstance }) => {
-            if (componentInstance.__vrv_devtools) {
-                const info = componentInstance.__vrv_devtools;
-                node.tags.push({
-                    label: (info.name ? `${info.name.toString()}: ` : '') + info.path,
-                    textColor: 0,
-                    tooltip: 'This component is rendered by &lt;router-view&gt;',
-                    backgroundColor: PINK_500,
-                });
-            }
-            // if multiple useLink are used
-            if (isArray(componentInstance.__vrl_devtools)) {
-                componentInstance.__devtoolsApi = api;
-                componentInstance.__vrl_devtools.forEach(devtoolsData => {
-                    let backgroundColor = ORANGE_400;
-                    let tooltip = '';
-                    if (devtoolsData.isExactActive) {
-                        backgroundColor = LIME_500;
-                        tooltip = 'This is exactly active';
-                    }
-                    else if (devtoolsData.isActive) {
-                        backgroundColor = BLUE_600;
-                        tooltip = 'This link is active';
-                    }
-                    node.tags.push({
-                        label: devtoolsData.route.path,
-                        textColor: 0,
-                        tooltip,
-                        backgroundColor,
-                    });
-                });
-            }
-        });
-        (0,vue__WEBPACK_IMPORTED_MODULE_0__.watch)(router.currentRoute, () => {
-            // refresh active state
-            refreshRoutesView();
-            api.notifyComponentUpdate();
-            api.sendInspectorTree(routerInspectorId);
-            api.sendInspectorState(routerInspectorId);
-        });
-        const navigationsLayerId = 'router:navigations:' + id;
-        api.addTimelineLayer({
-            id: navigationsLayerId,
-            label: `Router${id ? ' ' + id : ''} Navigations`,
-            color: 0x40a8c4,
-        });
-        // const errorsLayerId = 'router:errors'
-        // api.addTimelineLayer({
-        //   id: errorsLayerId,
-        //   label: 'Router Errors',
-        //   color: 0xea5455,
-        // })
-        router.onError((error, to) => {
-            api.addTimelineEvent({
-                layerId: navigationsLayerId,
-                event: {
-                    title: 'Error during Navigation',
-                    subtitle: to.fullPath,
-                    logType: 'error',
-                    time: api.now(),
-                    data: { error },
-                    groupId: to.meta.__navigationId,
-                },
-            });
-        });
-        // attached to `meta` and used to group events
-        let navigationId = 0;
-        router.beforeEach((to, from) => {
-            const data = {
-                guard: formatDisplay('beforeEach'),
-                from: formatRouteLocation(from, 'Current Location during this navigation'),
-                to: formatRouteLocation(to, 'Target location'),
-            };
-            // Used to group navigations together, hide from devtools
-            Object.defineProperty(to.meta, '__navigationId', {
-                value: navigationId++,
-            });
-            api.addTimelineEvent({
-                layerId: navigationsLayerId,
-                event: {
-                    time: api.now(),
-                    title: 'Start of navigation',
-                    subtitle: to.fullPath,
-                    data,
-                    groupId: to.meta.__navigationId,
-                },
-            });
-        });
-        router.afterEach((to, from, failure) => {
-            const data = {
-                guard: formatDisplay('afterEach'),
-            };
-            if (failure) {
-                data.failure = {
-                    _custom: {
-                        type: Error,
-                        readOnly: true,
-                        display: failure ? failure.message : '',
-                        tooltip: 'Navigation Failure',
-                        value: failure,
-                    },
-                };
-                data.status = formatDisplay('❌');
-            }
-            else {
-                data.status = formatDisplay('✅');
-            }
-            // we set here to have the right order
-            data.from = formatRouteLocation(from, 'Current Location during this navigation');
-            data.to = formatRouteLocation(to, 'Target location');
-            api.addTimelineEvent({
-                layerId: navigationsLayerId,
-                event: {
-                    title: 'End of navigation',
-                    subtitle: to.fullPath,
-                    time: api.now(),
-                    data,
-                    logType: failure ? 'warning' : 'default',
-                    groupId: to.meta.__navigationId,
-                },
-            });
-        });
-        /**
-         * Inspector of Existing routes
-         */
-        const routerInspectorId = 'router-inspector:' + id;
-        api.addInspector({
-            id: routerInspectorId,
-            label: 'Routes' + (id ? ' ' + id : ''),
-            icon: 'book',
-            treeFilterPlaceholder: 'Search routes',
-        });
-        function refreshRoutesView() {
-            // the routes view isn't active
-            if (!activeRoutesPayload)
-                return;
-            const payload = activeRoutesPayload;
-            // children routes will appear as nested
-            let routes = matcher.getRoutes().filter(route => !route.parent);
-            // reset match state to false
-            routes.forEach(resetMatchStateOnRouteRecord);
-            // apply a match state if there is a payload
-            if (payload.filter) {
-                routes = routes.filter(route => 
-                // save matches state based on the payload
-                isRouteMatching(route, payload.filter.toLowerCase()));
-            }
-            // mark active routes
-            routes.forEach(route => markRouteRecordActive(route, router.currentRoute.value));
-            payload.rootNodes = routes.map(formatRouteRecordForInspector);
-        }
-        let activeRoutesPayload;
-        api.on.getInspectorTree(payload => {
-            activeRoutesPayload = payload;
-            if (payload.app === app && payload.inspectorId === routerInspectorId) {
-                refreshRoutesView();
-            }
-        });
-        /**
-         * Display information about the currently selected route record
-         */
-        api.on.getInspectorState(payload => {
-            if (payload.app === app && payload.inspectorId === routerInspectorId) {
-                const routes = matcher.getRoutes();
-                const route = routes.find(route => route.record.__vd_id === payload.nodeId);
-                if (route) {
-                    payload.state = {
-                        options: formatRouteRecordMatcherForStateInspector(route),
-                    };
-                }
-            }
-        });
-        api.sendInspectorTree(routerInspectorId);
-        api.sendInspectorState(routerInspectorId);
-    });
-}
-function modifierForKey(key) {
-    if (key.optional) {
-        return key.repeatable ? '*' : '?';
-    }
-    else {
-        return key.repeatable ? '+' : '';
-    }
-}
-function formatRouteRecordMatcherForStateInspector(route) {
-    const { record } = route;
-    const fields = [
-        { editable: false, key: 'path', value: record.path },
-    ];
-    if (record.name != null) {
-        fields.push({
-            editable: false,
-            key: 'name',
-            value: record.name,
-        });
-    }
-    fields.push({ editable: false, key: 'regexp', value: route.re });
-    if (route.keys.length) {
-        fields.push({
-            editable: false,
-            key: 'keys',
-            value: {
-                _custom: {
-                    type: null,
-                    readOnly: true,
-                    display: route.keys
-                        .map(key => `${key.name}${modifierForKey(key)}`)
-                        .join(' '),
-                    tooltip: 'Param keys',
-                    value: route.keys,
-                },
-            },
-        });
-    }
-    if (record.redirect != null) {
-        fields.push({
-            editable: false,
-            key: 'redirect',
-            value: record.redirect,
-        });
-    }
-    if (route.alias.length) {
-        fields.push({
-            editable: false,
-            key: 'aliases',
-            value: route.alias.map(alias => alias.record.path),
-        });
-    }
-    if (Object.keys(route.record.meta).length) {
-        fields.push({
-            editable: false,
-            key: 'meta',
-            value: route.record.meta,
-        });
-    }
-    fields.push({
-        key: 'score',
-        editable: false,
-        value: {
-            _custom: {
-                type: null,
-                readOnly: true,
-                display: route.score.map(score => score.join(', ')).join(' | '),
-                tooltip: 'Score used to sort routes',
-                value: route.score,
-            },
-        },
-    });
-    return fields;
-}
-/**
- * Extracted from tailwind palette
- */
-const PINK_500 = 0xec4899;
-const BLUE_600 = 0x2563eb;
-const LIME_500 = 0x84cc16;
-const CYAN_400 = 0x22d3ee;
-const ORANGE_400 = 0xfb923c;
-// const GRAY_100 = 0xf4f4f5
-const DARK = 0x666666;
-function formatRouteRecordForInspector(route) {
-    const tags = [];
-    const { record } = route;
-    if (record.name != null) {
-        tags.push({
-            label: String(record.name),
-            textColor: 0,
-            backgroundColor: CYAN_400,
-        });
-    }
-    if (record.aliasOf) {
-        tags.push({
-            label: 'alias',
-            textColor: 0,
-            backgroundColor: ORANGE_400,
-        });
-    }
-    if (route.__vd_match) {
-        tags.push({
-            label: 'matches',
-            textColor: 0,
-            backgroundColor: PINK_500,
-        });
-    }
-    if (route.__vd_exactActive) {
-        tags.push({
-            label: 'exact',
-            textColor: 0,
-            backgroundColor: LIME_500,
-        });
-    }
-    if (route.__vd_active) {
-        tags.push({
-            label: 'active',
-            textColor: 0,
-            backgroundColor: BLUE_600,
-        });
-    }
-    if (record.redirect) {
-        tags.push({
-            label: typeof record.redirect === 'string'
-                ? `redirect: ${record.redirect}`
-                : 'redirects',
-            textColor: 0xffffff,
-            backgroundColor: DARK,
-        });
-    }
-    // add an id to be able to select it. Using the `path` is not possible because
-    // empty path children would collide with their parents
-    let id = record.__vd_id;
-    if (id == null) {
-        id = String(routeRecordId++);
-        record.__vd_id = id;
-    }
-    return {
-        id,
-        label: record.path,
-        tags,
-        children: route.children.map(formatRouteRecordForInspector),
-    };
-}
-//  incremental id for route records and inspector state
-let routeRecordId = 0;
-const EXTRACT_REGEXP_RE = /^\/(.*)\/([a-z]*)$/;
-function markRouteRecordActive(route, currentRoute) {
-    // no route will be active if matched is empty
-    // reset the matching state
-    const isExactActive = currentRoute.matched.length &&
-        isSameRouteRecord(currentRoute.matched[currentRoute.matched.length - 1], route.record);
-    route.__vd_exactActive = route.__vd_active = isExactActive;
-    if (!isExactActive) {
-        route.__vd_active = currentRoute.matched.some(match => isSameRouteRecord(match, route.record));
-    }
-    route.children.forEach(childRoute => markRouteRecordActive(childRoute, currentRoute));
-}
-function resetMatchStateOnRouteRecord(route) {
-    route.__vd_match = false;
-    route.children.forEach(resetMatchStateOnRouteRecord);
-}
-function isRouteMatching(route, filter) {
-    const found = String(route.re).match(EXTRACT_REGEXP_RE);
-    route.__vd_match = false;
-    if (!found || found.length < 3) {
-        return false;
-    }
-    // use a regexp without $ at the end to match nested routes better
-    const nonEndingRE = new RegExp(found[1].replace(/\$$/, ''), found[2]);
-    if (nonEndingRE.test(filter)) {
-        // mark children as matches
-        route.children.forEach(child => isRouteMatching(child, filter));
-        // exception case: `/`
-        if (route.record.path !== '/' || filter === '/') {
-            route.__vd_match = route.re.test(filter);
-            return true;
-        }
-        // hide the / route
-        return false;
-    }
-    const path = route.record.path.toLowerCase();
-    const decodedPath = decode(path);
-    // also allow partial matching on the path
-    if (!filter.startsWith('/') &&
-        (decodedPath.includes(filter) || path.includes(filter)))
-        return true;
-    if (decodedPath.startsWith(filter) || path.startsWith(filter))
-        return true;
-    if (route.record.name && String(route.record.name).includes(filter))
-        return true;
-    return route.children.some(child => isRouteMatching(child, filter));
-}
-function omit(obj, keys) {
-    const ret = {};
-    for (const key in obj) {
-        if (!keys.includes(key)) {
-            // @ts-expect-error
-            ret[key] = obj[key];
-        }
-    }
-    return ret;
-}
-
-/**
- * Creates a Router instance that can be used by a Vue app.
- *
- * @param options - {@link RouterOptions}
- */
-function createRouter(options) {
-    const matcher = createRouterMatcher(options.routes, options);
-    const parseQuery$1 = options.parseQuery || parseQuery;
-    const stringifyQuery$1 = options.stringifyQuery || stringifyQuery;
-    const routerHistory = options.history;
-    if (( true) && !routerHistory)
-        throw new Error('Provide the "history" option when calling "createRouter()":' +
-            ' https://next.router.vuejs.org/api/#history.');
-    const beforeGuards = useCallbacks();
-    const beforeResolveGuards = useCallbacks();
-    const afterGuards = useCallbacks();
-    const currentRoute = (0,vue__WEBPACK_IMPORTED_MODULE_0__.shallowRef)(START_LOCATION_NORMALIZED);
-    let pendingLocation = START_LOCATION_NORMALIZED;
-    // leave the scrollRestoration if no scrollBehavior is provided
-    if (isBrowser && options.scrollBehavior && 'scrollRestoration' in history) {
-        history.scrollRestoration = 'manual';
-    }
-    const normalizeParams = applyToParams.bind(null, paramValue => '' + paramValue);
-    const encodeParams = applyToParams.bind(null, encodeParam);
-    const decodeParams = 
-    // @ts-expect-error: intentionally avoid the type check
-    applyToParams.bind(null, decode);
-    function addRoute(parentOrRoute, route) {
-        let parent;
-        let record;
-        if (isRouteName(parentOrRoute)) {
-            parent = matcher.getRecordMatcher(parentOrRoute);
-            record = route;
-        }
-        else {
-            record = parentOrRoute;
-        }
-        return matcher.addRoute(record, parent);
-    }
-    function removeRoute(name) {
-        const recordMatcher = matcher.getRecordMatcher(name);
-        if (recordMatcher) {
-            matcher.removeRoute(recordMatcher);
-        }
-        else if ((true)) {
-            warn(`Cannot remove non-existent route "${String(name)}"`);
-        }
-    }
-    function getRoutes() {
-        return matcher.getRoutes().map(routeMatcher => routeMatcher.record);
-    }
-    function hasRoute(name) {
-        return !!matcher.getRecordMatcher(name);
-    }
-    function resolve(rawLocation, currentLocation) {
-        // const objectLocation = routerLocationAsObject(rawLocation)
-        // we create a copy to modify it later
-        currentLocation = assign({}, currentLocation || currentRoute.value);
-        if (typeof rawLocation === 'string') {
-            const locationNormalized = parseURL(parseQuery$1, rawLocation, currentLocation.path);
-            const matchedRoute = matcher.resolve({ path: locationNormalized.path }, currentLocation);
-            const href = routerHistory.createHref(locationNormalized.fullPath);
-            if ((true)) {
-                if (href.startsWith('//'))
-                    warn(`Location "${rawLocation}" resolved to "${href}". A resolved location cannot start with multiple slashes.`);
-                else if (!matchedRoute.matched.length) {
-                    warn(`No match found for location with path "${rawLocation}"`);
-                }
-            }
-            // locationNormalized is always a new object
-            return assign(locationNormalized, matchedRoute, {
-                params: decodeParams(matchedRoute.params),
-                hash: decode(locationNormalized.hash),
-                redirectedFrom: undefined,
-                href,
-            });
-        }
-        let matcherLocation;
-        // path could be relative in object as well
-        if ('path' in rawLocation) {
-            if (( true) &&
-                'params' in rawLocation &&
-                !('name' in rawLocation) &&
-                // @ts-expect-error: the type is never
-                Object.keys(rawLocation.params).length) {
-                warn(`Path "${
-                // @ts-expect-error: the type is never
-                rawLocation.path}" was passed with params but they will be ignored. Use a named route alongside params instead.`);
-            }
-            matcherLocation = assign({}, rawLocation, {
-                path: parseURL(parseQuery$1, rawLocation.path, currentLocation.path).path,
-            });
-        }
-        else {
-            // remove any nullish param
-            const targetParams = assign({}, rawLocation.params);
-            for (const key in targetParams) {
-                if (targetParams[key] == null) {
-                    delete targetParams[key];
-                }
-            }
-            // pass encoded values to the matcher, so it can produce encoded path and fullPath
-            matcherLocation = assign({}, rawLocation, {
-                params: encodeParams(rawLocation.params),
-            });
-            // current location params are decoded, we need to encode them in case the
-            // matcher merges the params
-            currentLocation.params = encodeParams(currentLocation.params);
-        }
-        const matchedRoute = matcher.resolve(matcherLocation, currentLocation);
-        const hash = rawLocation.hash || '';
-        if (( true) && hash && !hash.startsWith('#')) {
-            warn(`A \`hash\` should always start with the character "#". Replace "${hash}" with "#${hash}".`);
-        }
-        // the matcher might have merged current location params, so
-        // we need to run the decoding again
-        matchedRoute.params = normalizeParams(decodeParams(matchedRoute.params));
-        const fullPath = stringifyURL(stringifyQuery$1, assign({}, rawLocation, {
-            hash: encodeHash(hash),
-            path: matchedRoute.path,
-        }));
-        const href = routerHistory.createHref(fullPath);
-        if ((true)) {
-            if (href.startsWith('//')) {
-                warn(`Location "${rawLocation}" resolved to "${href}". A resolved location cannot start with multiple slashes.`);
-            }
-            else if (!matchedRoute.matched.length) {
-                warn(`No match found for location with path "${'path' in rawLocation ? rawLocation.path : rawLocation}"`);
-            }
-        }
-        return assign({
-            fullPath,
-            // keep the hash encoded so fullPath is effectively path + encodedQuery +
-            // hash
-            hash,
-            query: 
-            // if the user is using a custom query lib like qs, we might have
-            // nested objects, so we keep the query as is, meaning it can contain
-            // numbers at `$route.query`, but at the point, the user will have to
-            // use their own type anyway.
-            // https://github.com/vuejs/router/issues/328#issuecomment-649481567
-            stringifyQuery$1 === stringifyQuery
-                ? normalizeQuery(rawLocation.query)
-                : (rawLocation.query || {}),
-        }, matchedRoute, {
-            redirectedFrom: undefined,
-            href,
-        });
-    }
-    function locationAsObject(to) {
-        return typeof to === 'string'
-            ? parseURL(parseQuery$1, to, currentRoute.value.path)
-            : assign({}, to);
-    }
-    function checkCanceledNavigation(to, from) {
-        if (pendingLocation !== to) {
-            return createRouterError(8 /* ErrorTypes.NAVIGATION_CANCELLED */, {
-                from,
-                to,
-            });
-        }
-    }
-    function push(to) {
-        return pushWithRedirect(to);
-    }
-    function replace(to) {
-        return push(assign(locationAsObject(to), { replace: true }));
-    }
-    function handleRedirectRecord(to) {
-        const lastMatched = to.matched[to.matched.length - 1];
-        if (lastMatched && lastMatched.redirect) {
-            const { redirect } = lastMatched;
-            let newTargetLocation = typeof redirect === 'function' ? redirect(to) : redirect;
-            if (typeof newTargetLocation === 'string') {
-                newTargetLocation =
-                    newTargetLocation.includes('?') || newTargetLocation.includes('#')
-                        ? (newTargetLocation = locationAsObject(newTargetLocation))
-                        : // force empty params
-                            { path: newTargetLocation };
-                // @ts-expect-error: force empty params when a string is passed to let
-                // the router parse them again
-                newTargetLocation.params = {};
-            }
-            if (( true) &&
-                !('path' in newTargetLocation) &&
-                !('name' in newTargetLocation)) {
-                warn(`Invalid redirect found:\n${JSON.stringify(newTargetLocation, null, 2)}\n when navigating to "${to.fullPath}". A redirect must contain a name or path. This will break in production.`);
-                throw new Error('Invalid redirect');
-            }
-            return assign({
-                query: to.query,
-                hash: to.hash,
-                // avoid transferring params if the redirect has a path
-                params: 'path' in newTargetLocation ? {} : to.params,
-            }, newTargetLocation);
-        }
-    }
-    function pushWithRedirect(to, redirectedFrom) {
-        const targetLocation = (pendingLocation = resolve(to));
-        const from = currentRoute.value;
-        const data = to.state;
-        const force = to.force;
-        // to could be a string where `replace` is a function
-        const replace = to.replace === true;
-        const shouldRedirect = handleRedirectRecord(targetLocation);
-        if (shouldRedirect)
-            return pushWithRedirect(assign(locationAsObject(shouldRedirect), {
-                state: typeof shouldRedirect === 'object'
-                    ? assign({}, data, shouldRedirect.state)
-                    : data,
-                force,
-                replace,
-            }), 
-            // keep original redirectedFrom if it exists
-            redirectedFrom || targetLocation);
-        // if it was a redirect we already called `pushWithRedirect` above
-        const toLocation = targetLocation;
-        toLocation.redirectedFrom = redirectedFrom;
-        let failure;
-        if (!force && isSameRouteLocation(stringifyQuery$1, from, targetLocation)) {
-            failure = createRouterError(16 /* ErrorTypes.NAVIGATION_DUPLICATED */, { to: toLocation, from });
-            // trigger scroll to allow scrolling to the same anchor
-            handleScroll(from, from, 
-            // this is a push, the only way for it to be triggered from a
-            // history.listen is with a redirect, which makes it become a push
-            true, 
-            // This cannot be the first navigation because the initial location
-            // cannot be manually navigated to
-            false);
-        }
-        return (failure ? Promise.resolve(failure) : navigate(toLocation, from))
-            .catch((error) => isNavigationFailure(error)
-            ? // navigation redirects still mark the router as ready
-                isNavigationFailure(error, 2 /* ErrorTypes.NAVIGATION_GUARD_REDIRECT */)
-                    ? error
-                    : markAsReady(error) // also returns the error
-            : // reject any unknown error
-                triggerError(error, toLocation, from))
-            .then((failure) => {
-            if (failure) {
-                if (isNavigationFailure(failure, 2 /* ErrorTypes.NAVIGATION_GUARD_REDIRECT */)) {
-                    if (( true) &&
-                        // we are redirecting to the same location we were already at
-                        isSameRouteLocation(stringifyQuery$1, resolve(failure.to), toLocation) &&
-                        // and we have done it a couple of times
-                        redirectedFrom &&
-                        // @ts-expect-error: added only in dev
-                        (redirectedFrom._count = redirectedFrom._count
-                            ? // @ts-expect-error
-                                redirectedFrom._count + 1
-                            : 1) > 10) {
-                        warn(`Detected an infinite redirection in a navigation guard when going from "${from.fullPath}" to "${toLocation.fullPath}". Aborting to avoid a Stack Overflow. This will break in production if not fixed.`);
-                        return Promise.reject(new Error('Infinite redirect in navigation guard'));
-                    }
-                    return pushWithRedirect(
-                    // keep options
-                    assign({
-                        // preserve an existing replacement but allow the redirect to override it
-                        replace,
-                    }, locationAsObject(failure.to), {
-                        state: typeof failure.to === 'object'
-                            ? assign({}, data, failure.to.state)
-                            : data,
-                        force,
-                    }), 
-                    // preserve the original redirectedFrom if any
-                    redirectedFrom || toLocation);
-                }
-            }
-            else {
-                // if we fail we don't finalize the navigation
-                failure = finalizeNavigation(toLocation, from, true, replace, data);
-            }
-            triggerAfterEach(toLocation, from, failure);
-            return failure;
-        });
-    }
-    /**
-     * Helper to reject and skip all navigation guards if a new navigation happened
-     * @param to
-     * @param from
-     */
-    function checkCanceledNavigationAndReject(to, from) {
-        const error = checkCanceledNavigation(to, from);
-        return error ? Promise.reject(error) : Promise.resolve();
-    }
-    // TODO: refactor the whole before guards by internally using router.beforeEach
-    function navigate(to, from) {
-        let guards;
-        const [leavingRecords, updatingRecords, enteringRecords] = extractChangingRecords(to, from);
-        // all components here have been resolved once because we are leaving
-        guards = extractComponentsGuards(leavingRecords.reverse(), 'beforeRouteLeave', to, from);
-        // leavingRecords is already reversed
-        for (const record of leavingRecords) {
-            record.leaveGuards.forEach(guard => {
-                guards.push(guardToPromiseFn(guard, to, from));
-            });
-        }
-        const canceledNavigationCheck = checkCanceledNavigationAndReject.bind(null, to, from);
-        guards.push(canceledNavigationCheck);
-        // run the queue of per route beforeRouteLeave guards
-        return (runGuardQueue(guards)
-            .then(() => {
-            // check global guards beforeEach
-            guards = [];
-            for (const guard of beforeGuards.list()) {
-                guards.push(guardToPromiseFn(guard, to, from));
-            }
-            guards.push(canceledNavigationCheck);
-            return runGuardQueue(guards);
-        })
-            .then(() => {
-            // check in components beforeRouteUpdate
-            guards = extractComponentsGuards(updatingRecords, 'beforeRouteUpdate', to, from);
-            for (const record of updatingRecords) {
-                record.updateGuards.forEach(guard => {
-                    guards.push(guardToPromiseFn(guard, to, from));
-                });
-            }
-            guards.push(canceledNavigationCheck);
-            // run the queue of per route beforeEnter guards
-            return runGuardQueue(guards);
-        })
-            .then(() => {
-            // check the route beforeEnter
-            guards = [];
-            for (const record of to.matched) {
-                // do not trigger beforeEnter on reused views
-                if (record.beforeEnter && !from.matched.includes(record)) {
-                    if (isArray(record.beforeEnter)) {
-                        for (const beforeEnter of record.beforeEnter)
-                            guards.push(guardToPromiseFn(beforeEnter, to, from));
-                    }
-                    else {
-                        guards.push(guardToPromiseFn(record.beforeEnter, to, from));
-                    }
-                }
-            }
-            guards.push(canceledNavigationCheck);
-            // run the queue of per route beforeEnter guards
-            return runGuardQueue(guards);
-        })
-            .then(() => {
-            // NOTE: at this point to.matched is normalized and does not contain any () => Promise<Component>
-            // clear existing enterCallbacks, these are added by extractComponentsGuards
-            to.matched.forEach(record => (record.enterCallbacks = {}));
-            // check in-component beforeRouteEnter
-            guards = extractComponentsGuards(enteringRecords, 'beforeRouteEnter', to, from);
-            guards.push(canceledNavigationCheck);
-            // run the queue of per route beforeEnter guards
-            return runGuardQueue(guards);
-        })
-            .then(() => {
-            // check global guards beforeResolve
-            guards = [];
-            for (const guard of beforeResolveGuards.list()) {
-                guards.push(guardToPromiseFn(guard, to, from));
-            }
-            guards.push(canceledNavigationCheck);
-            return runGuardQueue(guards);
-        })
-            // catch any navigation canceled
-            .catch(err => isNavigationFailure(err, 8 /* ErrorTypes.NAVIGATION_CANCELLED */)
-            ? err
-            : Promise.reject(err)));
-    }
-    function triggerAfterEach(to, from, failure) {
-        // navigation is confirmed, call afterGuards
-        // TODO: wrap with error handlers
-        for (const guard of afterGuards.list())
-            guard(to, from, failure);
-    }
-    /**
-     * - Cleans up any navigation guards
-     * - Changes the url if necessary
-     * - Calls the scrollBehavior
-     */
-    function finalizeNavigation(toLocation, from, isPush, replace, data) {
-        // a more recent navigation took place
-        const error = checkCanceledNavigation(toLocation, from);
-        if (error)
-            return error;
-        // only consider as push if it's not the first navigation
-        const isFirstNavigation = from === START_LOCATION_NORMALIZED;
-        const state = !isBrowser ? {} : history.state;
-        // change URL only if the user did a push/replace and if it's not the initial navigation because
-        // it's just reflecting the url
-        if (isPush) {
-            // on the initial navigation, we want to reuse the scroll position from
-            // history state if it exists
-            if (replace || isFirstNavigation)
-                routerHistory.replace(toLocation.fullPath, assign({
-                    scroll: isFirstNavigation && state && state.scroll,
-                }, data));
-            else
-                routerHistory.push(toLocation.fullPath, data);
-        }
-        // accept current navigation
-        currentRoute.value = toLocation;
-        handleScroll(toLocation, from, isPush, isFirstNavigation);
-        markAsReady();
-    }
-    let removeHistoryListener;
-    // attach listener to history to trigger navigations
-    function setupListeners() {
-        // avoid setting up listeners twice due to an invalid first navigation
-        if (removeHistoryListener)
-            return;
-        removeHistoryListener = routerHistory.listen((to, _from, info) => {
-            if (!router.listening)
-                return;
-            // cannot be a redirect route because it was in history
-            const toLocation = resolve(to);
-            // due to dynamic routing, and to hash history with manual navigation
-            // (manually changing the url or calling history.hash = '#/somewhere'),
-            // there could be a redirect record in history
-            const shouldRedirect = handleRedirectRecord(toLocation);
-            if (shouldRedirect) {
-                pushWithRedirect(assign(shouldRedirect, { replace: true }), toLocation).catch(noop);
-                return;
-            }
-            pendingLocation = toLocation;
-            const from = currentRoute.value;
-            // TODO: should be moved to web history?
-            if (isBrowser) {
-                saveScrollPosition(getScrollKey(from.fullPath, info.delta), computeScrollPosition());
-            }
-            navigate(toLocation, from)
-                .catch((error) => {
-                if (isNavigationFailure(error, 4 /* ErrorTypes.NAVIGATION_ABORTED */ | 8 /* ErrorTypes.NAVIGATION_CANCELLED */)) {
-                    return error;
-                }
-                if (isNavigationFailure(error, 2 /* ErrorTypes.NAVIGATION_GUARD_REDIRECT */)) {
-                    // Here we could call if (info.delta) routerHistory.go(-info.delta,
-                    // false) but this is bug prone as we have no way to wait the
-                    // navigation to be finished before calling pushWithRedirect. Using
-                    // a setTimeout of 16ms seems to work but there is no guarantee for
-                    // it to work on every browser. So instead we do not restore the
-                    // history entry and trigger a new navigation as requested by the
-                    // navigation guard.
-                    // the error is already handled by router.push we just want to avoid
-                    // logging the error
-                    pushWithRedirect(error.to, toLocation
-                    // avoid an uncaught rejection, let push call triggerError
-                    )
-                        .then(failure => {
-                        // manual change in hash history #916 ending up in the URL not
-                        // changing, but it was changed by the manual url change, so we
-                        // need to manually change it ourselves
-                        if (isNavigationFailure(failure, 4 /* ErrorTypes.NAVIGATION_ABORTED */ |
-                            16 /* ErrorTypes.NAVIGATION_DUPLICATED */) &&
-                            !info.delta &&
-                            info.type === NavigationType.pop) {
-                            routerHistory.go(-1, false);
-                        }
-                    })
-                        .catch(noop);
-                    // avoid the then branch
-                    return Promise.reject();
-                }
-                // do not restore history on unknown direction
-                if (info.delta) {
-                    routerHistory.go(-info.delta, false);
-                }
-                // unrecognized error, transfer to the global handler
-                return triggerError(error, toLocation, from);
-            })
-                .then((failure) => {
-                failure =
-                    failure ||
-                        finalizeNavigation(
-                        // after navigation, all matched components are resolved
-                        toLocation, from, false);
-                // revert the navigation
-                if (failure) {
-                    if (info.delta &&
-                        // a new navigation has been triggered, so we do not want to revert, that will change the current history
-                        // entry while a different route is displayed
-                        !isNavigationFailure(failure, 8 /* ErrorTypes.NAVIGATION_CANCELLED */)) {
-                        routerHistory.go(-info.delta, false);
-                    }
-                    else if (info.type === NavigationType.pop &&
-                        isNavigationFailure(failure, 4 /* ErrorTypes.NAVIGATION_ABORTED */ | 16 /* ErrorTypes.NAVIGATION_DUPLICATED */)) {
-                        // manual change in hash history #916
-                        // it's like a push but lacks the information of the direction
-                        routerHistory.go(-1, false);
-                    }
-                }
-                triggerAfterEach(toLocation, from, failure);
-            })
-                .catch(noop);
-        });
-    }
-    // Initialization and Errors
-    let readyHandlers = useCallbacks();
-    let errorHandlers = useCallbacks();
-    let ready;
-    /**
-     * Trigger errorHandlers added via onError and throws the error as well
-     *
-     * @param error - error to throw
-     * @param to - location we were navigating to when the error happened
-     * @param from - location we were navigating from when the error happened
-     * @returns the error as a rejected promise
-     */
-    function triggerError(error, to, from) {
-        markAsReady(error);
-        const list = errorHandlers.list();
-        if (list.length) {
-            list.forEach(handler => handler(error, to, from));
-        }
-        else {
-            if ((true)) {
-                warn('uncaught error during route navigation:');
-            }
-            console.error(error);
-        }
-        return Promise.reject(error);
-    }
-    function isReady() {
-        if (ready && currentRoute.value !== START_LOCATION_NORMALIZED)
-            return Promise.resolve();
-        return new Promise((resolve, reject) => {
-            readyHandlers.add([resolve, reject]);
-        });
-    }
-    function markAsReady(err) {
-        if (!ready) {
-            // still not ready if an error happened
-            ready = !err;
-            setupListeners();
-            readyHandlers
-                .list()
-                .forEach(([resolve, reject]) => (err ? reject(err) : resolve()));
-            readyHandlers.reset();
-        }
-        return err;
-    }
-    // Scroll behavior
-    function handleScroll(to, from, isPush, isFirstNavigation) {
-        const { scrollBehavior } = options;
-        if (!isBrowser || !scrollBehavior)
-            return Promise.resolve();
-        const scrollPosition = (!isPush && getSavedScrollPosition(getScrollKey(to.fullPath, 0))) ||
-            ((isFirstNavigation || !isPush) &&
-                history.state &&
-                history.state.scroll) ||
-            null;
-        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.nextTick)()
-            .then(() => scrollBehavior(to, from, scrollPosition))
-            .then(position => position && scrollToPosition(position))
-            .catch(err => triggerError(err, to, from));
-    }
-    const go = (delta) => routerHistory.go(delta);
-    let started;
-    const installedApps = new Set();
-    const router = {
-        currentRoute,
-        listening: true,
-        addRoute,
-        removeRoute,
-        hasRoute,
-        getRoutes,
-        resolve,
-        options,
-        push,
-        replace,
-        go,
-        back: () => go(-1),
-        forward: () => go(1),
-        beforeEach: beforeGuards.add,
-        beforeResolve: beforeResolveGuards.add,
-        afterEach: afterGuards.add,
-        onError: errorHandlers.add,
-        isReady,
-        install(app) {
-            const router = this;
-            app.component('RouterLink', RouterLink);
-            app.component('RouterView', RouterView);
-            app.config.globalProperties.$router = router;
-            Object.defineProperty(app.config.globalProperties, '$route', {
-                enumerable: true,
-                get: () => (0,vue__WEBPACK_IMPORTED_MODULE_0__.unref)(currentRoute),
-            });
-            // this initial navigation is only necessary on client, on server it doesn't
-            // make sense because it will create an extra unnecessary navigation and could
-            // lead to problems
-            if (isBrowser &&
-                // used for the initial navigation client side to avoid pushing
-                // multiple times when the router is used in multiple apps
-                !started &&
-                currentRoute.value === START_LOCATION_NORMALIZED) {
-                // see above
-                started = true;
-                push(routerHistory.location).catch(err => {
-                    if ((true))
-                        warn('Unexpected error when starting the router:', err);
-                });
-            }
-            const reactiveRoute = {};
-            for (const key in START_LOCATION_NORMALIZED) {
-                // @ts-expect-error: the key matches
-                reactiveRoute[key] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(() => currentRoute.value[key]);
-            }
-            app.provide(routerKey, router);
-            app.provide(routeLocationKey, (0,vue__WEBPACK_IMPORTED_MODULE_0__.reactive)(reactiveRoute));
-            app.provide(routerViewLocationKey, currentRoute);
-            const unmountApp = app.unmount;
-            installedApps.add(app);
-            app.unmount = function () {
-                installedApps.delete(app);
-                // the router is not attached to an app anymore
-                if (installedApps.size < 1) {
-                    // invalidate the current navigation
-                    pendingLocation = START_LOCATION_NORMALIZED;
-                    removeHistoryListener && removeHistoryListener();
-                    removeHistoryListener = null;
-                    currentRoute.value = START_LOCATION_NORMALIZED;
-                    started = false;
-                    ready = false;
-                }
-                unmountApp();
-            };
-            // TODO: this probably needs to be updated so it can be used by vue-termui
-            if (( true) && isBrowser) {
-                addDevtools(app, router, matcher);
-            }
-        },
-    };
-    return router;
-}
-function runGuardQueue(guards) {
-    return guards.reduce((promise, guard) => promise.then(() => guard()), Promise.resolve());
-}
-function extractChangingRecords(to, from) {
-    const leavingRecords = [];
-    const updatingRecords = [];
-    const enteringRecords = [];
-    const len = Math.max(from.matched.length, to.matched.length);
-    for (let i = 0; i < len; i++) {
-        const recordFrom = from.matched[i];
-        if (recordFrom) {
-            if (to.matched.find(record => isSameRouteRecord(record, recordFrom)))
-                updatingRecords.push(recordFrom);
-            else
-                leavingRecords.push(recordFrom);
-        }
-        const recordTo = to.matched[i];
-        if (recordTo) {
-            // the type doesn't matter because we are comparing per reference
-            if (!from.matched.find(record => isSameRouteRecord(record, recordTo))) {
-                enteringRecords.push(recordTo);
-            }
-        }
-    }
-    return [leavingRecords, updatingRecords, enteringRecords];
-}
-
-/**
- * Returns the router instance. Equivalent to using `$router` inside
- * templates.
- */
-function useRouter() {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.inject)(routerKey);
-}
-/**
- * Returns the current route location. Equivalent to using `$route` inside
- * templates.
- */
-function useRoute() {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.inject)(routeLocationKey);
-}
-
-
-
+/* (ignored) */
 
 /***/ }),
 

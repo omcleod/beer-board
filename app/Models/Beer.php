@@ -14,7 +14,7 @@ class Beer extends Model
 
     public function brewery()
     {
-        return $this->belongsTo(Brewery::class, 'brewery_id');
+        return $this->belongsTo(Brewery::class, 'brewey_id');
     }
 
     public function style()
